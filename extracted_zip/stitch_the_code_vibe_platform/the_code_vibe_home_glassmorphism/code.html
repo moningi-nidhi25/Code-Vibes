@@ -1,0 +1,529 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>The Code Vibe</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed-variant": "#003ea8", "surface-variant": "#dae2fd", "tertiary-fixed": "#eaddff", "surface": "#faf8ff", "on-error": "#ffffff", "inverse-primary": "#b4c5ff", "on-secondary-container": "#00546b", "secondary": "#006782", "on-surface": "#131b2e", "surface-bright": "#faf8ff", "on-primary": "#ffffff", "on-tertiary-container": "#f7edff", "on-secondary-fixed-variant": "#004d63", "on-secondary-fixed": "#001f29", "error-container": "#ffdad6", "on-surface-variant": "#434655", "primary-container": "#2563eb", "on-secondary": "#ffffff", "secondary-fixed-dim": "#5ed4ff", "surface-tint": "#0053db", "inverse-on-surface": "#eef0ff", "primary": "#004ac6", "on-primary-fixed": "#00174b", "error": "#ba1a1a", "outline": "#737686", "tertiary-fixed-dim": "#d2bbff", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#5a00c6", "surface-container": "#eaedff", "inverse-surface": "#283044", "secondary-container": "#2fcdfe", "primary-fixed-dim": "#b4c5ff", "outline-variant": "#c3c6d7", "on-tertiary-fixed": "#25005a", "on-primary-container": "#eeefff", "on-error-container": "#93000a", "on-background": "#131b2e", "tertiary": "#6a1edb", "surface-dim": "#d2d9f4", "tertiary-container": "#8343f4", "on-tertiary": "#ffffff", "surface-container-low": "#f2f3ff", "background": "#faf8ff", "surface-container-highest": "#dae2fd", "surface-container-high": "#e2e7ff", "secondary-fixed": "#bbe9ff", "primary-fixed": "#dbe1ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "2rem", "space-md": "1rem", "space-xs": "0.25rem", "margin-mobile": "1rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter-sm": "1rem", "gutter": "1.5rem" }, "fontFamily": { "headline-md": [ "Space Grotesk" ], "body-md": [ "Inter" ], "display-hero-mobile": [ "Space Grotesk" ], "body-sm": [ "Inter" ], "headline-xl": [ "Space Grotesk" ], "headline-lg": [ "Space Grotesk" ], "mono-lg": [ "JetBrains Mono" ], "display-hero": [ "Space Grotesk" ], "label-ui": [ "Inter" ], "headline-xl-mobile": [ "Space Grotesk" ], "mono-sm": [ "JetBrains Mono" ], "body-lg": [ "Inter" ], "headline-sm": [ "Space Grotesk" ] }, "fontSize": { "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-md": [ "15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" } ], "display-hero-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-sm": [ "13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-xl": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "mono-lg": [ "14px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "label-ui": [ "13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "headline-xl-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "mono-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "body-lg": [ "18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-[#f6f8fe] font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-white relative min-h-screen overflow-x-hidden">
+<!-- Global Ambient Glassmorphism Atmosphere Orbs -->
+<div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+<div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-gradient-to-tr from-secondary-container/25 via-primary-container/20 to-tertiary-container/30 blur-[120px] rounded-full"></div>
+<div class="absolute top-[28rem] -left-48 w-[550px] h-[550px] bg-secondary/15 blur-[130px] rounded-full"></div>
+<div class="absolute top-[52rem] -right-48 w-[600px] h-[600px] bg-tertiary/15 blur-[140px] rounded-full"></div>
+<div class="absolute top-[96rem] left-1/4 w-[700px] h-[500px] bg-primary-container/15 blur-[130px] rounded-full"></div>
+<div class="absolute bottom-32 -right-36 w-[650px] h-[650px] bg-secondary-container/20 blur-[140px] rounded-full"></div>
+</div>
+<!-- FLOATING FROSTED GLASS HEADER -->
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-3">
+<div class="h-16 px-6 rounded-2xl bg-white/70 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_rgba(0,31,75,0.06)] flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-lg">
+<a class="flex items-center gap-space-sm group" data-path="home" href="#">
+<div class="w-9 h-9 rounded-full p-0.5 bg-gradient-to-tr from-secondary-container via-primary-container to-tertiary-container shadow-xs shrink-0 flex items-center justify-center transition-transform group-hover:scale-105">
+<img alt="The Code Vibe Logo" class="w-full h-full rounded-full object-contain bg-white/90 backdrop-blur-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABcyLxDKvWB5SEr_arLw2sMGjqjX3kFjITy-e3zQDkzTmebJ5HNnw3VBsiemhfX77PNp5AN04jBw8Om42EceFRbIEv5f5KtPq3ulzGSru7qs-7SIk82Um9BCKiP9PgnZt1PZwygTMBVfOoGAJFklK1MUFfKz6fzZGARIpL7S7ym4Z2RJmOC2IODSNIDJ3ewu6US8DaCbyQtPX__XUJYl0cXm92S_FWz-kDrduWFHz7hKFOjT59t1Xy">
+</div>
+<span class="font-headline-sm text-headline-sm tracking-tight font-bold bg-gradient-to-r from-secondary via-primary-container to-tertiary bg-clip-text text-transparent">The Code Vibe</span>
+</a>
+<nav class="hidden lg:flex items-center gap-space-xs p-1" data-active-classes="text-primary font-semibold bg-white/80 shadow-xs border border-white/80 rounded-lg">
+<a aria-current="page" class="px-3.5 py-1.5 transition-all text-primary font-semibold bg-white/80 border border-white/80 rounded-lg shadow-xs" data-path="home" href="#">Home</a>
+<a class="px-3.5 py-1.5 font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface hover:bg-white/50 rounded-lg transition-colors" data-path="about" href="#">About</a>
+<a class="px-3.5 py-1.5 font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface hover:bg-white/50 rounded-lg transition-colors" data-path="events" href="#">Events</a>
+<a class="px-3.5 py-1.5 font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface hover:bg-white/50 rounded-lg transition-colors" data-path="collaborate" href="#">Collaborate</a>
+<a class="px-3.5 py-1.5 font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface hover:bg-white/50 rounded-lg transition-colors" data-path="admin-portal" href="#">Admin</a>
+</nav>
+</div>
+<div class="flex items-center gap-space-md">
+<a class="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-gradient-to-r from-primary to-tertiary text-on-primary font-label-ui text-label-ui shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/30 hover:opacity-95 active:scale-95 transition-all" data-path="join-community" href="#">Join Community</a>
+<img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-white/80 shadow-xs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyuVx_d7jSI4eKcNT-HnXOtS7osOz_D-zjSjTPwJm6r5FVkIaYJu8ROcCoyl4YutObKhxihlJdtxTtxgfIQCtIGu4xH155rF6pK-VIaP92os1u_b8Gdviogsib4yBkI16_hG0F8buJ33uda__jWwAEGn_hr191O9_sjEZbYG-cosQ4piHHkHWPbckTPxYc9l5SN_VbBWX4c14Rd3DCR6JEQdBF5AO9sm1TYn0z9W9F6WVe_kJq3zhV">
+</div>
+</div>
+</div>
+</header>
+<main class="w-full pt-20 min-h-screen">
+<div class="flex flex-col w-full">
+<!-- HERO SECTION -->
+<div class="relative w-full overflow-hidden">
+<section class="max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-16 lg:pt-20 lg:pb-24 flex flex-col items-center text-center">
+<!-- Status Badge / Radar -->
+<div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/70 backdrop-blur-md border border-white/80 shadow-[0_4px_16px_rgba(0,55,140,0.06)] mb-7">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant uppercase tracking-wider">Cohort 08 • Registrations Open</span>
+<span class="font-mono-sm text-mono-sm text-primary font-semibold">Live</span>
+</div>
+<!-- Main Typography Hero -->
+<h1 class="font-display-hero text-display-hero text-on-surface max-w-4xl tracking-tight leading-tight drop-shadow-xs">
+      More Than Code. <br>
+<span class="bg-gradient-to-r from-secondary via-primary-container to-tertiary bg-clip-text text-transparent">
+        A Community That Builds Together.
+      </span>
+</h1>
+<p class="mt-6 max-w-2xl font-body-lg text-body-lg text-on-surface-variant">
+      A community for developers to explore technology, build meaningful projects, participate in events, and collaborate with people who share their passion for creating.
+    </p>
+<!-- Action Buttons -->
+<div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+<a class="group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-secondary via-primary-container to-tertiary text-on-primary font-label-ui text-label-ui shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:brightness-105 active:scale-95 transition-all" data-path="join-community" href="#">
+<span class="">Join the Community</span>
+<span class="material-symbols-outlined text-base group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white/70 backdrop-blur-md border border-white/80 hover:bg-white/90 text-on-surface font-label-ui text-label-ui shadow-md shadow-slate-200/50 transition-all active:scale-95" href="#featured-events">
+<span class="material-symbols-outlined text-base text-primary">calendar_month</span>
+<span class="">Explore Events</span>
+</a>
+</div>
+<!-- Glassmorphic Quick Metric Strip -->
+<div class="w-full mt-16 p-1.5 rounded-3xl bg-gradient-to-r from-white/70 via-white/40 to-white/70 backdrop-blur-xl border border-white/80 shadow-[0_16px_40px_rgba(0,40,120,0.06)]">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-6 px-6 bg-white/60 backdrop-blur-md rounded-2xl">
+<div class="flex flex-col items-center border-none md:border-r border-slate-200/60 py-2">
+<span class="font-headline-lg text-headline-lg text-primary tracking-tight font-bold" id="count-builders">12,400+</span>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant mt-1">Active Builders</span>
+</div>
+<div class="flex flex-col items-center border-none md:border-r border-slate-200/60 py-2">
+<span class="font-headline-lg text-headline-lg text-secondary tracking-tight font-bold">180+</span>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant mt-1">Shipped Open Projects</span>
+</div>
+<div class="flex flex-col items-center border-none md:border-r border-slate-200/60 py-2">
+<span class="font-headline-lg text-headline-lg text-tertiary tracking-tight font-bold">45+</span>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant mt-1">Hackathons &amp; Talks</span>
+</div>
+<div class="flex flex-col items-center py-2">
+<span class="font-headline-lg text-headline-lg text-primary-container tracking-tight font-bold">98%</span>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant mt-1">Mentorship Match</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- WHAT WE DO (GOALS & OBJECTIVES) SECTION -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-20 relative" id="what-we-do">
+<div class="text-center max-w-3xl mx-auto mb-14">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/70 backdrop-blur-md border border-white/80 mb-4 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-gradient-to-r from-secondary-container via-primary-container to-tertiary-container animate-pulse"></span>
+<span class="font-mono-sm text-mono-sm uppercase tracking-wider text-primary font-semibold">Mission &amp; Objectives</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+      What We Do <span class="bg-gradient-to-r from-secondary via-primary to-tertiary bg-clip-text text-transparent">— Built for Engineers</span>
+</h2>
+<p class="mt-4 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+      We empower developers to move beyond tutorials into real software engineering, collaborative production shipping, and accelerated career growth.
+    </p>
+</div>
+<!-- Interactive 4-Card Frosted Glass Responsive Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1: Co-Building -->
+<div class="group relative rounded-3xl bg-white/60 backdrop-blur-xl p-7 border border-white/70 shadow-[0_10px_30px_rgba(0,50,130,0.05)] hover:shadow-[0_20px_40px_rgba(0,74,198,0.12)] hover:-translate-y-1.5 hover:border-primary/50 transition-all duration-300 flex flex-col justify-between overflow-hidden">
+<div class="absolute -top-12 -right-12 w-28 h-28 bg-primary/20 rounded-full blur-2xl group-hover:bg-primary/30 transition-all pointer-events-none"></div>
+<div class="relative z-10">
+<div class="flex items-center justify-between mb-5">
+<div class="w-12 h-12 rounded-2xl bg-white/80 backdrop-blur-md border border-white text-primary flex items-center justify-center shadow-sm group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-2xl">terminal</span>
+</div>
+<span class="font-mono-sm text-mono-sm px-2.5 py-1 rounded-full bg-primary/10 border border-primary/20 font-semibold tracking-wider text-primary uppercase">
+            Co-Building
+          </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors font-bold">
+          Ship Real Production Software
+        </h3>
+<p class="mt-3 font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Join active engineering pods building distributed systems, AI agent frameworks, and developer tooling. Ship to production with peer code reviews and architectural oversight.
+        </p>
+</div>
+<div class="mt-6 pt-4 border-t border-slate-200/50 flex items-center justify-between text-on-surface relative z-10">
+<span class="font-mono-sm text-mono-sm font-semibold flex items-center gap-1.5 text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          180+ Open Source Repos
+        </span>
+<span class="material-symbols-outlined text-base text-outline group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_forward</span>
+</div>
+</div>
+<!-- Card 2: Mentorship -->
+<div class="group relative rounded-3xl bg-white/60 backdrop-blur-xl p-7 border border-white/70 shadow-[0_10px_30px_rgba(0,50,130,0.05)] hover:shadow-[0_20px_40px_rgba(0,103,130,0.12)] hover:-translate-y-1.5 hover:border-secondary/50 transition-all duration-300 flex flex-col justify-between overflow-hidden">
+<div class="absolute -top-12 -right-12 w-28 h-28 bg-secondary/20 rounded-full blur-2xl group-hover:bg-secondary/30 transition-all pointer-events-none"></div>
+<div class="relative z-10">
+<div class="flex items-center justify-between mb-5">
+<div class="w-12 h-12 rounded-2xl bg-white/80 backdrop-blur-md border border-white text-secondary flex items-center justify-center shadow-sm group-hover:bg-secondary group-hover:text-on-secondary transition-colors duration-300">
+<span class="material-symbols-outlined text-2xl">group</span>
+</div>
+<span class="font-mono-sm text-mono-sm px-2.5 py-1 rounded-full bg-secondary-fixed/50 border border-secondary/20 text-on-secondary-fixed-variant font-semibold tracking-wider uppercase">
+            Mentorship
+          </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-secondary transition-colors font-bold">
+          Peer Pair Programming
+        </h3>
+<p class="mt-3 font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Level up faster through structured weekly pairing sessions, algorithmic breakdowns, and guidance from senior and staff engineers from top tech companies.
+        </p>
+</div>
+<div class="mt-6 pt-4 border-t border-slate-200/50 flex items-center justify-between text-on-surface relative z-10">
+<span class="font-mono-sm text-mono-sm font-semibold flex items-center gap-1.5 text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          Weekly Rhythm • Zero Ego
+        </span>
+<span class="material-symbols-outlined text-base text-outline group-hover:text-secondary group-hover:translate-x-1 transition-all">arrow_forward</span>
+</div>
+</div>
+<!-- Card 3: Hackathons -->
+<div class="group relative rounded-3xl bg-white/60 backdrop-blur-xl p-7 border border-white/70 shadow-[0_10px_30px_rgba(0,50,130,0.05)] hover:shadow-[0_20px_40px_rgba(106,30,219,0.12)] hover:-translate-y-1.5 hover:border-tertiary/50 transition-all duration-300 flex flex-col justify-between overflow-hidden">
+<div class="absolute -top-12 -right-12 w-28 h-28 bg-tertiary/20 rounded-full blur-2xl group-hover:bg-tertiary/30 transition-all pointer-events-none"></div>
+<div class="relative z-10">
+<div class="flex items-center justify-between mb-5">
+<div class="w-12 h-12 rounded-2xl bg-white/80 backdrop-blur-md border border-white text-tertiary flex items-center justify-center shadow-sm group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors duration-300">
+<span class="material-symbols-outlined text-2xl">trophy</span>
+</div>
+<span class="font-mono-sm text-mono-sm px-2.5 py-1 rounded-full bg-tertiary-fixed/50 border border-tertiary/20 text-on-tertiary-fixed-variant font-semibold tracking-wider uppercase">
+            Hackathons
+          </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-tertiary transition-colors font-bold">
+          Flagship Hackathons &amp; Sprints
+        </h3>
+<p class="mt-3 font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Compete in high-stakes build challenges with automated sandbox environments, verifiable deliverables, sponsor bounties, and cash prize pools.
+        </p>
+</div>
+<div class="mt-6 pt-4 border-t border-slate-200/50 flex items-center justify-between text-on-surface relative z-10">
+<span class="font-mono-sm text-mono-sm font-semibold flex items-center gap-1.5 text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+          $50,000+ Distributed Bounties
+        </span>
+<span class="material-symbols-outlined text-base text-outline group-hover:text-tertiary group-hover:translate-x-1 transition-all">arrow_forward</span>
+</div>
+</div>
+<!-- Card 4: Knowledge -->
+<div class="group relative rounded-3xl bg-white/60 backdrop-blur-xl p-7 border border-white/70 shadow-[0_10px_30px_rgba(0,50,130,0.05)] hover:shadow-[0_20px_40px_rgba(37,99,235,0.12)] hover:-translate-y-1.5 hover:border-primary-container/50 transition-all duration-300 flex flex-col justify-between overflow-hidden">
+<div class="absolute -top-12 -right-12 w-28 h-28 bg-primary-container/20 rounded-full blur-2xl group-hover:bg-primary-container/30 transition-all pointer-events-none"></div>
+<div class="relative z-10">
+<div class="flex items-center justify-between mb-5">
+<div class="w-12 h-12 rounded-2xl bg-white/80 backdrop-blur-md border border-white text-primary-container flex items-center justify-center shadow-sm group-hover:bg-primary-container group-hover:text-on-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-2xl">menu_book</span>
+</div>
+<span class="font-mono-sm text-mono-sm px-2.5 py-1 rounded-full bg-primary-container/10 border border-primary-container/20 font-semibold tracking-wider text-primary-container uppercase">
+            Knowledge
+          </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary-container transition-colors font-bold">
+          Deep-Dive Workshops &amp; Tech Talks
+        </h3>
+<p class="mt-3 font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Deconstruct complex topics like eBPF internals, distributed consensus, memory-safe languages, and zero-knowledge systems in hands-on workshops.
+        </p>
+</div>
+<div class="mt-6 pt-4 border-t border-slate-200/50 flex items-center justify-between text-on-surface relative z-10">
+<span class="font-mono-sm text-mono-sm font-semibold flex items-center gap-1.5 text-primary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+          45+ Deep Dives Hosted
+        </span>
+<span class="material-symbols-outlined text-base text-outline group-hover:text-primary-container group-hover:translate-x-1 transition-all">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- FEATURED EVENTS SECTION -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 py-16" id="featured-events">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+<div>
+<span class="font-mono-sm text-mono-sm text-primary uppercase tracking-wider block mb-1">Calendar &amp; Assemblies</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-bold">Featured Events</h2>
+</div>
+<a class="inline-flex items-center gap-1.5 font-label-ui text-label-ui text-primary hover:text-on-primary-fixed-variant group" data-path="events" href="#">
+<span class="">View all scheduled events</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6"><!-- Event Card 1: Hackathon -->
+<div class="bg-white/60 backdrop-blur-xl border border-white/70 rounded-3xl overflow-hidden shadow-[0_10px_30px_rgba(0,50,130,0.05)] hover:shadow-[0_20px_40px_rgba(0,50,130,0.1)] hover:-translate-y-1 transition-all flex flex-col justify-between group">
+  <div>
+    
+    <div class="p-7 pb-2"><div class="flex items-center justify-between gap-2 mb-4"><span class="px-3 py-1 rounded-full bg-secondary-fixed/50 border border-secondary/20 text-on-secondary-fixed-variant font-mono-sm text-mono-sm font-semibold">Hackathon</span><span class="font-mono-sm text-mono-sm text-on-surface-variant flex items-center gap-1.5"><span class="material-symbols-outlined text-sm text-primary">schedule</span>09:00 AM - 06:00 PM PST</span></div><h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors font-bold">AI Agent Hackathon 2025</h3><p class="mt-2 font-body-sm text-body-sm text-on-surface-variant line-clamp-2">48-hour sprint to craft self-healing, stateful autonomous agents with memory persistence.</p><div class="mt-4 space-y-2 py-3 px-3.5 rounded-2xl bg-white/50 backdrop-blur-sm border border-white/60"><div class="flex items-center gap-2 text-on-surface-variant font-mono-sm text-mono-sm"><span class="material-symbols-outlined text-base text-primary">calendar_month</span><span class="">May 16 - 18, 2025</span></div><div class="flex items-center gap-2 text-on-surface-variant font-mono-sm text-mono-sm"><span class="material-symbols-outlined text-base text-secondary">location_on</span><span class="">Online &amp; Worldwide • Discord Stage</span></div></div></div>
+  </div>
+  <div class="px-6 pb-6 pt-3 flex items-center justify-end">
+    <a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white/70 hover:bg-white/95 border border-white/80 text-on-surface font-label-ui text-label-ui shadow-xs transition-all active:scale-95 group-hover:border-primary/40" href="#">
+      <span class="">More Details</span>
+      <span class="material-symbols-outlined text-sm text-on-surface-variant group-hover:text-primary group-hover:translate-x-0.5 transition-all">arrow_forward</span>
+    </a>
+  </div>
+</div>
+
+<!-- Event Card 2: Workshop -->
+<div class="bg-white/60 backdrop-blur-xl border border-white/70 rounded-3xl overflow-hidden shadow-[0_10px_30px_rgba(0,50,130,0.05)] hover:shadow-[0_20px_40px_rgba(0,50,130,0.1)] hover:-translate-y-1 transition-all flex flex-col justify-between group">
+  <div>
+    
+    <div class="p-7 pb-2"><div class="flex items-center justify-between gap-2 mb-4"><span class="px-3 py-1 rounded-full bg-tertiary-fixed/50 border border-tertiary/20 text-on-tertiary-fixed-variant font-mono-sm text-mono-sm font-semibold">Workshop</span><span class="font-mono-sm text-mono-sm text-on-surface-variant flex items-center gap-1.5"><span class="material-symbols-outlined text-sm text-primary">schedule</span>11:00 AM - 02:00 PM PST</span></div><h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors font-bold">Rust for TypeScript Devs</h3><p class="mt-2 font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Demystifying memory safety, lifetimes, and WebAssembly compilation paths for JavaScript veterans.</p><div class="mt-4 space-y-2 py-3 px-3.5 rounded-2xl bg-white/50 backdrop-blur-sm border border-white/60"><div class="flex items-center gap-2 text-on-surface-variant font-mono-sm text-mono-sm"><span class="material-symbols-outlined text-base text-primary">calendar_month</span><span class="">June 02, 2025</span></div><div class="flex items-center gap-2 text-on-surface-variant font-mono-sm text-mono-sm"><span class="material-symbols-outlined text-base text-secondary">location_on</span><span class="">Interactive Lab • Virtual Sandbox</span></div></div></div>
+  </div>
+  <div class="px-6 pb-6 pt-3 flex items-center justify-end">
+    <a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white/70 hover:bg-white/95 border border-white/80 text-on-surface font-label-ui text-label-ui shadow-xs transition-all active:scale-95 group-hover:border-primary/40" href="#">
+      <span class="">More Details</span>
+      <span class="material-symbols-outlined text-sm text-on-surface-variant group-hover:text-primary group-hover:translate-x-0.5 transition-all">arrow_forward</span>
+    </a>
+  </div>
+</div>
+
+<!-- Event Card 3: Tech Talk -->
+<div class="bg-white/60 backdrop-blur-xl border border-white/70 rounded-3xl overflow-hidden shadow-[0_10px_30px_rgba(0,50,130,0.05)] hover:shadow-[0_20px_40px_rgba(0,50,130,0.1)] hover:-translate-y-1 transition-all flex flex-col justify-between group">
+  <div>
+    
+    <div class="p-7 pb-2"><div class="flex items-center justify-between gap-2 mb-4"><span class="px-3 py-1 rounded-full bg-primary-fixed/50 border border-primary/20 text-on-primary-fixed-variant font-mono-sm text-mono-sm font-semibold">Tech Talk</span><span class="font-mono-sm text-mono-sm text-on-surface-variant flex items-center gap-1.5"><span class="material-symbols-outlined text-sm text-primary">schedule</span>05:00 PM - 07:30 PM PST</span></div><h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors font-bold">System Architecture at Scale</h3><p class="mt-2 font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Deep architectural breakdown of zero-downtime database sharding and distributed consensus under 100k QPS.</p><div class="mt-4 space-y-2 py-3 px-3.5 rounded-2xl bg-white/50 backdrop-blur-sm border border-white/60"><div class="flex items-center gap-2 text-on-surface-variant font-mono-sm text-mono-sm"><span class="material-symbols-outlined text-base text-primary">calendar_month</span><span class="">June 18, 2025</span></div><div class="flex items-center gap-2 text-on-surface-variant font-mono-sm text-mono-sm"><span class="material-symbols-outlined text-base text-secondary">location_on</span><span class="">SF Tech Hall &amp; Global Stream</span></div></div></div>
+  </div>
+  <div class="px-6 pb-6 pt-3 flex items-center justify-end">
+    <a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white/70 hover:bg-white/95 border border-white/80 text-on-surface font-label-ui text-label-ui shadow-xs transition-all active:scale-95 group-hover:border-primary/40" href="#">
+      <span class="">More Details</span>
+      <span class="material-symbols-outlined text-sm text-on-surface-variant group-hover:text-primary group-hover:translate-x-0.5 transition-all">arrow_forward</span>
+    </a>
+  </div>
+</div></div>
+</section>
+<!-- OPEN COLLABORATION PROJECTS SPOTLIGHT -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 py-12">
+<div class="p-8 lg:p-12 rounded-3xl bg-white/50 backdrop-blur-xl border border-white/80 shadow-[0_16px_40px_rgba(0,40,120,0.06)] relative overflow-hidden">
+<div class="absolute -top-32 -left-32 w-80 h-80 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-32 -right-32 w-80 h-80 bg-tertiary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4 relative z-10">
+<div>
+<div class="flex items-center gap-2 mb-1.5 font-mono-sm text-mono-sm text-secondary uppercase font-semibold">
+<span class="material-symbols-outlined text-sm">code_blocks</span>
+<span class="">Peer Engineering Pods</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-bold">Open Collaboration Projects</h2>
+</div>
+<a class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/80 hover:bg-white border border-white/90 text-on-surface font-label-ui text-label-ui shadow-sm hover:shadow transition-all" data-path="collaborate" href="#">
+<span class="">Explore All Projects</span>
+<span class="material-symbols-outlined text-sm">tune</span>
+</a>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 relative z-10">
+<!-- Collaboration Card 1 -->
+<div class="p-7 rounded-3xl bg-white/70 backdrop-blur-xl border border-white/80 shadow-[0_8px_24px_rgba(0,30,90,0.04)] hover:shadow-[0_16px_36px_rgba(0,50,140,0.08)] hover:-translate-y-1 transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-mono-sm text-mono-sm text-primary font-semibold">github.com/thecodevibe/chroma-flow</span>
+<span class="px-3 py-1 rounded-full bg-secondary-container/20 border border-secondary-container/40 text-on-secondary-container font-mono-sm text-mono-sm flex items-center gap-1.5 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              2 Seats Open
+            </span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">ChromaFlow WebGL Canvas Engine</h3>
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant">
+            GPU-accelerated vector rendering engine for high-density node graphs. Seeking a shaders engineer and a performance tester.
+          </p>
+<!-- Technical Specification pill list -->
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="px-2.5 py-1 rounded-lg bg-white/80 border border-white font-mono-sm text-mono-sm text-on-surface shadow-xs">TypeScript</span>
+<span class="px-2.5 py-1 rounded-lg bg-white/80 border border-white font-mono-sm text-mono-sm text-on-surface shadow-xs">WebGL 2.0</span>
+<span class="px-2.5 py-1 rounded-lg bg-white/80 border border-white font-mono-sm text-mono-sm text-on-surface shadow-xs">GLSL</span>
+<span class="px-2.5 py-1 rounded-lg bg-white/80 border border-white font-mono-sm text-mono-sm text-on-surface shadow-xs">Vitest</span>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t border-slate-200/50 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<img class="w-8 h-8 rounded-full object-cover ring-2 ring-white" data-alt="Portrait photo of a young man with glasses working on an open source project, crisp modern lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7U7-jBpHbrY--TMb-okvztgn0o78lK4Xf1HhFelVWhLM7pvK2Rx68wGqAXIjuKjbccYMcPPy8uIF3fMdRcT5P1-BgjYg6rGDOdgAYDJyKlB39yft5loqmo-i5s-dfk5wAVwcW2lMIGbL-1CnvdmZev3M7U66xv-I4uJ0ZMB1VxKFrdIEXsxIyu2ic0YHI2D5qAEjb12jK-8EIAi-Pccvz1uTlCuUotCvu1FAYAz8NINMXqNEAX25W">
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">Lead: @alex_k</span>
+</div>
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-primary text-on-primary font-label-ui text-label-ui shadow-md shadow-primary/20 hover:opacity-95 transition-all active:scale-95" type="button">
+<span class="">Request to Pair</span>
+<span class="material-symbols-outlined text-sm">handshake</span>
+</button>
+</div>
+</div>
+<!-- Collaboration Card 2 -->
+<div class="p-7 rounded-3xl bg-white/70 backdrop-blur-xl border border-white/80 shadow-[0_8px_24px_rgba(0,30,90,0.04)] hover:shadow-[0_16px_36px_rgba(0,50,140,0.08)] hover:-translate-y-1 transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-mono-sm text-mono-sm text-tertiary font-semibold">github.com/thecodevibe/nexus-queue</span>
+<span class="px-3 py-1 rounded-full bg-tertiary-fixed/50 border border-tertiary/20 text-on-tertiary-fixed-variant font-mono-sm text-mono-sm flex items-center gap-1.5 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+              1 Seat Open
+            </span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Nexus Distributed Task Scheduler</h3>
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant">
+            Fault-tolerant asynchronous job broker written in Go with raft-backed leader election and gRPC interface.
+          </p>
+<!-- Technical Specification pill list -->
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="px-2.5 py-1 rounded-lg bg-white/80 border border-white font-mono-sm text-mono-sm text-on-surface shadow-xs">Golang 1.23</span>
+<span class="px-2.5 py-1 rounded-lg bg-white/80 border border-white font-mono-sm text-mono-sm text-on-surface shadow-xs">gRPC</span>
+<span class="px-2.5 py-1 rounded-lg bg-white/80 border border-white font-mono-sm text-mono-sm text-on-surface shadow-xs">Protobuf</span>
+<span class="px-2.5 py-1 rounded-lg bg-white/80 border border-white font-mono-sm text-mono-sm text-on-surface shadow-xs">Docker</span>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t border-slate-200/50 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<img class="w-8 h-8 rounded-full object-cover ring-2 ring-white" data-alt="Portrait of an experienced male system developer smiling at camera in an office tech setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhD6tXPy7_PL2x9eyr0ex34o6GJxqyUMQskTE2L5kYWFLukjYjcj24Gxge0EU9ZAYyhrIVko4yPfwXe4v0HU6W2-LstmIp1-KHd3qZGBb4VOGu5dg86paFdKOspcGIYNffMBJyKaP45Gyvxc3rTOeu3R-nTPq19gzRhGhirFjwBs9IDPQI__EQa1yUJ1uAAgN5SZvSVw7a9sioTHA7rxvsojrk9fVKZu-6urFbfDX80DDrQTJmqxzY">
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">Lead: @tarik_dev</span>
+</div>
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-primary text-on-primary font-label-ui text-label-ui shadow-md shadow-primary/20 hover:opacity-95 transition-all active:scale-95" type="button">
+<span class="">Request to Pair</span>
+<span class="material-symbols-outlined text-sm">handshake</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- COMMUNITY VOICES / TESTIMONIALS -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 py-16">
+<div class="text-center max-w-2xl mx-auto mb-12">
+<span class="font-mono-sm text-mono-sm text-primary uppercase tracking-widest block mb-2 font-semibold">Verified Builders</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-bold">Engineered by Creators</h2>
+<p class="mt-2 font-body-md text-body-md text-on-surface-variant">
+      What engineers, maintainers, and founders say about building in The Code Vibe ecosystem.
+    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Testimonial 1 -->
+<div class="p-7 rounded-3xl bg-white/60 backdrop-blur-xl border border-white/70 shadow-[0_10px_30px_rgba(0,50,130,0.05)] hover:shadow-[0_20px_40px_rgba(0,50,130,0.1)] hover:-translate-y-1 transition-all flex flex-col justify-between">
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+        “The pair programming sessions accelerated my understanding of distributed systems faster than any paid course. Shipped my first production Go microservice in 3 weeks.”
+      </p>
+<div class="mt-6 flex items-center gap-3 pt-4 border-t border-slate-200/50">
+<img class="w-11 h-11 rounded-full object-cover ring-2 ring-white/80 shadow-xs" data-alt="Close up portrait photo of a smiling developer woman with natural light, warm and authentic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtPlC1wpc4qJoMLCUxHTKTqacVtMjRyI3dBwfu2vnI9wiDzXRNAlwFSl2101jxdRD1Csx0vrXtQkk5Fbc6fkr_xo0qJsM7AMJd25qwXboVRRK8dEjCRdft7yX6ecUzg0-qIfyrksar5vyclJwIM5E1pH_piofjtXn-j_o4htmh3AaH_W_59rB76gFOM9W1q38suIzlaF2VwuwbFntVaSaZiZDi6U0EjkXIPGeJsgQJ8AkHK5PpyeVB">
+<div>
+<span class="font-label-ui text-label-ui text-on-surface block font-bold">Samantha Roy</span>
+<span class="font-mono-sm text-mono-sm text-outline block">@samroy_dev • SRE at CloudScale</span>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="p-7 rounded-3xl bg-white/60 backdrop-blur-xl border border-white/70 shadow-[0_10px_30px_rgba(0,50,130,0.05)] hover:shadow-[0_20px_40px_rgba(0,50,130,0.1)] hover:-translate-y-1 transition-all flex flex-col justify-between">
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+        “Found our technical co-founder during the AI Agents Hackathon. The signal-to-noise ratio in this community is leagues beyond traditional Discord forums.”
+      </p>
+<div class="mt-6 flex items-center gap-3 pt-4 border-t border-slate-200/50">
+<img class="w-11 h-11 rounded-full object-cover ring-2 ring-white/80 shadow-xs" data-alt="Portrait photograph of young founder smiling confidently in casual modern developer attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcasoZaX4qH1xb3GBfF1PI2zOSxe6AF_QjQJ7xwcCnFv-sRXo6UAS14YgDVVspQRdlv-IlZpUzprgWbGP7h_wOIboDxXAB-dhar0a6i-RWGUx_nP57Y2qW8UWX4AdxOXXKFqLdTzjYEMJbcqIWvIwc96mFiUlT9Cl7OSb5nz0GpPpYc1Mr4Em2-mNlEitII90k2EOQeDHF0Y9lrcrFMs-sWs18WWvu8ZYASboqGOzLGpTu63j0mlBP">
+<div>
+<span class="font-label-ui text-label-ui text-on-surface block font-bold">Liam Chen</span>
+<span class="font-mono-sm text-mono-sm text-outline block">@liam_builds • Founder, AgenticOS</span>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="p-7 rounded-3xl bg-white/60 backdrop-blur-xl border border-white/70 shadow-[0_10px_30px_rgba(0,50,130,0.05)] hover:shadow-[0_20px_40px_rgba(0,50,130,0.1)] hover:-translate-y-1 transition-all flex flex-col justify-between">
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+        “Mentoring junior engineers here has refined how I write architectural documentation. The collaborative feedback loop is remarkably thoughtful and rigorous.”
+      </p>
+<div class="mt-6 flex items-center gap-3 pt-4 border-t border-slate-200/50">
+<img class="w-11 h-11 rounded-full object-cover ring-2 ring-white/80 shadow-xs" data-alt="Portrait photo of a mature software architect with pleasant expression and smart casual style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJRR1f9IkzhbpzVcSRtK1_yk9Sxvwja60KOsUK84bH734qqLCoGOtE7ZHXBXeYBeGC2BKD0CzRduEOlsjvMnb8AvhXmM0ZF9D2iRP_DxNgjE4gyN1lKrAm0zCB0pgJncTpHQpl-gg1um8qXo8uPhJbV9ZO1R_0R8Tvk_TVUnsZafx2afhnPawxl0QqRElYE7DG53ckPkDsnxtLAH6fZQ6PiBPwFaTuWEQcnQ4mM4jPh2LxA6mjaE-V">
+<div>
+<span class="font-label-ui text-label-ui text-on-surface block font-bold">Davide Moretti</span>
+<span class="font-mono-sm text-mono-sm text-outline block">@dmoretti • Staff Eng at Datasync</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FINAL CALL TO ACTION BANNER -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 pb-24">
+<div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-primary via-primary-container to-tertiary p-8 lg:p-14 text-on-primary shadow-2xl shadow-primary/25 border border-white/20 backdrop-blur-xl">
+<!-- Structural ambient glow & glass reflection overlays -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-secondary-container/30 rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute -left-12 -top-12 w-64 h-64 bg-white/10 rounded-full blur-xl pointer-events-none"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent pointer-events-none"></div>
+<div class="relative z-10 max-w-3xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-md border border-white/20 mb-4 text-xs font-mono-sm shadow-xs">
+<span class="material-symbols-outlined text-sm">bolt</span>
+<span class="">Zero Friction Onboarding</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-primary tracking-tight font-bold">
+        Ready to elevate your code vibe?
+      </h2>
+<p class="mt-4 font-body-lg text-body-lg text-on-primary-container/90 max-w-2xl">
+        Connect with top engineers, ship ambitious projects, and grow your career. Get instant access to private repos, hackathons, and pairing circles.
+      </p>
+<div class="mt-8 flex flex-wrap items-center gap-4">
+<a class="px-7 py-3.5 rounded-xl bg-white text-on-surface font-label-ui text-label-ui font-semibold shadow-lg shadow-black/10 hover:bg-white/90 active:scale-95 transition-all" data-path="join-community" href="#">
+          Join Community
+        </a>
+<a class="px-6 py-3.5 rounded-xl bg-white/15 hover:bg-white/25 text-on-primary font-label-ui text-label-ui backdrop-blur-md border border-white/25 transition-all active:scale-95" data-path="about" href="#">
+          Read Our Manifesto
+        </a>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- GLASSMORPHISM FOOTER -->
+<footer class="w-full bg-white/60 backdrop-blur-2xl border-t border-white/80 text-on-surface relative">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 pt-16 pb-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 mb-16">
+<div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full p-0.5 bg-gradient-to-tr from-secondary-container via-primary-container to-tertiary-container shadow-xs shrink-0 flex items-center justify-center">
+<img alt="The Code Vibe Logo" class="w-full h-full rounded-full object-contain bg-white/90 backdrop-blur-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABcyLxDKvWB5SEr_arLw2sMGjqjX3kFjITy-e3zQDkzTmebJ5HNnw3VBsiemhfX77PNp5AN04jBw8Om42EceFRbIEv5f5KtPq3ulzGSru7qs-7SIk82Um9BCKiP9PgnZt1PZwygTMBVfOoGAJFklK1MUFfKz6fzZGARIpL7S7ym4Z2RJmOC2IODSNIDJ3ewu6US8DaCbyQtPX__XUJYl0cXm92S_FWz-kDrduWFHz7hKFOjT59t1Xy">
+</div>
+<span class="font-headline-md text-headline-md tracking-tight font-bold bg-gradient-to-r from-secondary via-primary-container to-tertiary bg-clip-text text-transparent">The Code Vibe</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Where developers explore technology, build meaningful projects, and pair up to ship real software.</p>
+</div>
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 backdrop-blur-md border border-white shadow-xs w-fit">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">All Systems Operational • 12,400+ Active Builders</span>
+</div>
+<div class="flex items-center gap-3">
+<a aria-label="GitHub" class="w-9 h-9 rounded-xl bg-white/80 backdrop-blur-md border border-white shadow-xs hover:bg-white flex items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="#">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path></svg>
+</a>
+<a aria-label="Discord" class="w-9 h-9 rounded-xl bg-white/80 backdrop-blur-md border border-white shadow-xs hover:bg-white flex items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="#">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 urban-hidden 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.894.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"></path></svg>
+</a>
+<a aria-label="X / Twitter" class="w-9 h-9 rounded-xl bg-white/80 backdrop-blur-md border border-white shadow-xs hover:bg-white flex items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="#">
+<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+</a>
+<a aria-label="LinkedIn" class="w-9 h-9 rounded-xl bg-white/80 backdrop-blur-md border border-white shadow-xs hover:bg-white flex items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="#">
+<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+<a aria-label="YouTube" class="w-9 h-9 rounded-xl bg-white/80 backdrop-blur-md border border-white shadow-xs hover:bg-white flex items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="#">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
+</a>
+</div>
+</div>
+<div class="lg:col-span-2 space-y-4">
+<div class="font-label-ui text-label-ui text-on-surface uppercase tracking-wider font-semibold">Navigation</div>
+<ul class="space-y-3">
+<li class="leading-none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="#">Home</a></li>
+<li class="leading-none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="about" href="#">About Us</a></li>
+<li class="leading-none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="events" href="#">Events &amp; Workshops</a></li>
+<li class="leading-none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="collaborate" href="#">Collaborate</a></li>
+<li class="leading-none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="admin-portal" href="#">Admin Portal</a></li>
+</ul>
+</div>
+<div class="lg:col-span-3 space-y-4">
+<div class="font-label-ui text-label-ui text-on-surface uppercase tracking-wider font-semibold">Community</div>
+<ul class="space-y-3">
+<li class="leading-none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">AI Agents Hackathon</a></li>
+<li class="leading-none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Pair Programming Circles</a></li>
+<li class="leading-none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Open Source Pods</a></li>
+<li class="leading-none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Mentorship Network</a></li>
+<li class="leading-none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Leaderboard</a></li>
+</ul>
+</div>
+<div class="lg:col-span-2 space-y-4">
+<div class="font-label-ui text-label-ui text-on-surface uppercase tracking-wider font-semibold">Resources</div>
+<ul class="space-y-3">
+<li class="leading-none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Documentation</a></li>
+<li class="leading-none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Community Guidelines</a></li>
+<li class="leading-none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Code of Conduct</a></li>
+<li class="leading-none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Brand Assets</a></li>
+<li class="leading-none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">API &amp; Telemetry</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-200/50 flex flex-col md:flex-row items-center justify-between gap-4 text-on-surface-variant font-body-sm text-body-sm">
+<div class="font-mono-sm text-mono-sm">© 2025 The Code Vibe Community. All rights reserved.</div>
+<div class="flex flex-wrap items-center gap-6 font-body-sm text-body-sm">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Security</a>
+<a class="hover:text-primary transition-colors" href="#">Cookie Settings</a>
+</div>
+</div>
+</div>
+</footer>
+
+
+
+
+</body></html>

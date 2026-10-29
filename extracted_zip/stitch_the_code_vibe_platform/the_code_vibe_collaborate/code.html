@@ -1,0 +1,933 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>The Code Vibe</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed-variant": "#003ea8", "surface-variant": "#dae2fd", "tertiary-fixed": "#eaddff", "surface": "#faf8ff", "on-error": "#ffffff", "inverse-primary": "#b4c5ff", "on-secondary-container": "#00546b", "secondary": "#006782", "on-surface": "#131b2e", "surface-bright": "#faf8ff", "on-primary": "#ffffff", "on-tertiary-container": "#f7edff", "on-secondary-fixed-variant": "#004d63", "on-secondary-fixed": "#001f29", "error-container": "#ffdad6", "on-surface-variant": "#434655", "primary-container": "#2563eb", "on-secondary": "#ffffff", "secondary-fixed-dim": "#5ed4ff", "surface-tint": "#0053db", "inverse-on-surface": "#eef0ff", "primary": "#004ac6", "on-primary-fixed": "#00174b", "error": "#ba1a1a", "outline": "#737686", "tertiary-fixed-dim": "#d2bbff", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#5a00c6", "surface-container": "#eaedff", "inverse-surface": "#283044", "secondary-container": "#2fcdfe", "primary-fixed-dim": "#b4c5ff", "outline-variant": "#c3c6d7", "on-tertiary-fixed": "#25005a", "on-primary-container": "#eeefff", "on-error-container": "#93000a", "on-background": "#131b2e", "tertiary": "#6a1edb", "surface-dim": "#d2d9f4", "tertiary-container": "#8343f4", "on-tertiary": "#ffffff", "surface-container-low": "#f2f3ff", "background": "#faf8ff", "surface-container-highest": "#dae2fd", "surface-container-high": "#e2e7ff", "secondary-fixed": "#bbe9ff", "primary-fixed": "#dbe1ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "2rem", "space-md": "1rem", "space-xs": "0.25rem", "margin-mobile": "1rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter-sm": "1rem", "gutter": "1.5rem" }, "fontFamily": { "headline-md": [ "Space Grotesk" ], "body-md": [ "Inter" ], "display-hero-mobile": [ "Space Grotesk" ], "body-sm": [ "Inter" ], "headline-xl": [ "Space Grotesk" ], "headline-lg": [ "Space Grotesk" ], "mono-lg": [ "JetBrains Mono" ], "display-hero": [ "Space Grotesk" ], "label-ui": [ "Inter" ], "headline-xl-mobile": [ "Space Grotesk" ], "mono-sm": [ "JetBrains Mono" ], "body-lg": [ "Inter" ], "headline-sm": [ "Space Grotesk" ] }, "fontSize": { "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-md": [ "15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" } ], "display-hero-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-sm": [ "13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-xl": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "mono-lg": [ "14px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "label-ui": [ "13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "headline-xl-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "mono-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "body-lg": [ "18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased overflow-x-hidden"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm" data-path="home" href="#"><img alt="The Code Vibe Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL_2NeBgzbw77HPFFtuBASjEZF23Y6MXCO4G2bhotzshkYNsqaaFzKSRCMvjEHBohHH3b3HlLkak5x8vMXhHcuFWZ1R25b6SGDc1PIVZlwzw2s9NJQNn5wrlGiTCUFyHIkd7qwP58ZhOu-pip-7KJ-I4ky8H7m6zc1a9CSM8ZxVjDHxlGYXfIgO5x99FUBU60_QGfyDqfik6z91DH5BIZJzScIwBWo0DJRsTUWz3Vk0qsqoGx5PXpAEe1V0KH3cY032g"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">The Code Vibe</span></a><nav class="hidden lg:flex items-center gap-space-xs p-1" data-active-classes="text-primary font-semibold bg-surface-container-high rounded-lg"><a class="px-3 py-1.5 font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" data-path="home" href="#">Home</a><a class="px-3 py-1.5 font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" data-path="about" href="#">About</a><a class="px-3 py-1.5 font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" data-path="events" href="#">Events</a><a aria-current="page" class="px-3 py-1.5 transition-colors text-primary font-semibold bg-surface-container-high rounded-lg" data-path="collaborate" href="#">Collaborate</a><a class="px-3 py-1.5 font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" data-path="admin-portal" href="#">Admin</a></nav></div><div class="flex items-center gap-space-md"><a class="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-gradient-to-r from-secondary-container via-primary to-tertiary text-on-primary font-label-ui text-label-ui shadow-sm hover:opacity-95 active:scale-95 transition-all" data-path="join-community" href="#">Join Community</a><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyuVx_d7jSI4eKcNT-HnXOtS7osOz_D-zjSjTPwJm6r5FVkIaYJu8ROcCoyl4YutObKhxihlJdtxTtxgfIQCtIGu4xH155rF6pK-VIaP92os1u_b8Gdviogsib4yBkI16_hG0F8buJ33uda__jWwAEGn_hr191O9_sjEZbYG-cosQ4piHHkHWPbckTPxYc9l5SN_VbBWX4c14Rd3DCR6JEQdBF5AO9sm1TYn0z9W9F6WVe_kJq3zhV"></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Visual Accent & Signal Tracker -->
+<div class="relative w-full overflow-hidden bg-surface-container-low py-10 px-6 lg:px-12">
+<div class="absolute -right-20 -top-24 w-96 h-96 rounded-full bg-gradient-to-br from-secondary-container via-primary to-tertiary opacity-20 blur-3xl pointer-events-none"></div>
+<div class="absolute left-1/3 bottom-0 w-80 h-32 bg-primary-fixed/30 blur-2xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-6 relative z-10">
+<div class="space-y-3 max-w-3xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-mono-sm text-mono-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-ping"></span>
+<span class="">DISPATCH // 24 ACTIVE OPEN-SOURCE CELL CLUSTERS</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Open Collaboration Projects</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Find your next team, contribute to production-grade open source, or launch your own project with passionate builders.</p>
+</div>
+<!-- Action Button Group -->
+<div class="flex items-center gap-3 self-start md:self-auto shrink-0">
+<button class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-secondary-container via-primary to-tertiary text-on-primary font-label-ui text-label-ui shadow-md hover:shadow-lg active:scale-95 transition-all cursor-pointer" id="openSubmitModalBtn">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+<span class="">+ Submit a Project</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Exploration Hub -->
+<div class="max-w-7xl mx-auto w-full px-6 lg:px-12 py-8 flex flex-col gap-8 relative"><div class="absolute inset-0 pointer-events-none overflow-hidden -z-10"><div class="absolute top-1/4 left-10 w-96 h-96 rounded-full bg-gradient-to-br from-secondary-container via-primary to-tertiary opacity-20 blur-3xl"></div><div class="absolute top-2/3 right-10 w-96 h-96 rounded-full bg-gradient-to-br from-tertiary via-primary to-secondary opacity-20 blur-3xl"></div></div>
+<!-- Controls: Filter & Search Console -->
+<div class="w-full backdrop-blur-xl bg-surface-container-lowest/80 border border-outline-variant/30 p-6 rounded-xl shadow-lg flex flex-col gap-6"><div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4"><div class="relative flex-1"><span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-lg pointer-events-none">search</span><input class="w-full pl-10 pr-16 py-2.5 bg-surface-container-low/70 backdrop-blur-sm rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" id="searchInput" placeholder="Search projects by name, keyword, or tech..." type="text"><span class="absolute right-3.5 top-1/2 -translate-y-1/2 font-mono-sm text-mono-sm text-outline px-1.5 py-0.5 rounded bg-surface-container">⌘K</span></div><div class="flex items-center gap-3 self-end lg:self-center"><div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low/80 backdrop-blur-sm text-on-surface font-mono-sm text-mono-sm"><span class="material-symbols-outlined text-sm text-secondary">tune</span><span class="">Sort: <strong class="font-semibold">Recent First</strong></span></div><span class="font-mono-sm text-mono-sm text-on-surface-variant bg-surface-container px-3 py-1.5 rounded-lg">Showing 5 of 24</span></div></div><div class="flex flex-col gap-2"><div class="flex items-center justify-between"><span class="font-label-ui text-label-ui uppercase tracking-wider text-outline">Tech Stack Filter</span><button class="text-primary font-mono-sm text-mono-sm hover:underline cursor-pointer" id="clearFiltersBtn">Reset Filters</button></div><div class="flex flex-wrap items-center gap-2" id="techFilterContainer"><button class="tech-pill active px-3 py-1.5 rounded-lg font-mono-sm text-mono-sm bg-primary text-on-primary transition-all shadow-sm" data-tech="all">All</button><button class="tech-pill px-3 py-1.5 rounded-lg font-mono-sm text-mono-sm bg-surface-container/80 text-on-surface hover:bg-surface-container-high transition-all" data-tech="Rust">Rust</button><button class="tech-pill px-3 py-1.5 rounded-lg font-mono-sm text-mono-sm bg-surface-container/80 text-on-surface hover:bg-surface-container-high transition-all" data-tech="TypeScript">TypeScript</button><button class="tech-pill px-3 py-1.5 rounded-lg font-mono-sm text-mono-sm bg-surface-container/80 text-on-surface hover:bg-surface-container-high transition-all" data-tech="Python">Python</button><button class="tech-pill px-3 py-1.5 rounded-lg font-mono-sm text-mono-sm bg-surface-container/80 text-on-surface hover:bg-surface-container-high transition-all" data-tech="Go">Go</button><button class="tech-pill px-3 py-1.5 rounded-lg font-mono-sm text-mono-sm bg-surface-container/80 text-on-surface hover:bg-surface-container-high transition-all" data-tech="React">React / Next.js</button><button class="tech-pill px-3 py-1.5 rounded-lg font-mono-sm text-mono-sm bg-surface-container/80 text-on-surface hover:bg-surface-container-high transition-all" data-tech="AI">AI / ML</button><button class="tech-pill px-3 py-1.5 rounded-lg font-mono-sm text-mono-sm bg-surface-container/80 text-on-surface hover:bg-surface-container-high transition-all" data-tech="Solidity">Solidity</button></div></div><div class="flex flex-col gap-2 pt-2 border-t-0"><span class="font-label-ui text-label-ui uppercase tracking-wider text-outline">Open Positions</span><div class="flex flex-wrap items-center gap-2" id="roleFilterContainer"><button class="role-pill active px-3 py-1 rounded-full font-label-ui text-label-ui bg-secondary-fixed text-on-secondary-fixed transition-all" data-role="all">Any Role</button><button class="role-pill px-3 py-1 rounded-full font-label-ui text-label-ui bg-surface-container/80 text-on-surface-variant hover:bg-surface-container-high transition-all" data-role="Frontend Dev">Frontend Dev</button><button class="role-pill px-3 py-1 rounded-full font-label-ui text-label-ui bg-surface-container/80 text-on-surface-variant hover:bg-surface-container-high transition-all" data-role="Backend / Systems">Backend / Systems</button><button class="role-pill px-3 py-1 rounded-full font-label-ui text-label-ui bg-surface-container/80 text-on-surface-variant hover:bg-surface-container-high transition-all" data-role="AI Engineer">AI Engineer</button><button class="role-pill px-3 py-1 rounded-full font-label-ui text-label-ui bg-surface-container/80 text-on-surface-variant hover:bg-surface-container-high transition-all" data-role="Product Designer">Product Designer</button><button class="role-pill px-3 py-1 rounded-full font-label-ui text-label-ui bg-surface-container/80 text-on-surface-variant hover:bg-surface-container-high transition-all" data-role="DevOps">DevOps</button></div></div></div>
+<!-- Active Telemetry Metric Strip -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div>
+<div class="font-mono-sm text-mono-sm text-outline">TOTAL OPEN ROLES</div>
+<div class="font-headline-md text-headline-md text-on-surface mt-0.5">38 Seats</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">group_add</span>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div>
+<div class="font-mono-sm text-mono-sm text-outline">ACTIVE REVIEW VELOCITY</div>
+<div class="font-headline-md text-headline-md text-on-surface mt-0.5">&lt; 48 hrs</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div>
+<div class="font-mono-sm text-mono-sm text-outline">WEEKLY CODE COMMITS</div>
+<div class="font-headline-md text-headline-md text-on-surface mt-0.5">1,480+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">terminal</span>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div>
+<div class="font-mono-sm text-mono-sm text-outline">COMMUNITY MATCH RATE</div>
+<div class="font-headline-md text-headline-md text-on-surface mt-0.5">91.4%</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">verified</span>
+</div>
+</div>
+</div>
+<!-- Project Cards Feed -->
+<div class="grid grid-cols-1 gap-6" id="projectsGrid">
+<!-- PROJECT CARD 1 (Featured Flagship) -->
+<article class="project-card rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all p-6 lg:p-8 flex flex-col gap-6 relative overflow-hidden backdrop-blur-xl border" data-roles="Backend / Systems,Frontend Dev" data-techs="Rust,eBPF,Apache Kafka,React" data-title="DevPulse: Real-time Developer Analytics &amp; Telemetry">
+<!-- Visual Accent Edge -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-primary via-secondary-container to-tertiary"></div>
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="w-14 h-14 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-3xl">insights</span>
+</div>
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm bg-primary-fixed text-on-primary-fixed uppercase tracking-wider">Flagship OS</span>
+<span class="px-2 py-0.5 rounded-full font-mono-sm text-mono-sm bg-surface-container-high text-on-surface-variant flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+                  Open until Nov 30
+                </span>
+<span class="font-mono-sm text-mono-sm text-outline">· 6 applications received</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">DevPulse: Real-time Developer Analytics &amp; Telemetry</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">Open-source telemetry collector for multi-cloud developer environments with eBPF hooks. Captures sub-millisecond execution traces and translates runtime syscalls directly into actionable distributed tracing graphs.</p>
+</div>
+</div>
+<div class="flex items-center gap-2 self-start lg:self-center shrink-0">
+<div class="flex -space-x-2 overflow-hidden">
+<img class="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container-lowest object-cover" data-alt="Alex Chen portrait, engineering lead smiling in modern software design studio with clean neon ambient background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUUUCBkysTYFy6Ydnwf7HO1sJd4r9WuYESgmFci7lxODronijvSwpH8b10Xwy-Pj5JNlP2vb60QOKs3gSEP5qA3Lf52ahQIsAcSCdjI1N4JXokHnLwdGxbGeArVO1EFVL5KthRyzcXfyQ0sDW_1Bs5xCvJE8ajGqiaRvagrG_vjwk4rO-aUHCyTRjWTXImWqGuqWayhF07SiqmRJbXVDkYW-MlneQ3jnuT4nJdHgnRMrXI5Mmmagt6">
+<img class="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container-lowest object-cover" data-alt="Technical co-founder portrait wearing glasses in bright contemporary open plan software development office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCemehlgxETL3QaHaosVsHQGdYI186gVy1dACNFXKa_Ooh61GY05kJSw8IA0-kzNq0M356XSKHPz0JyeQfliIyiBVOKVpD9KJIqIoUpW0za2xej9G1FRRZhsdBzF9-Yc8QNG24TdEJUlYrN13a_q1zib1BcR-iNNkecbCa0OE4bw79zkmhAnOVIxtkwLCY8N_ATc5kfnRZqOc_Q85lSJ3Rq1BW9oJhM2g6rIOdAp4lE6PlrXgjyLZQ">
+<img class="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container-lowest object-cover" data-alt="Developer contributor focused on dual code monitors in modern bright creative workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiuwsvhBvuDuvoEtKEtJFS5Wu8kWI7SNZTofcUic0Ik_fa37KOXquplJ2OdJPRYAfrfIWz4SsWe5OQoEAYMnkFN3r9HDPbAIrWniF9RdlI3gDe6w4Ev_XSgKWXW6aAqCxSEYieUHtyDT5ZfbJVLyBx2ncA0S4ZPFfOWlvE9rmb2NIxPbLUNRigf2qwRQ7y9L3JDMWNr0luU8pWIrkFLf_mcnltAdxpafG6kAYhU7e_Q5dDbPkLjx0g">
+</div>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant font-medium">Alex Chen (@achen) &amp; 4 maintainers</span>
+</div>
+</div>
+<!-- Tech Badges -->
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-mono-sm text-mono-sm font-semibold text-outline uppercase tracking-wider mr-1">Stack:</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-mono-sm text-mono-sm text-on-surface">Rust</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-mono-sm text-mono-sm text-on-surface">eBPF</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-mono-sm text-mono-sm text-on-surface">Apache Kafka</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-mono-sm text-mono-sm text-on-surface">React</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high font-mono-sm text-mono-sm text-on-surface-variant">Tailwind CSS</span>
+</div>
+<!-- Open Roles Split Bento Panel -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col justify-between gap-3">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-ui text-label-ui text-primary uppercase tracking-wide">Role Spot 01</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">eBPF Systems Engineer</h3>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-mono-sm text-mono-sm font-semibold">1 Opening</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Required: Low-level C/Rust kernel tracing, system probes, memory safe concurrent ring-buffers.</p>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col justify-between gap-3">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-ui text-label-ui text-tertiary uppercase tracking-wide">Role Spot 02</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Full-Stack UI Engineer</h3>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-mono-sm text-mono-sm font-semibold">2 Openings</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Required: React, Canvas / WebGL metrics canvas, high-frequency telemetry charting with WebSockets.</p>
+</div>
+</div>
+<!-- Card Footprint & CTA -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 bg-surface-container-lowest">
+<div class="flex items-center gap-4 text-on-surface-variant font-mono-sm text-mono-sm w-full sm:w-auto">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base text-outline">fork_right</span> 142 Forks</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base text-outline">star</span> 1.8k Stars</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base text-outline">schedule</span> ~8 hrs/week expected</span>
+</div>
+<div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+<button class="spec-modal-trigger px-4 py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-ui text-label-ui transition-colors cursor-pointer border" data-project="DevPulse">
+              View Project Specs
+            </button>
+<button class="apply-modal-trigger px-5 py-2 rounded-lg bg-gradient-to-r from-secondary-container via-primary to-tertiary text-on-primary font-label-ui text-label-ui shadow-sm hover:opacity-95 active:scale-95 transition-all cursor-pointer" data-project="DevPulse" data-roles="eBPF Systems Engineer,Full-Stack UI Engineer">
+              Apply to Collaborate
+            </button>
+</div>
+</div>
+</article>
+<!-- PROJECT CARD 2 -->
+<article class="project-card rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all p-6 lg:p-8 flex flex-col gap-6 relative overflow-hidden backdrop-blur-xl border" data-roles="Frontend Dev,AI Engineer" data-techs="Python,PyTorch,Electron,WebGPU,TypeScript,AI" data-title="NeuroFlow: Local LLM Orchestration Studio">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-secondary-container via-primary to-tertiary"></div>
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="w-14 h-14 rounded-xl bg-surface-container flex items-center justify-center text-secondary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-3xl">psychology</span>
+</div>
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm bg-tertiary-fixed text-on-tertiary-fixed uppercase tracking-wider">AI Studio</span>
+<span class="px-2 py-0.5 rounded-full font-mono-sm text-mono-sm bg-surface-container-high text-on-surface-variant flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+                  Active Sprint
+                </span>
+<span class="font-mono-sm text-mono-sm text-outline">· 11 applications received</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">NeuroFlow: Local LLM Orchestration Studio</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">Lightweight desktop UI for running and routing multi-agent workflows locally using WebGPU acceleration. Zero data egress, local quant models, and node-based prompt chain visualizer.</p>
+</div>
+</div>
+<div class="flex items-center gap-2 self-start lg:self-center shrink-0">
+<div class="flex -space-x-2 overflow-hidden">
+<img class="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container-lowest object-cover" data-alt="Sophia Rodriguez profile portrait, modern female AI researcher smiling in brightly lit high-tech software studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDofp_RPW3en-PN6jrXu0-7Za_BMQHruz2DDJkH_zCn-lj28KVB-iE8EokvLINbHEhCh4QUpRJ0PIcMi1miCf2Sw8XVqce7xdyOEjP5fSQIq6_9E0K7BcmbeoDCadPSV-j7P_GbUosDuz5jv11I2B26kll9mD8x4nq29SBoWRWVibUwchX_C5AO_xKzR9arX6r2C472HO6H6BDBUUlxHj6KB-7a5UIH4JvgCcY0WRXiBS0-S7V1ZI90">
+<img class="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container-lowest object-cover" data-alt="Young male machine learning engineer wearing headphones in clean architectural creative tech office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtOG99e934JauV15Rjcz31YOjSHAObnf6byehiyUW7cYFJb9yYRURyzLhrNyJzbaGQGnyzVC5Qju2NO8Y-OFkGjh1aKMb4TL06njZMKsrhtJnx9LZ3sqOF2Ami9Q7AF-o5dgoShDPYBR8ea8dH7GNXTbry7tylg28ekqsiF6_ItQ_w03-kMPJpH17sd-UqRfV-I43PAHxqtiEOg-LJjsdVeCfoF-zVhB9ljzht8k9FJigT_wncjUM7">
+</div>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant font-medium">Sophia Rodriguez &amp; AI Working Group</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-mono-sm text-mono-sm font-semibold text-outline uppercase tracking-wider mr-1">Stack:</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-mono-sm text-mono-sm text-on-surface">Python</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-mono-sm text-mono-sm text-on-surface">PyTorch</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-mono-sm text-mono-sm text-on-surface">WebGPU</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-mono-sm text-mono-sm text-on-surface">TypeScript</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-mono-sm text-mono-sm text-on-surface">Electron</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col justify-between gap-3">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-ui text-label-ui text-secondary uppercase tracking-wide">Role Spot 01</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Frontend Performance Specialist</h3>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-mono-sm text-mono-sm font-semibold">1 Opening</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Required: WebGPU shader compute passes, Canvas rendering speedups, and responsive reactive node trees.</p>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col justify-between gap-3">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-ui text-label-ui text-secondary uppercase tracking-wide">Role Spot 02</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Python API Dev</h3>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-mono-sm text-mono-sm font-semibold">1 Opening</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Required: FastAPI, model weight streaming, local ONNX conversion pipelines, asynchronous IPC messaging.</p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 bg-surface-container-lowest">
+<div class="flex items-center gap-4 text-on-surface-variant font-mono-sm text-mono-sm w-full sm:w-auto">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base text-outline">fork_right</span> 89 Forks</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base text-outline">star</span> 940 Stars</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base text-outline">schedule</span> ~10 hrs/week</span>
+</div>
+<div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+<button class="spec-modal-trigger px-4 py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-ui text-label-ui transition-colors cursor-pointer border" data-project="NeuroFlow">
+              View Project Specs
+            </button>
+<button class="apply-modal-trigger px-5 py-2 rounded-lg bg-gradient-to-r from-secondary-container via-primary to-tertiary text-on-primary font-label-ui text-label-ui shadow-sm hover:opacity-95 active:scale-95 transition-all cursor-pointer" data-project="NeuroFlow" data-roles="Frontend Performance Specialist,Python API Dev">
+              Apply to Collaborate
+            </button>
+</div>
+</div>
+</article>
+<!-- PROJECT CARD 3 -->
+<article class="project-card rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all p-6 lg:p-8 flex flex-col gap-6 relative overflow-hidden backdrop-blur-xl border" data-roles="Backend / Systems,DevOps" data-techs="Go,Kubernetes" data-title="CloudMesh: Serverless Workflow Engine">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-secondary-container via-primary to-tertiary"></div>
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="w-14 h-14 rounded-xl bg-surface-container flex items-center justify-center text-primary-container shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-3xl">hub</span>
+</div>
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm bg-surface-container-highest text-on-surface uppercase tracking-wider">Cloud Infrastructure</span>
+<span class="px-2 py-0.5 rounded-full font-mono-sm text-mono-sm bg-surface-container-high text-on-surface-variant flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container animate-pulse"></span>
+                  Rolling Admissions
+                </span>
+<span class="font-mono-sm text-mono-sm text-outline">· 4 applications received</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">CloudMesh: Serverless Workflow Engine</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">Distributed, event-driven task coordinator built in Golang. Orchestrates hybrid multi-cloud workloads with zero cold start latency via smart container hibernation and warm pre-allocations.</p>
+</div>
+</div>
+<div class="flex items-center gap-2 self-start lg:self-center shrink-0">
+<div class="flex -space-x-2 overflow-hidden">
+<img class="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container-lowest object-cover" data-alt="DevOps engineer portrait in modern datacenter control room with blue lighting accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmI5ofj9gELotzRk1WR5f2gSmKe-b8bK6NNgyCEyQ2NFid1g_sYP4BL2tud7EmH_9LB70kYPYHbOcfxvDMvuP4q339pa3JvM8MV7l8yOA51pe5EKpc0fMOhlpx0ck0pGVR0fPhg15zLibyeqm8xNAdb5ykbb8JjUrjnzFS1dbgt6O2AXgHgk2r5k18dXTe0i2NEPjql4Wk0StsRKz1JKlqBfWFl0z7fhGlJmSuz3GRypzFNadL7T60">
+</div>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant font-medium">Elena Rostova &amp; Systems SIG</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-mono-sm text-mono-sm font-semibold text-outline uppercase tracking-wider mr-1">Stack:</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-mono-sm text-mono-sm text-on-surface">Go</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-mono-sm text-mono-sm text-on-surface">Kubernetes</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-mono-sm text-mono-sm text-on-surface">gRPC</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-mono-sm text-mono-sm text-on-surface">Protobuf</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-mono-sm text-mono-sm text-on-surface">Prometheus</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col justify-between gap-3 md:col-span-2">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-ui text-label-ui text-primary uppercase tracking-wide">Core Opening</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Backend Go Engineer</h3>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-mono-sm text-mono-sm font-semibold">2 Openings</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Required: Advanced Go goroutines channel choreography, Kubernetes Custom Resource Definitions (CRDs), and high-throughput gRPC stream optimizations.</p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 bg-surface-container-lowest">
+<div class="flex items-center gap-4 text-on-surface-variant font-mono-sm text-mono-sm w-full sm:w-auto">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base text-outline">fork_right</span> 62 Forks</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base text-outline">star</span> 520 Stars</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base text-outline">schedule</span> ~6 hrs/week</span>
+</div>
+<div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+<button class="spec-modal-trigger px-4 py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-ui text-label-ui transition-colors cursor-pointer border" data-project="CloudMesh">
+              View Project Specs
+            </button>
+<button class="apply-modal-trigger px-5 py-2 rounded-lg bg-gradient-to-r from-secondary-container via-primary to-tertiary text-on-primary font-label-ui text-label-ui shadow-sm hover:opacity-95 active:scale-95 transition-all cursor-pointer" data-project="CloudMesh" data-roles="Backend Go Engineer">
+              Apply to Collaborate
+            </button>
+</div>
+</div>
+</article>
+<!-- PROJECT CARD 4 (Solidity/DeFi Systems) -->
+<article class="project-card rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all p-6 lg:p-8 flex flex-col gap-6 relative overflow-hidden backdrop-blur-xl border" data-roles="Backend / Systems,Product Designer" data-techs="Solidity,Rust,TypeScript" data-title="OmniAnchor: Cross-Chain State Oracle">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-secondary-container via-primary to-tertiary"></div>
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="w-14 h-14 rounded-xl bg-surface-container flex items-center justify-center text-tertiary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-3xl">token</span>
+</div>
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm bg-tertiary-fixed text-on-tertiary-fixed uppercase tracking-wider">Protocol</span>
+<span class="px-2 py-0.5 rounded-full font-mono-sm text-mono-sm bg-surface-container-high text-on-surface-variant flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+                  Active Audit
+                </span>
+<span class="font-mono-sm text-mono-sm text-outline">· 8 applications received</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">OmniAnchor: Cross-Chain State Oracle</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">Zero-knowledge proof-based data synchronizer securing high-frequency state updates between EVM networks and Solana without relying on centralized validator rings.</p>
+</div>
+</div>
+<div class="flex items-center gap-2 self-start lg:self-center shrink-0">
+<div class="flex -space-x-2 overflow-hidden">
+<img class="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container-lowest object-cover" data-alt="Cryptographic software engineer looking into screen with code terminal reflections in modern tech setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-9l4kyybi8Id7ydcc4Uh6_jbWCKaiZBRRzXXkTMStxTdaxzVYO5UkSGOwBcH-CjRw8lANZY9arf7PX1p8lWLIeufF1QJ_yrrh0VAnR5BcdaRlau_NMt4I6V_3CSi67zriL3kEzUkxakpmQHdg17V0vhGzRGNa8l5cqa9SIVw3sYeL0z9mNMv_bqZjt5nIWqV3J4LPYbztgmrb8s-5-gnXIwDWmcgFxOPeO-A-Q3x9yLd9hLA4HQq1">
+<img class="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container-lowest object-cover" data-alt="UI UX digital product designer interacting with whiteboard sketches in creative software firm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjSko6TvfKFYe4vSsLo8SZDOWYGRmY-hy-V-c7hbsYtmL_WZTePBRA2pVeLe11XcWA7-b9Z_62EL28iAzqGABTVwk40JWIEHiIKpAXf2bYGaDYU3e_HMzs44ANUcdo1oxfsh3ER46RTOXMxcX-WDmukH3ux7LgnBFwpQ8l_hN9V3446mcBFioFSq08YhEZis7BF_cioMGtf4uOFowigRRglby32X3JDy7LO4rSDVrK9MqiUaun4-JA">
+</div>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant font-medium">Kaelen Voss (@kvoss)</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-mono-sm text-mono-sm font-semibold text-outline uppercase tracking-wider mr-1">Stack:</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-mono-sm text-mono-sm text-on-surface">Solidity</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-mono-sm text-mono-sm text-on-surface">Rust</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-mono-sm text-mono-sm text-on-surface">Foundry</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-mono-sm text-mono-sm text-on-surface">TypeScript</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col justify-between gap-3">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-ui text-label-ui text-tertiary uppercase tracking-wide">Role Spot 01</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Smart Contract Auditor / Dev</h3>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-mono-sm text-mono-sm font-semibold">1 Opening</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Required: Solidity gas optimization, Foundry fuzzing, and reentrancy proof verification.</p>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col justify-between gap-3">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-ui text-label-ui text-secondary uppercase tracking-wide">Role Spot 02</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Product Designer</h3>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-mono-sm text-mono-sm font-semibold">1 Opening</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Required: Figma design system design for technical explorer panels, token bridges, and status telemetry monitors.</p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 bg-surface-container-lowest">
+<div class="flex items-center gap-4 text-on-surface-variant font-mono-sm text-mono-sm w-full sm:w-auto">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base text-outline">fork_right</span> 41 Forks</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base text-outline">star</span> 388 Stars</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base text-outline">schedule</span> ~8 hrs/week</span>
+</div>
+<div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+<button class="spec-modal-trigger px-4 py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-ui text-label-ui transition-colors cursor-pointer border" data-project="OmniAnchor">
+              View Project Specs
+            </button>
+<button class="apply-modal-trigger px-5 py-2 rounded-lg bg-gradient-to-r from-secondary-container via-primary to-tertiary text-on-primary font-label-ui text-label-ui shadow-sm hover:opacity-95 active:scale-95 transition-all cursor-pointer" data-project="OmniAnchor" data-roles="Smart Contract Auditor,Product Designer">
+              Apply to Collaborate
+            </button>
+</div>
+</div>
+</article>
+<!-- PROJECT CARD 5 (AI + Design) -->
+<article class="project-card rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all p-6 lg:p-8 flex flex-col gap-6 relative overflow-hidden backdrop-blur-xl border" data-roles="Frontend Dev,Product Designer" data-techs="TypeScript,React,WebGPU" data-title="VibeCanvas: Reactive Shader Playground">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-secondary-container via-primary to-tertiary"></div>
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="w-14 h-14 rounded-xl bg-surface-container flex items-center justify-center text-secondary-container shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-3xl">brush</span>
+</div>
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm bg-surface-container-high text-on-surface-variant uppercase tracking-wider">Creative Tech</span>
+<span class="px-2 py-0.5 rounded-full font-mono-sm text-mono-sm bg-surface-container-high text-on-surface-variant flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+                  Sprint Launch
+                </span>
+<span class="font-mono-sm text-mono-sm text-outline">· 3 applications received</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">VibeCanvas: Reactive Shader Playground</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">Interactive web-based fragment shader editor with generative AI audio reactives and instantaneous live WebAssembly exports.</p>
+</div>
+</div>
+<div class="flex items-center gap-2 self-start lg:self-center shrink-0">
+<div class="flex -space-x-2 overflow-hidden">
+<img class="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container-lowest object-cover" data-alt="Creative frontend engineer with warm lighting in front of generative colorful graphics display" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDytZKinXoaeJ-Az1Zi9d8dUMciHggxNtYsH55E_bVEuld8RDuAYrYBEqzvfagsSqXCJbdS6zXlqTenIIBJZXUouX7fNVhKKkDBtnhaF3bRzlZlPf3DqVyAe7fQqpwi66pHGteoy3WcJOo6d7_h7GevvxUwPTYMUYLkx5O-bGKPQ8X1ShyPml0hfeRjxH0yEoVxjeK4Udh-dOsnXXyA8jLC8YtCWmT6egScfI17_0ibC9o1JocLLQSd">
+</div>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant font-medium">Marc Dupont (@mdupont)</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-mono-sm text-mono-sm font-semibold text-outline uppercase tracking-wider mr-1">Stack:</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-mono-sm text-mono-sm text-on-surface">TypeScript</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-mono-sm text-mono-sm text-on-surface">React</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-mono-sm text-mono-sm text-on-surface">WebGPU</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-mono-sm text-mono-sm text-on-surface">WASM</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col justify-between gap-3">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-ui text-label-ui text-primary uppercase tracking-wide">Role Spot 01</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Frontend Dev</h3>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-mono-sm text-mono-sm font-semibold">1 Opening</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Required: React performance tuning, monaco-editor customization, and WebAudio API integrations.</p>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col justify-between gap-3">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-ui text-label-ui text-secondary uppercase tracking-wide">Role Spot 02</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Product Designer</h3>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-mono-sm text-mono-sm font-semibold">1 Opening</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Required: Prototyping dark and light mode UI controls, knobs, and timeline scrubbers.</p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 bg-surface-container-lowest">
+<div class="flex items-center gap-4 text-on-surface-variant font-mono-sm text-mono-sm w-full sm:w-auto">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base text-outline">fork_right</span> 29 Forks</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base text-outline">star</span> 310 Stars</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base text-outline">schedule</span> ~5 hrs/week</span>
+</div>
+<div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+<button class="spec-modal-trigger px-4 py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-ui text-label-ui transition-colors cursor-pointer border" data-project="VibeCanvas">
+              View Project Specs
+            </button>
+<button class="apply-modal-trigger px-5 py-2 rounded-lg bg-gradient-to-r from-secondary-container via-primary to-tertiary text-on-primary font-label-ui text-label-ui shadow-sm hover:opacity-95 active:scale-95 transition-all cursor-pointer" data-project="VibeCanvas" data-roles="Frontend Dev,Product Designer">
+              Apply to Collaborate
+            </button>
+</div>
+</div>
+</article>
+</div>
+<!-- Empty State Fallback -->
+<div class="hidden p-12 text-center rounded-xl bg-surface-container-lowest flex-col items-center justify-center gap-3 shadow-sm" id="noResultsState">
+<span class="material-symbols-outlined text-5xl text-outline">manage_search</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">No matching projects found</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Try clearing some filters or searching for alternative tech keywords like "Rust", "WebGPU", or "Go".</p>
+<button class="mt-2 px-4 py-2 rounded-lg bg-primary text-on-primary font-label-ui text-label-ui cursor-pointer" id="resetAllBtn">Reset All Filters</button>
+</div>
+</div>
+<!-- APPLICATION DRAWER / MODAL DIALOG -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-on-surface/40 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-200" id="applyModal">
+<div class="relative w-full max-w-xl bg-surface-container-lowest rounded-xl shadow-xl border border-outline-variant/30 overflow-hidden scale-95 transition-all duration-200">
+<!-- Top Accent Bar -->
+<div class="h-1.5 w-full bg-gradient-to-r from-primary via-secondary-container to-tertiary"></div>
+<!-- Modal Body (Form State) -->
+<div class="p-6 md:p-8 space-y-6" id="applyFormSection">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span class="font-mono-sm text-mono-sm text-primary uppercase tracking-wide">Contributor Intake</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1" id="applyModalTitle">Apply to join DevPulse team</h2>
+</div>
+<button class="text-outline hover:text-on-surface p-1 rounded-lg hover:bg-surface-container cursor-pointer transition-colors" id="closeApplyModalBtn">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<form class="space-y-4" id="collaborationApplicationForm">
+<!-- Role Selection -->
+<div class="space-y-1.5">
+<label class="font-label-ui text-label-ui text-on-surface" for="applyRoleSelect">Target Role / Discipline</label>
+<select class="w-full px-3.5 py-2.5 bg-surface rounded-lg font-body-md text-body-md text-on-surface outline-none ring-1 ring-outline-variant focus:ring-2 focus:ring-primary-container transition-all" id="applyRoleSelect">
+<!-- Dynamically populated -->
+</select>
+</div>
+<!-- GitHub Profile -->
+<div class="space-y-1.5">
+<label class="font-label-ui text-label-ui text-on-surface" for="githubInput">GitHub Profile Link</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">code</span>
+<input class="w-full pl-10 pr-3.5 py-2.5 bg-surface rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline outline-none ring-1 ring-outline-variant focus:ring-2 focus:ring-primary-container transition-all" id="githubInput" placeholder="https://github.com/your-username" required="" type="url">
+</div>
+</div>
+<!-- Availability -->
+<div class="space-y-1.5">
+<label class="font-label-ui text-label-ui text-on-surface" for="availabilityInput">Available Commitment (Hours / Week)</label>
+<select class="w-full px-3.5 py-2.5 bg-surface rounded-lg font-body-md text-body-md text-on-surface outline-none ring-1 ring-outline-variant focus:ring-2 focus:ring-primary-container transition-all" id="availabilityInput">
+<option value="5-10">5 - 10 hrs / week (Part-time sprint)</option>
+<option value="10-20">10 - 20 hrs / week (Core contributor)</option>
+<option value="20+">20+ hrs / week (Dedicated sprint lead)</option>
+</select>
+</div>
+<!-- Experience Pitch -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-ui text-label-ui text-on-surface" for="pitchInput">Experience &amp; Why You're Excited</label>
+<span class="font-mono-sm text-mono-sm text-outline">Max 300 words</span>
+</div>
+<textarea class="w-full px-3.5 py-2.5 bg-surface rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline outline-none ring-1 ring-outline-variant focus:ring-2 focus:ring-primary-container transition-all resize-none" id="pitchInput" placeholder="Briefly describe low-level systems or frontend work you've authored, PRs merged, or relevant repositories..." required="" rows="3"></textarea>
+</div>
+<div class="pt-2 flex items-center justify-end gap-3">
+<button class="px-4 py-2 rounded-lg bg-surface-container-high text-on-surface font-label-ui text-label-ui hover:bg-surface-container-highest transition-colors cursor-pointer" id="cancelApplyBtn" type="button">
+              Cancel
+            </button>
+<button class="px-5 py-2.5 rounded-lg bg-gradient-to-r from-secondary-container via-primary to-tertiary text-on-primary font-label-ui text-label-ui shadow-sm hover:opacity-95 active:scale-95 transition-all cursor-pointer" type="submit">
+              Submit Application
+            </button>
+</div>
+</form>
+</div>
+<!-- Success State -->
+<div class="hidden p-8 text-center flex-col items-center justify-center gap-4" id="applySuccessSection">
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-4xl">check_circle</span>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline-md text-headline-md text-on-surface">Application Dispatched</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mx-auto">Your application has been routed directly to the project maintainers. Review velocity is typically within <strong class="font-semibold text-on-surface">2 business days</strong>.</p>
+</div>
+<div class="w-full p-4 rounded-lg bg-surface-container font-mono-sm text-mono-sm text-on-surface-variant text-left flex items-center justify-between">
+<span class="">Tracking ID: <code class="text-primary font-semibold">VIBE-APP-8941</code></span>
+<span class="flex items-center gap-1 text-secondary"><span class="w-2 h-2 rounded-full bg-secondary-container"></span> Queued for maintainer review</span>
+</div>
+<button class="mt-2 px-6 py-2 rounded-lg bg-primary text-on-primary font-label-ui text-label-ui cursor-pointer" id="closeSuccessBtn">
+          Return to Projects
+        </button>
+</div>
+</div>
+</div>
+<!-- SUBMIT A NEW PROJECT MODAL -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-on-surface/40 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-200" id="submitProjectModal">
+<div class="relative w-full max-w-xl bg-surface-container-lowest rounded-xl shadow-xl border border-outline-variant/30 overflow-hidden scale-95 transition-all duration-200">
+<div class="h-1.5 w-full bg-gradient-to-r from-secondary-container via-primary to-tertiary"></div>
+<div class="p-6 md:p-8 space-y-6">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-mono-sm text-mono-sm text-primary uppercase tracking-wide">Community Launchpad</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1">Submit an Open Project</h2>
+</div>
+<button class="text-outline hover:text-on-surface p-1 rounded-lg hover:bg-surface-container cursor-pointer transition-colors" id="closeSubmitModalBtn">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<form class="space-y-4" id="newProjectForm">
+<div class="space-y-1.5">
+<label class="font-label-ui text-label-ui text-on-surface">Project Title</label>
+<input class="w-full px-3.5 py-2.5 bg-surface rounded-lg font-body-md text-body-md text-on-surface outline-none ring-1 ring-outline-variant focus:ring-2 focus:ring-primary-container transition-all" placeholder="e.g., HyperTrace: Distributed Profiler" required="" type="text">
+</div>
+<div class="space-y-1.5">
+<label class="font-label-ui text-label-ui text-on-surface">One-Sentence Elevator Pitch</label>
+<textarea class="w-full px-3.5 py-2.5 bg-surface rounded-lg font-body-md text-body-md text-on-surface outline-none ring-1 ring-outline-variant focus:ring-2 focus:ring-primary-container transition-all resize-none" placeholder="Explain the technical problem and architectural vision in 140 chars..." required="" rows="2"></textarea>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-1.5">
+<label class="font-label-ui text-label-ui text-on-surface">Primary Stack</label>
+<input class="w-full px-3.5 py-2.5 bg-surface rounded-lg font-body-md text-body-md text-on-surface outline-none ring-1 ring-outline-variant focus:ring-2 focus:ring-primary-container transition-all" placeholder="e.g., Rust, WebAssembly, Go" required="" type="text">
+</div>
+<div class="space-y-1.5">
+<label class="font-label-ui text-label-ui text-on-surface">Repository URL</label>
+<input class="w-full px-3.5 py-2.5 bg-surface rounded-lg font-body-md text-body-md text-on-surface outline-none ring-1 ring-outline-variant focus:ring-2 focus:ring-primary-container transition-all" placeholder="https://github.com/org/repo" required="" type="url">
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="font-label-ui text-label-ui text-on-surface">Open Contributor Roles Needed</label>
+<input class="w-full px-3.5 py-2.5 bg-surface rounded-lg font-body-md text-body-md text-on-surface outline-none ring-1 ring-outline-variant focus:ring-2 focus:ring-primary-container transition-all" placeholder="e.g., Systems Architect (1), UI Performance (1)" required="" type="text">
+</div>
+<div class="pt-2 flex items-center justify-end gap-3">
+<button class="px-4 py-2 rounded-lg bg-surface-container-high text-on-surface font-label-ui text-label-ui hover:bg-surface-container-highest transition-colors cursor-pointer" id="cancelSubmitBtn" type="button">
+              Cancel
+            </button>
+<button class="px-5 py-2.5 rounded-lg bg-gradient-to-r from-primary to-tertiary text-on-primary font-label-ui text-label-ui shadow-sm hover:opacity-95 active:scale-95 transition-all cursor-pointer" type="submit">
+              Dispatch to Community Review
+            </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- SPECS MODAL -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-on-surface/40 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-200" id="specModal">
+<div class="relative w-full max-w-2xl bg-surface-container-lowest rounded-xl shadow-xl border border-outline-variant/30 overflow-hidden scale-95 transition-all duration-200">
+<div class="h-1.5 w-full bg-secondary"></div>
+<div class="p-6 md:p-8 space-y-6">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-mono-sm text-mono-sm text-secondary uppercase tracking-wider">Architecture Brief &amp; Requirements</span>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1" id="specModalTitle">Project Specifications</h2>
+</div>
+<button class="text-outline hover:text-on-surface p-1 rounded-lg hover:bg-surface-container cursor-pointer transition-colors" id="closeSpecModalBtn">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="space-y-4 font-body-md text-body-md text-on-surface-variant max-h-[60vh] overflow-y-auto pr-2">
+<div class="p-4 rounded-lg bg-surface-container-low space-y-2">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Target Architecture</h4>
+<p class="">Components follow strict zero-copy ingestion patterns with decoupled telemetry rings. Low latency syscall inspection utilizes kernel BPF maps before piping into regional Kafka buffers.</p>
+</div>
+<div class="space-y-2">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Development Milestones</h4>
+<ul class="space-y-1.5 list-disc list-inside font-body-sm text-body-sm">
+<li class=""><strong>Milestone 1:</strong> Trace Collector Kernel Probe implementation (Weeks 1-3)</li>
+<li class=""><strong>Milestone 2:</strong> gRPC Streaming Channel &amp; Session multiplexing (Weeks 4-6)</li>
+<li class=""><strong>Milestone 3:</strong> High-DPI UI Canvas real-time event visualizer (Weeks 7-9)</li>
+</ul>
+</div>
+<div class="space-y-2">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Codebase Standards</h4>
+<div class="p-3 bg-surface-container rounded font-mono-sm text-mono-sm text-on-surface flex items-center justify-between">
+<code>git clone https://github.com/thecodevibe/specs-blueprint.git</code>
+<button class="text-primary hover:underline cursor-pointer" onclick="navigator.clipboard.writeText('git clone https://github.com/thecodevibe/specs-blueprint.git'); this.innerText='Copied!'; setTimeout(()=&gt;this.innerText='Copy', 1500);">Copy</button>
+</div>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-end">
+<button class="px-5 py-2.5 rounded-lg bg-primary text-on-primary font-label-ui text-label-ui cursor-pointer" id="closeSpecBtnDone">
+            Close Specs
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // DOM Elements
+  const searchInput = document.getElementById('searchInput');
+  const projectCards = document.querySelectorAll('.project-card');
+  const techPills = document.querySelectorAll('.tech-pill');
+  const rolePills = document.querySelectorAll('.role-pill');
+  const noResults = document.getElementById('noResultsState');
+  const resetAllBtn = document.getElementById('resetAllBtn');
+  const clearFiltersBtn = document.getElementById('clearFiltersBtn');
+
+  // Modal elements: Apply
+  const applyModal = document.getElementById('applyModal');
+  const applyModalTitle = document.getElementById('applyModalTitle');
+  const applyRoleSelect = document.getElementById('applyRoleSelect');
+  const applyFormSection = document.getElementById('applyFormSection');
+  const applySuccessSection = document.getElementById('applySuccessSection');
+  const collaborationForm = document.getElementById('collaborationApplicationForm');
+  const closeApplyModalBtn = document.getElementById('closeApplyModalBtn');
+  const cancelApplyBtn = document.getElementById('cancelApplyBtn');
+  const closeSuccessBtn = document.getElementById('closeSuccessBtn');
+
+  // Modal elements: Submit Project
+  const submitModal = document.getElementById('submitProjectModal');
+  const openSubmitModalBtn = document.getElementById('openSubmitModalBtn');
+  const closeSubmitModalBtn = document.getElementById('closeSubmitModalBtn');
+  const cancelSubmitBtn = document.getElementById('cancelSubmitBtn');
+  const newProjectForm = document.getElementById('newProjectForm');
+
+  // Modal elements: Specs
+  const specModal = document.getElementById('specModal');
+  const specModalTitle = document.getElementById('specModalTitle');
+  const closeSpecModalBtn = document.getElementById('closeSpecModalBtn');
+  const closeSpecBtnDone = document.getElementById('closeSpecBtnDone');
+
+  let activeTech = 'all';
+  let activeRole = 'all';
+
+  function filterProjects() {
+    const query = searchInput.value.toLowerCase().trim();
+    let visibleCount = 0;
+
+    projectCards.forEach(card => {
+      const title = card.getAttribute('data-title').toLowerCase();
+      const techs = card.getAttribute('data-techs') || '';
+      const roles = card.getAttribute('data-roles') || '';
+
+      const matchesSearch = !query || title.includes(query) || techs.toLowerCase().includes(query);
+      const matchesTech = (activeTech === 'all') || techs.includes(activeTech);
+      const matchesRole = (activeRole === 'all') || roles.includes(activeRole);
+
+      if (matchesSearch && matchesTech && matchesRole) {
+        card.classList.remove('hidden');
+        visibleCount++;
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+
+    if (visibleCount === 0) {
+      noResults.classList.remove('hidden');
+      noResults.classList.add('flex');
+    } else {
+      noResults.classList.add('hidden');
+      noResults.classList.remove('flex');
+    }
+  }
+
+  // Filter events
+  techPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      techPills.forEach(p => {
+        p.classList.remove('bg-primary', 'text-on-primary', 'active');
+        p.classList.add('bg-surface-container', 'text-on-surface');
+      });
+      pill.classList.remove('bg-surface-container', 'text-on-surface');
+      pill.classList.add('bg-primary', 'text-on-primary', 'active');
+      activeTech = pill.getAttribute('data-tech');
+      filterProjects();
+    });
+  });
+
+  rolePills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      rolePills.forEach(p => {
+        p.classList.remove('bg-secondary-fixed', 'text-on-secondary-fixed', 'active');
+        p.classList.add('bg-surface-container', 'text-on-surface-variant');
+      });
+      pill.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      pill.classList.add('bg-secondary-fixed', 'text-on-secondary-fixed', 'active');
+      activeRole = pill.getAttribute('data-role');
+      filterProjects();
+    });
+  });
+
+  searchInput.addEventListener('input', filterProjects);
+
+  function resetAll() {
+    searchInput.value = '';
+    activeTech = 'all';
+    activeRole = 'all';
+
+    techPills.forEach((p, idx) => {
+      if (idx === 0) {
+        p.classList.remove('bg-surface-container', 'text-on-surface');
+        p.classList.add('bg-primary', 'text-on-primary', 'active');
+      } else {
+        p.classList.remove('bg-primary', 'text-on-primary', 'active');
+        p.classList.add('bg-surface-container', 'text-on-surface');
+      }
+    });
+
+    rolePills.forEach((p, idx) => {
+      if (idx === 0) {
+        p.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        p.classList.add('bg-secondary-fixed', 'text-on-secondary-fixed', 'active');
+      } else {
+        p.classList.remove('bg-secondary-fixed', 'text-on-secondary-fixed', 'active');
+        p.classList.add('bg-surface-container', 'text-on-surface-variant');
+      }
+    });
+
+    filterProjects();
+  }
+
+  resetAllBtn.addEventListener('click', resetAll);
+  clearFiltersBtn.addEventListener('click', resetAll);
+
+  // Apply Modal handlers
+  function openApplyModal(projectName, rolesList) {
+    applyModalTitle.innerText = `Apply to join ${projectName} team`;
+    applyRoleSelect.innerHTML = '';
+    
+    const roles = rolesList.split(',').map(r => r.trim());
+    roles.forEach(role => {
+      const opt = document.createElement('option');
+      opt.value = role;
+      opt.innerText = role;
+      applyRoleSelect.appendChild(opt);
+    });
+
+    applyFormSection.classList.remove('hidden');
+    applySuccessSection.classList.add('hidden');
+    applySuccessSection.classList.remove('flex');
+
+    applyModal.classList.remove('opacity-0', 'pointer-events-none');
+    applyModal.children[0].classList.remove('scale-95');
+    applyModal.children[0].classList.add('scale-100');
+  }
+
+  function closeApplyModal() {
+    applyModal.classList.add('opacity-0', 'pointer-events-none');
+    applyModal.children[0].classList.add('scale-95');
+    applyModal.children[0].classList.remove('scale-100');
+    collaborationForm.reset();
+  }
+
+  document.querySelectorAll('.apply-modal-trigger').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const pName = btn.getAttribute('data-project');
+      const pRoles = btn.getAttribute('data-roles') || 'General Contributor';
+      openApplyModal(pName, pRoles);
+    });
+  });
+
+  closeApplyModalBtn.addEventListener('click', closeApplyModal);
+  cancelApplyBtn.addEventListener('click', closeApplyModal);
+  closeSuccessBtn.addEventListener('click', closeApplyModal);
+
+  collaborationForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    applyFormSection.classList.add('hidden');
+    applySuccessSection.classList.remove('hidden');
+    applySuccessSection.classList.add('flex');
+  });
+
+  // Submit Modal Handlers
+  openSubmitModalBtn.addEventListener('click', () => {
+    submitModal.classList.remove('opacity-0', 'pointer-events-none');
+    submitModal.children[0].classList.remove('scale-95');
+    submitModal.children[0].classList.add('scale-100');
+  });
+
+  function closeSubmitModal() {
+    submitModal.classList.add('opacity-0', 'pointer-events-none');
+    submitModal.children[0].classList.add('scale-95');
+    submitModal.children[0].classList.remove('scale-100');
+    newProjectForm.reset();
+  }
+
+  closeSubmitModalBtn.addEventListener('click', closeSubmitModal);
+  cancelSubmitBtn.addEventListener('click', closeSubmitModal);
+  newProjectForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    closeSubmitModal();
+    alert('Project dispatched to Community SIG reviewers! Verification link dispatched to your developer profile.');
+  });
+
+  // Specs Modal Handlers
+  document.querySelectorAll('.spec-modal-trigger').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const pName = btn.getAttribute('data-project');
+      specModalTitle.innerText = `${pName} Blueprint Specifications`;
+      specModal.classList.remove('opacity-0', 'pointer-events-none');
+      specModal.children[0].classList.remove('scale-95');
+      specModal.children[0].classList.add('scale-100');
+    });
+  });
+
+  function closeSpecModal() {
+    specModal.classList.add('opacity-0', 'pointer-events-none');
+    specModal.children[0].classList.add('scale-95');
+    specModal.children[0].classList.remove('scale-100');
+  }
+
+  closeSpecModalBtn.addEventListener('click', closeSpecModal);
+  closeSpecBtnDone.addEventListener('click', closeSpecModal);
+
+  // Keyboard shortcut listener (CMD+K to focus search, ESC to dismiss modals)
+  window.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      searchInput.focus();
+    }
+    if (e.key === 'Escape') {
+      closeApplyModal();
+      closeSubmitModal();
+      closeSpecModal();
+    }
+  });
+</script></main><footer class="w-full bg-surface border-t border-slate-200/80 pt-16 pb-12 mt-12">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-slate-200/70">
+      <div class="md:col-span-5 space-y-4">
+        <div class="flex items-center gap-3">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8DHOrXWEJk1jQYWNqugSY0qOGHR6d5bRTrMRMBPQhPO-L9Ay6fEr0njMcCOKD-tj_v_I4g4yG3G9UDt7UR2FvWoK1OMf2REWonYuhwVL4DqPkCPJCi38_TlqPT18y0F1twp_NsgdOaoevoEGmZFh4Nt1ohSGqZzInc8czMtAxBfBmFboCiAQXDLGVjaNyUHk4BfVCXluRLe3VlLqqJzbGj2HSf3cbUv_ofN917tmOg6Hc7OwZit9y" alt="The Code Vibe Logo" class="w-9 h-9 object-contain rounded-full shadow-sm">
+          <span class="text-xl font-bold tracking-tight bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">The Code Vibe</span>
+        </div>
+        <p class="text-sm text-slate-600 max-w-sm leading-relaxed">
+          Where developers explore technology, build meaningful projects, and pair up to ship real software.
+        </p>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-xs text-emerald-700 font-medium">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span class="">All Systems Operational • 12,400+ Active Builders</span>
+        </div>
+        <div class="flex items-center gap-3 pt-2 text-slate-500">
+          <a href="#" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-colors hover:text-slate-900" aria-label="GitHub">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path></svg>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-colors hover:text-slate-900" aria-label="Discord">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.894.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"></path></svg>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-colors hover:text-slate-900" aria-label="X">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-colors hover:text-slate-900" aria-label="LinkedIn">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.8v8.37h-2.8V10.9M7.86 6.81a1.63 1.63 0 1 0 1.63 1.63 1.63 1.63 0 0 0-1.63-1.63z"></path></svg>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-colors hover:text-slate-900" aria-label="YouTube">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
+          </a>
+        </div>
+      </div>
+      <div class="md:col-span-2 space-y-3">
+        <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-900">Navigation</h4>
+        <ul class="space-y-2 text-sm text-slate-600">
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">Home</a></li>
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">About Us</a></li>
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">Events &amp; Workshops</a></li>
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">Collaborate</a></li>
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">Admin Portal</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-2 space-y-3">
+        <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-900">Community</h4>
+        <ul class="space-y-2 text-sm text-slate-600">
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">AI Agents Hackathon</a></li>
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">Pair Programming Circles</a></li>
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">Open Source Pods</a></li>
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">Mentorship Network</a></li>
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">Leaderboard</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-3 space-y-3">
+        <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-900">Resources</h4>
+        <ul class="space-y-2 text-sm text-slate-600">
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">Documentation</a></li>
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">Community Guidelines</a></li>
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">Code of Conduct</a></li>
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">Brand Assets</a></li>
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">API &amp; Telemetry</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+      <p class="">© 2025 The Code Vibe Community. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a href="#" class="hover:text-slate-800 transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-slate-800 transition-colors">Terms of Service</a>
+        <a href="#" class="hover:text-slate-800 transition-colors">Security</a>
+        <a href="#" class="hover:text-slate-800 transition-colors">Cookie Settings</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+</body></html>

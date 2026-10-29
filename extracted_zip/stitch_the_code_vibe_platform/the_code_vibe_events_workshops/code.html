@@ -1,0 +1,731 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>The Code Vibe</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed-variant": "#003ea8", "surface-variant": "#dae2fd", "tertiary-fixed": "#eaddff", "surface": "#faf8ff", "on-error": "#ffffff", "inverse-primary": "#b4c5ff", "on-secondary-container": "#00546b", "secondary": "#006782", "on-surface": "#131b2e", "surface-bright": "#faf8ff", "on-primary": "#ffffff", "on-tertiary-container": "#f7edff", "on-secondary-fixed-variant": "#004d63", "on-secondary-fixed": "#001f29", "error-container": "#ffdad6", "on-surface-variant": "#434655", "primary-container": "#2563eb", "on-secondary": "#ffffff", "secondary-fixed-dim": "#5ed4ff", "surface-tint": "#0053db", "inverse-on-surface": "#eef0ff", "primary": "#004ac6", "on-primary-fixed": "#00174b", "error": "#ba1a1a", "outline": "#737686", "tertiary-fixed-dim": "#d2bbff", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#5a00c6", "surface-container": "#eaedff", "inverse-surface": "#283044", "secondary-container": "#2fcdfe", "primary-fixed-dim": "#b4c5ff", "outline-variant": "#c3c6d7", "on-tertiary-fixed": "#25005a", "on-primary-container": "#eeefff", "on-error-container": "#93000a", "on-background": "#131b2e", "tertiary": "#6a1edb", "surface-dim": "#d2d9f4", "tertiary-container": "#8343f4", "on-tertiary": "#ffffff", "surface-container-low": "#f2f3ff", "background": "#faf8ff", "surface-container-highest": "#dae2fd", "surface-container-high": "#e2e7ff", "secondary-fixed": "#bbe9ff", "primary-fixed": "#dbe1ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "2rem", "space-md": "1rem", "space-xs": "0.25rem", "margin-mobile": "1rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter-sm": "1rem", "gutter": "1.5rem" }, "fontFamily": { "headline-md": [ "Space Grotesk" ], "body-md": [ "Inter" ], "display-hero-mobile": [ "Space Grotesk" ], "body-sm": [ "Inter" ], "headline-xl": [ "Space Grotesk" ], "headline-lg": [ "Space Grotesk" ], "mono-lg": [ "JetBrains Mono" ], "display-hero": [ "Space Grotesk" ], "label-ui": [ "Inter" ], "headline-xl-mobile": [ "Space Grotesk" ], "mono-sm": [ "JetBrains Mono" ], "body-lg": [ "Inter" ], "headline-sm": [ "Space Grotesk" ] }, "fontSize": { "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-md": [ "15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" } ], "display-hero-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-sm": [ "13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-xl": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "mono-lg": [ "14px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "label-ui": [ "13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "headline-xl-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "mono-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "body-lg": [ "18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm" data-path="home" href="#"><img alt="The Code Vibe Logo" class="h-8 w-auto object-contain rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL_2NeBgzbw77HPFFtuBASjEZF23Y6MXCO4G2bhotzshkYNsqaaFzKSRCMvjEHBohHH3b3HlLkak5x8vMXhHcuFWZ1R25b6SGDc1PIVZlwzw2s9NJQNn5wrlGiTCUFyHIkd7qwP58ZhOu-pip-7KJ-I4ky8H7m6zc1a9CSM8ZxVjDHxlGYXfIgO5x99FUBU60_QGfyDqfik6z91DH5BIZJzScIwBWo0DJRsTUWz3Vk0qsqoGx5PXpAEe1V0KH3cY032g"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">The Code Vibe</span></a><nav class="hidden lg:flex items-center gap-space-xs p-1" data-active-classes="text-primary font-semibold bg-surface-container-high rounded-lg"><a class="px-3 py-1.5 font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" data-path="home" href="#">Home</a><a class="px-3 py-1.5 font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" data-path="about" href="#">About</a><a aria-current="page" class="px-3 py-1.5 transition-colors text-primary font-semibold bg-surface-container-high rounded-lg" data-path="events" href="#">Events</a><a class="px-3 py-1.5 font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" data-path="collaborate" href="#">Collaborate</a><a class="px-3 py-1.5 font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors inline-flex items-center gap-1.5" data-path="admin-portal" href="#"><span class="w-1.5 h-1.5 rounded-full bg-secondary-container animate-pulse"></span>Admin Portal</a></nav></div><div class="flex items-center gap-space-md"><a class="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-gradient-to-r from-primary to-tertiary text-on-primary font-label-ui text-label-ui shadow-sm hover:opacity-95 active:scale-95 transition-all" data-path="join-community" href="#">Join Community</a><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyuVx_d7jSI4eKcNT-HnXOtS7osOz_D-zjSjTPwJm6r5FVkIaYJu8ROcCoyl4YutObKhxihlJdtxTtxgfIQCtIGu4xH155rF6pK-VIaP92os1u_b8Gdviogsib4yBkI16_hG0F8buJ33uda__jWwAEGn_hr191O9_sjEZbYG-cosQ4piHHkHWPbckTPxYc9l5SN_VbBWX4c14Rd3DCR6JEQdBF5AO9sm1TYn0z9W9F6WVe_kJq3zhV"></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Subtle Ambient Glow Canvas Decorators -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-24 left-1/6 w-[600px] h-[500px] rounded-full bg-gradient-to-tr from-secondary-container/25 via-primary/15 to-transparent blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-48 -right-24 w-[650px] h-[650px] rounded-full bg-gradient-to-bl from-tertiary/20 via-primary-container/15 to-secondary/10 blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-[680px] left-1/3 w-[550px] h-[550px] rounded-full bg-gradient-to-r from-secondary-container/15 to-tertiary-container/15 blur-3xl pointer-events-none -z-10"></div><div class="max-w-7xl mx-auto px-6 lg:px-12 py-space-xl">
+<!-- Header Section: Discoverability & Filter Toolbar -->
+<section class="space-y-space-lg mb-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="space-y-space-xs max-w-2xl">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-surface-container-high font-mono-sm text-mono-sm text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container mr-1.5 animate-ping"></span>
+                LIVE EVENT PROTOCOL
+              </span>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">SYS.REV.2025</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Community Events &amp; Workshops</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+              Learn, compete, and level up with fellow developers across hackathons, deep-dive workshops, and tech talks.
+            </p>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-lowest p-2 rounded-xl shadow-sm" style="background: rgba(255, 255, 255, 0.72); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.9); box-shadow: rgba(37, 99, 235, 0.05) 0px 8px 32px, rgba(255, 255, 255, 0.8) 0px 1px 1px inset;">
+<div class="flex items-center gap-2 px-3 py-1.5 bg-surface-container rounded-lg">
+<span class="material-symbols-outlined text-primary text-base">calendar_month</span>
+<span class="font-mono-sm text-mono-sm text-on-surface font-semibold">Q4 2025 COHORT</span>
+</div>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant px-2">Synced: 18m ago</span>
+</div>
+</div>
+<!-- Search & Dynamic Filter Suite -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm space-y-space-md" style="background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.9); box-shadow: rgba(19, 27, 46, 0.04) 0px 12px 36px, rgba(255, 255, 255, 0.8) 0px 1px 1px inset;">
+<div class="flex flex-col lg:flex-row gap-space-md items-center justify-between">
+<div class="relative w-full lg:w-2/3">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-11 pr-14 py-3 bg-surface-container-low font-body-md text-body-md text-on-surface placeholder:text-outline rounded-lg outline-none transition-all focus:bg-surface-container-lowest focus:shadow-md" id="eventSearchInput" placeholder="Search events by topic, technology, or speaker..." type="text" style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(226, 232, 255, 0.8); box-shadow: rgba(0, 0, 0, 0.03) 0px 1px 2px inset;">
+<span class="absolute right-3.5 top-1/2 -translate-y-1/2 font-mono-sm text-mono-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">⌘K</span>
+</div>
+<!-- Date/Status Dropdown Selector -->
+<div class="relative w-full lg:w-72">
+<div class="flex items-center justify-between px-4 py-3 bg-surface-container-low rounded-lg cursor-pointer select-none" id="timeframeDropdownBtn" style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(226, 232, 255, 0.8);">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">schedule</span>
+<span class="font-label-ui text-label-ui text-on-surface" id="selectedTimeframe">Upcoming Events</span>
+</div>
+<span class="material-symbols-outlined text-outline text-sm transition-transform" id="dropdownArrow">expand_more</span>
+</div>
+<div class="hidden absolute top-full left-0 right-0 mt-2 bg-surface-container-lowest rounded-xl shadow-xl z-30 py-2" id="timeframeDropdownMenu" style="background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(24px); border: 1px solid rgba(255, 255, 255, 0.95); box-shadow: rgba(0, 74, 198, 0.08) 0px 16px 40px, rgba(255, 255, 255, 0.9) 0px 1px 1px inset;">
+<button class="w-full text-left px-4 py-2 font-body-sm text-body-sm text-on-surface hover:bg-surface-container transition-colors flex items-center justify-between" onclick="setTimeframe('Upcoming Events')" type="button">
+<span class="">Upcoming Events</span>
+<span class="font-mono-sm text-mono-sm text-primary">Active</span>
+</button>
+<button class="w-full text-left px-4 py-2 font-body-sm text-body-sm text-on-surface hover:bg-surface-container transition-colors flex items-center justify-between" onclick="setTimeframe('This Month')" type="button">
+<span class="">This Month</span>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">8 items</span>
+</button>
+<button class="w-full text-left px-4 py-2 font-body-sm text-body-sm text-on-surface hover:bg-surface-container transition-colors flex items-center justify-between" onclick="setTimeframe('Past Archive')" type="button">
+<span class="">Past Archive</span>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">42 recorded</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Category Filter Pills -->
+<div class="flex flex-wrap items-center gap-2 pt-1 overflow-x-auto">
+<button class="category-btn active-category-btn px-4 py-1.5 rounded-full font-label-ui text-label-ui text-on-primary-container shadow-sm transition-all bg-gradient-to-r from-primary to-tertiary" onclick="filterCategory('all', this)" type="button">
+              All Events (24)
+            </button>
+<button class="category-btn px-4 py-1.5 rounded-full font-label-ui text-label-ui bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" onclick="filterCategory('hackathon', this)" type="button" style="background: rgba(234, 237, 255, 0.6); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.8);">
+              Hackathons (5)
+            </button>
+<button class="category-btn px-4 py-1.5 rounded-full font-label-ui text-label-ui bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" onclick="filterCategory('workshop', this)" type="button" style="background: rgba(234, 237, 255, 0.6); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.8);">
+              Workshops (8)
+            </button>
+<button class="category-btn px-4 py-1.5 rounded-full font-label-ui text-label-ui bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" onclick="filterCategory('talk', this)" type="button" style="background: rgba(234, 237, 255, 0.6); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.8);">
+              Tech Talks (7)
+            </button>
+<button class="category-btn px-4 py-1.5 rounded-full font-label-ui text-label-ui bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" onclick="filterCategory('meetup', this)" type="button" style="background: rgba(234, 237, 255, 0.6); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.8);">
+              Meetups (4)
+            </button>
+</div>
+</div>
+</section>
+<!-- Featured / Hero Event Banner -->
+
+<!-- Main Upcoming Events Grid -->
+<section class="space-y-space-md mb-space-xl">
+<div class="flex items-center justify-between">
+<div class="space-y-0.5">
+<h2 class="font-headline-md text-headline-md text-on-surface">Upcoming Scheduled Sessions</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Deep technical immersion hosted weekly by community leads.</p>
+</div>
+<div class="font-mono-sm text-mono-sm text-on-surface-variant hidden sm:block">
+            Showing <span class="font-semibold text-on-surface">4 of 24</span> confirmed sessions
+          </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md" id="eventsGrid"><!-- Event Card 1 -->
+<div class="event-card group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col overflow-hidden border border-slate-200/70" data-category="workshop" style="background: rgba(255, 255, 255, 0.72); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.85); box-shadow: rgba(37, 99, 235, 0.05) 0px 10px 30px, rgba(255, 255, 255, 0.9) 0px 1px 1px inset;">
+  <div class="relative h-48 w-full overflow-hidden bg-surface-container">
+    <img src="https://lh3.googleusercontent.com/aida/AEtjO1V8xRv2-lE656xEurDdYlPC7wFHUgAc9YGOi1X0bACSu-_ODWIzEf_PNtUCH0hZgKlobWOQfCI0nZgh44ZMW2yY0RzBByKP0tT6bDy4omBrWT6X-KsR024UWBQkFmABbZv7KATfXuMO_rNiEbfc4as31TWurKPUKy4tJjcnvGu8fmh5QBuZY1wQTzOZpl71qSRbodf8EHczQuS5EXJxutSE9KJZZghxS-COO0f_15-6XjabgPMZY_eINg" alt="Full-Stack Vector Search with Postgres &amp; pgvector" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+  </div>
+  <div class="p-6 flex flex-col flex-1 justify-between space-y-4">
+    <div class="space-y-3">
+      <div class="flex items-center justify-between"><span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm bg-secondary-fixed text-on-secondary-fixed"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Online</span><span class="px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm bg-tertiary-fixed text-on-tertiary-fixed-variant">Workshop</span></div>
+      <div>
+        <h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+          Full-Stack Vector Search with Postgres &amp; pgvector
+        </h3>
+        <p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-1">
+          Architecting scalable semantic retrieval pipelines directly in PostgreSQL with HNSW indexing.
+        </p>
+      </div>
+      <div class="flex flex-wrap items-center gap-4 text-on-surface-variant font-mono-sm text-mono-sm pt-1">
+        <div class="flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-sm text-primary">calendar_today</span>
+          <span class="">Dec 2, 2025</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-sm text-primary">schedule</span>
+          <span class="">10:00 AM – 1:00 PM PST</span>
+        </div>
+      </div>
+    </div>
+    <div class="pt-2 flex justify-end border-t border-slate-100">
+      <button type="button" onclick="openDetailsModal('Full-Stack Vector Search with Postgres &amp; pgvector', 'workshop')" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-ui text-label-ui transition-colors group/btn">
+        <span class="">More Details</span>
+        <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-0.5 transition-transform">arrow_forward</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Event Card 2 -->
+<div class="event-card group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col overflow-hidden border border-slate-200/70" data-category="talk" style="background: rgba(255, 255, 255, 0.72); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.85); box-shadow: rgba(37, 99, 235, 0.05) 0px 10px 30px, rgba(255, 255, 255, 0.9) 0px 1px 1px inset;">
+  <div class="relative h-48 w-full overflow-hidden bg-surface-container">
+    <img src="https://lh3.googleusercontent.com/aida/AEtjO1V1tOU0WqQTsUSsU_f9D1VRXboW0NF1Py15sHlyuQoY0_5-oSr65ZCUWYEtUo0sbUoUAzDoN4lKtep-a31dt5BHtkFNWDERSXm32tl2iSwW1q8_W1L7mVInACjFfyAIYBVgbfB-Ny5c5WqCS96poHHinojsQMLpDc0qEP3_InS2wx0908FrZOW2kgoiK5QtfSYZ4a5kyDYSBPKwtB2rr4qhdJka6n7UUi7asurCThhOq7H3ui-1aYl6WIc" alt="Building High-Throughput Microservices in Go" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+  </div>
+  <div class="p-6 flex flex-col flex-1 justify-between space-y-4">
+    <div class="space-y-3">
+      <div class="flex items-center justify-between"><span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm bg-secondary-fixed text-on-secondary-fixed"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Online</span><span class="px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm bg-secondary-fixed text-on-secondary-fixed-variant">Tech Talk</span></div>
+      <div>
+        <h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+          Building High-Throughput Microservices in Go
+        </h3>
+        <p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-1">
+          Deconstructing zero-allocation serialization, lock-free concurrency rings, and 500k RPS loads.
+        </p>
+      </div>
+      <div class="flex flex-wrap items-center gap-4 text-on-surface-variant font-mono-sm text-mono-sm pt-1">
+        <div class="flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-sm text-primary">calendar_today</span>
+          <span class="">Dec 8, 2025</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-sm text-primary">schedule</span>
+          <span class="">6:00 PM – 8:30 PM PST</span>
+        </div>
+      </div>
+    </div>
+    <div class="pt-2 flex justify-end border-t border-slate-100">
+      <button type="button" onclick="openDetailsModal('Building High-Throughput Microservices in Go', 'talk')" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-ui text-label-ui transition-colors group/btn">
+        <span class="">More Details</span>
+        <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-0.5 transition-transform">arrow_forward</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Event Card 3 -->
+<div class="event-card group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col overflow-hidden border border-slate-200/70" data-category="hackathon" style="background: rgba(255, 255, 255, 0.72); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.85); box-shadow: rgba(37, 99, 235, 0.05) 0px 10px 30px, rgba(255, 255, 255, 0.9) 0px 1px 1px inset;">
+  <div class="relative h-48 w-full overflow-hidden bg-surface-container">
+    <img src="https://lh3.googleusercontent.com/aida/AEtjO1V9aX6OuzBN_kVEPYmsGA_5dFKZwtMchMLm04UJIutXj_1UH7vah8NGzeL3g-SXN4paLbtWNILCCjsGhw_GGYU3usouzclo4h1XdSLWY3xzzS5izgdIghoIfwVkNoxL9zwUH7_1gq7HFyn_53KDDkoqGHV_Bcf2Jyvxpaz9jKseNd-3XAOCvRIqQVUyMLu2TtZd6Uqb-caGbFViW-YiBqe3LHAb2cIblD69NmYM-laReJOuuMSfc9qbGA" alt="Open Source AI Sprint: Fine-Tuning LLMs" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+  </div>
+  <div class="p-6 flex flex-col flex-1 justify-between space-y-4">
+    <div class="space-y-3">
+      <div class="flex items-center justify-between"><span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm bg-secondary-fixed text-on-secondary-fixed"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Online</span><span class="px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm bg-primary-fixed text-on-primary-fixed-variant">Hackathon</span></div>
+      <div>
+        <h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+          Open Source AI Sprint: Fine-Tuning LLMs
+        </h3>
+        <p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-1">
+          Fine-tune open-weights models (Llama 3, Mistral) for niche dev tools with cloud GPU grants.
+        </p>
+      </div>
+      <div class="flex flex-wrap items-center gap-4 text-on-surface-variant font-mono-sm text-mono-sm pt-1">
+        <div class="flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-sm text-primary">calendar_today</span>
+          <span class="">Dec 14–15, 2025</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-sm text-primary">schedule</span>
+          <span class="">36 Hours Continuous</span>
+        </div>
+      </div>
+    </div>
+    <div class="pt-2 flex justify-end border-t border-slate-100">
+      <button type="button" onclick="openDetailsModal('Open Source AI Sprint: Fine-Tuning LLMs', 'hackathon')" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-ui text-label-ui transition-colors group/btn">
+        <span class="">More Details</span>
+        <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-0.5 transition-transform">arrow_forward</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Event Card 4 -->
+<div class="event-card group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col overflow-hidden border border-slate-200/70" data-category="meetup" style="background: rgba(255, 255, 255, 0.72); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.85); box-shadow: rgba(37, 99, 235, 0.05) 0px 10px 30px, rgba(255, 255, 255, 0.9) 0px 1px 1px inset;">
+  <div class="relative h-48 w-full overflow-hidden bg-surface-container">
+    <img src="https://lh3.googleusercontent.com/aida/AEtjO1V8xRv2-lE656xEurDdYlPC7wFHUgAc9YGOi1X0bACSu-_ODWIzEf_PNtUCH0hZgKlobWOQfCI0nZgh44ZMW2yY0RzBByKP0tT6bDy4omBrWT6X-KsR024UWBQkFmABbZv7KATfXuMO_rNiEbfc4as31TWurKPUKy4tJjcnvGu8fmh5QBuZY1wQTzOZpl71qSRbodf8EHczQuS5EXJxutSE9KJZZghxS-COO0f_15-6XjabgPMZY_eINg" alt="WebAssembly in the Real World: Beyond the Browser" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+  </div>
+  <div class="p-6 flex flex-col flex-1 justify-between space-y-4">
+    <div class="space-y-3">
+      <div class="flex items-center justify-between"><span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm bg-surface-container-high text-on-surface"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Hybrid</span><span class="px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm bg-surface-container-high text-on-surface">Meetup</span></div>
+      <div>
+        <h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+          WebAssembly in the Real World: Beyond the Browser
+        </h3>
+        <p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-1">
+          Exploration of WASI 0.2, untrusted sandboxed code at edge gateways, and Rust microservices.
+        </p>
+      </div>
+      <div class="flex flex-wrap items-center gap-4 text-on-surface-variant font-mono-sm text-mono-sm pt-1">
+        <div class="flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-sm text-primary">calendar_today</span>
+          <span class="">Dec 20, 2025</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-sm text-primary">schedule</span>
+          <span class="">5:30 PM – 8:00 PM EST</span>
+        </div>
+      </div>
+    </div>
+    <div class="pt-2 flex justify-end border-t border-slate-100">
+      <button type="button" onclick="openDetailsModal('WebAssembly in the Real World: Beyond the Browser', 'meetup')" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-ui text-label-ui transition-colors group/btn">
+        <span class="">More Details</span>
+        <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-0.5 transition-transform">arrow_forward</span>
+      </button>
+    </div>
+  </div>
+</div></div>
+</section>
+<!-- Past Events Archive (Collapsible / Expandable Row) -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl shadow-sm cursor-pointer" onclick="togglePastEvents()" aria-expanded="true" style="background: rgba(255, 255, 255, 0.72); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.9); box-shadow: rgba(19, 27, 46, 0.04) 0px 8px 30px, rgba(255, 255, 255, 0.85) 0px 1px 1px inset;">
+<div class="flex items-center gap-3">
+<span class="p-2 rounded-lg bg-surface-container text-primary material-symbols-outlined">history_edu</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Past Events &amp; Recorded Sessions</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Review recordings, benchmark repos, and slides from past hackathons and talks.</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-mono-sm text-mono-sm text-on-surface-variant hidden sm:inline">3 Archives Available</span>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="pastCollapseIcon">expand_less</span>
+</div>
+</div>
+<div class="space-y-4 pt-2" id="pastEventsList">
+  <!-- Sub-header & Quick Filter Pills -->
+  <div class="flex flex-wrap items-center justify-between gap-3 p-4 bg-surface-container-lowest rounded-xl border border-slate-200/70 shadow-sm" style="background: rgba(255, 255, 255, 0.65); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.85); box-shadow: rgba(37, 99, 235, 0.03) 0px 8px 24px, rgba(255, 255, 255, 0.8) 0px 1px 1px inset;">
+    <div class="flex flex-wrap items-center gap-2">
+      <button type="button" class="px-3.5 py-1.5 rounded-full font-label-ui text-label-ui bg-gradient-to-r from-primary to-tertiary text-on-primary shadow-sm">All Recorded Sessions (48)</button>
+      <button type="button" class="px-3.5 py-1.5 rounded-full font-label-ui text-label-ui bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors">Tech Talks &amp; Keynotes</button>
+      <button type="button" class="px-3.5 py-1.5 rounded-full font-label-ui text-label-ui bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors">Hands-on Workshops</button>
+      <button type="button" class="px-3.5 py-1.5 rounded-full font-label-ui text-label-ui bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors">Hackathon Demos</button>
+    </div>
+    <div class="flex items-center gap-2 text-on-surface-variant font-mono-sm text-mono-sm">
+      <span class="material-symbols-outlined text-sm text-primary">tune</span>
+      <span class="">Filtered by: Latest 2025 Sessions</span>
+    </div>
+  </div>
+
+  <!-- Grid of Past Sessions Cards -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+    <!-- Archive Card 1 -->
+    <div class="bg-surface-container-lowest rounded-xl p-space-md border border-slate-200/70 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4" style="background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.85); box-shadow: rgba(37, 99, 235, 0.04) 0px 8px 24px, rgba(255, 255, 255, 0.8) 0px 1px 1px inset;">
+      <div class="space-y-2.5">
+        <div class="flex items-center justify-between">
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm bg-secondary-fixed text-on-secondary-fixed">
+            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Online
+          </span>
+          <span class="px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm bg-surface-container font-medium text-on-surface-variant">
+            Oct 24, 2025
+          </span>
+        </div>
+        <h4 class="font-headline-sm text-headline-sm text-on-surface">eBPF Internals &amp; Zero-Downtime Microservices</h4>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">Kernel tracing, dynamic network probes, and custom security sandboxing without kernel module compilation.</p>
+        <div class="flex flex-wrap items-center gap-2 pt-1 font-mono-sm text-mono-sm text-on-surface-variant">
+          <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface">
+            <span class="material-symbols-outlined text-xs text-error">timer</span> 1h 45m
+          </span>
+          <span class="px-2 py-0.5 rounded bg-surface-container">Linux</span>
+          <span class="px-2 py-0.5 rounded bg-surface-container">Networking</span>
+        </div>
+      </div>
+      <div class="pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+        <a href="#" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-ui text-label-ui hover:opacity-95 shadow-sm transition-all">
+          <span class="material-symbols-outlined text-sm">play_circle</span>
+          <span class="">Watch Recording</span>
+        </a>
+        <a href="#" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-ui text-label-ui transition-colors">
+          <span class="material-symbols-outlined text-sm text-primary">code</span>
+          <span class="">View Slides &amp; Code</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Archive Card 2 -->
+    <div class="bg-surface-container-lowest rounded-xl p-space-md border border-slate-200/70 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4" style="background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.85); box-shadow: rgba(37, 99, 235, 0.04) 0px 8px 24px, rgba(255, 255, 255, 0.8) 0px 1px 1px inset;">
+      <div class="space-y-2.5">
+        <div class="flex items-center justify-between">
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm bg-primary-fixed text-on-primary-fixed-variant">
+            <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Hybrid
+          </span>
+          <span class="px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm bg-surface-container font-medium text-on-surface-variant">
+            Sep 30, 2025
+          </span>
+        </div>
+        <h4 class="font-headline-sm text-headline-sm text-on-surface">Autonomous AI Agents Hackathon: Grand Finale</h4>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">Showcase of top 12 autonomous agent prototypes, multi-agent debate protocols, and tool use benchmarks.</p>
+        <div class="flex flex-wrap items-center gap-2 pt-1 font-mono-sm text-mono-sm text-on-surface-variant">
+          <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface">
+            <span class="material-symbols-outlined text-xs text-error">timer</span> 2h 30m
+          </span>
+          <span class="px-2 py-0.5 rounded bg-surface-container">AI / LLMs</span>
+          <span class="px-2 py-0.5 rounded bg-surface-container">Demos</span>
+        </div>
+      </div>
+      <div class="pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+        <a href="#" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-ui text-label-ui hover:opacity-95 shadow-sm transition-all">
+          <span class="material-symbols-outlined text-sm">play_circle</span>
+          <span class="">Watch Recording</span>
+        </a>
+        <a href="#" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-ui text-label-ui transition-colors">
+          <span class="material-symbols-outlined text-sm text-primary">terminal</span>
+          <span class="">View Slides &amp; Code</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Archive Card 3 -->
+    <div class="bg-surface-container-lowest rounded-xl p-space-md border border-slate-200/70 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4" style="background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.85); box-shadow: rgba(37, 99, 235, 0.04) 0px 8px 24px, rgba(255, 255, 255, 0.8) 0px 1px 1px inset;">
+      <div class="space-y-2.5">
+        <div class="flex items-center justify-between">
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm bg-secondary-fixed text-on-secondary-fixed">
+            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Online
+          </span>
+          <span class="px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm bg-surface-container font-medium text-on-surface-variant">
+            Sep 12, 2025
+          </span>
+        </div>
+        <h4 class="font-headline-sm text-headline-sm text-on-surface">Rust for TypeScript Devs: WASM &amp; Memory Safety</h4>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">Bridging async event loops, zero-copy byte buffers, and compiling web workers via wasm-bindgen.</p>
+        <div class="flex flex-wrap items-center gap-2 pt-1 font-mono-sm text-mono-sm text-on-surface-variant">
+          <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface">
+            <span class="material-symbols-outlined text-xs text-error">timer</span> 2h 10m
+          </span>
+          <span class="px-2 py-0.5 rounded bg-surface-container">Rust</span>
+          <span class="px-2 py-0.5 rounded bg-surface-container">WASM</span>
+        </div>
+      </div>
+      <div class="pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+        <a href="#" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-ui text-label-ui hover:opacity-95 shadow-sm transition-all">
+          <span class="material-symbols-outlined text-sm">play_circle</span>
+          <span class="">Watch Recording</span>
+        </a>
+        <a href="#" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-ui text-label-ui transition-colors">
+          <span class="material-symbols-outlined text-sm text-primary">code</span>
+          <span class="">View Slides &amp; Code</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Archive Card 4 -->
+    <div class="bg-surface-container-lowest rounded-xl p-space-md border border-slate-200/70 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4" style="background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.85); box-shadow: rgba(37, 99, 235, 0.04) 0px 8px 24px, rgba(255, 255, 255, 0.8) 0px 1px 1px inset;">
+      <div class="space-y-2.5">
+        <div class="flex items-center justify-between">
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm bg-secondary-fixed text-on-secondary-fixed">
+            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Online
+          </span>
+          <span class="px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm bg-surface-container font-medium text-on-surface-variant">
+            Aug 18, 2025
+          </span>
+        </div>
+        <h4 class="font-headline-sm text-headline-sm text-on-surface">WebGL &amp; WebGPU Canvas Engine Demo</h4>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">Writing custom compute shaders for 100k GPU particle simulations and browser performance telemetry.</p>
+        <div class="flex flex-wrap items-center gap-2 pt-1 font-mono-sm text-mono-sm text-on-surface-variant">
+          <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface">
+            <span class="material-symbols-outlined text-xs text-error">timer</span> 1h 35m
+          </span>
+          <span class="px-2 py-0.5 rounded bg-surface-container">Graphics</span>
+          <span class="px-2 py-0.5 rounded bg-surface-container">WebGPU</span>
+        </div>
+      </div>
+      <div class="pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+        <a href="#" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-ui text-label-ui hover:opacity-95 shadow-sm transition-all">
+          <span class="material-symbols-outlined text-sm">play_circle</span>
+          <span class="">Watch Recording</span>
+        </a>
+        <a href="#" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-ui text-label-ui transition-colors">
+          <span class="material-symbols-outlined text-sm text-primary">code</span>
+          <span class="">View Slides &amp; Code</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Prominent Link / CTA to Video Vault -->
+  <div class="p-4 bg-surface-container-lowest rounded-xl border border-slate-200/70 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3" style="background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.9); box-shadow: rgba(0, 74, 198, 0.05) 0px 8px 32px, rgba(255, 255, 255, 0.9) 0px 1px 1px inset;">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+        <span class="material-symbols-outlined text-base">video_library</span>
+      </div>
+      <div>
+        <span class="font-label-ui text-label-ui text-on-surface block">Looking for older seasons or hackathon submissions?</span>
+        <span class="font-body-sm text-body-sm text-on-surface-variant">48 full session recordings, sample repositories, and transcripts are indexed in the Vault.</span>
+      </div>
+    </div>
+    <a href="#" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-ui text-label-ui transition-colors group/btn whitespace-nowrap">
+      <span class="">View Full Archive &amp; Video Vault</span>
+      <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-0.5 transition-transform">arrow_forward</span>
+    </a>
+  </div>
+</div>
+</section>
+</div>
+</div>
+<!-- Event Detail Modal Drawer Overlay -->
+<div class="hidden fixed inset-0 z-50 overflow-y-auto bg-on-surface/40 backdrop-blur-sm flex items-center justify-center p-4" id="eventDetailModal">
+<div class="relative w-full max-w-2xl bg-surface-container-lowest rounded-2xl shadow-xl overflow-hidden my-8" style="background: rgba(255, 255, 255, 0.88); backdrop-filter: blur(28px); border: 1px solid rgba(255, 255, 255, 0.95); box-shadow: rgba(19, 27, 46, 0.12) 0px 24px 60px, rgba(255, 255, 255, 0.9) 0px 1px 2px inset;">
+<!-- Modal Header -->
+<div class="p-6 bg-surface-container-low flex items-start justify-between">
+<div class="space-y-1">
+<span class="px-2.5 py-0.5 rounded font-mono-sm text-mono-sm bg-primary text-on-primary" id="modalCategoryBadge">
+            HACKATHON
+          </span>
+<h3 class="font-headline-md text-headline-md text-on-surface" id="modalEventTitle">
+            Decentralized Systems &amp; AI Hackathon 2025
+          </h3>
+<p class="font-mono-sm text-mono-sm text-on-surface-variant">Format: Hybrid • Location: San Francisco Hub + Discord</p>
+</div>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" onclick="closeDetailsModal()" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Modal Body -->
+<div class="p-6 space-y-space-md max-h-[70vh] overflow-y-auto">
+<!-- Interactive Schedule Tab -->
+<div class="space-y-2">
+<h4 class="font-label-ui text-label-ui text-on-surface uppercase tracking-wider">Schedule &amp; Milestones</h4>
+<div class="space-y-2">
+<div class="p-3 bg-surface-container-low rounded-lg flex items-center justify-between">
+<div>
+<div class="font-label-ui text-label-ui text-on-surface">Day 1: Kickoff &amp; Team Formation</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Architecture primer, API token distribution &amp; project ideation</div>
+</div>
+<span class="font-mono-sm text-mono-sm text-primary">09:00 AM</span>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg flex items-center justify-between">
+<div>
+<div class="font-label-ui text-label-ui text-on-surface">Day 2: Mid-Point Code Review &amp; Mentorship</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">1-on-1 architecture checkpoint with staff mentor pool</div>
+</div>
+<span class="font-mono-sm text-mono-sm text-primary">02:00 PM</span>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg flex items-center justify-between">
+<div>
+<div class="font-label-ui text-label-ui text-on-surface">Day 3: Demos &amp; Live Judging</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">5-minute technical pitch + live Q&amp;A directly with judges</div>
+</div>
+<span class="font-mono-sm text-mono-sm text-primary">04:00 PM</span>
+</div>
+</div>
+</div>
+<!-- Speaker & Host Bio -->
+<div class="space-y-2">
+<h4 class="font-label-ui text-label-ui text-on-surface uppercase tracking-wider">Lead Hosts &amp; Evaluators</h4>
+<div class="flex items-center gap-3 p-3 bg-surface-container rounded-lg">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Close up photographic headshot portrait of Dr. Alex Rivera, principal researcher with glasses and soft studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn9qB2Oz9Sw7t7Ld_XextGC0feT7x0fCXUkKH2V7YLSczJ_PpkkIvxB8vaT7J_qv9H3TEsSnbKHhNvgh2g8KvuBy66tuYbjirvMbSr_QB8XH7FQ8xSpH9A_cP9Zy09MCE_pMzQ-7ug3E9_1hpNr8PtWZFPIFi53kMlEZzrxg6WyrorReY_7h_yIX0F8rpTSzbXPN6k9m7zY3LQEI0i3lPF90ZwwuoxVr1_G02b3a5kyDZwsEBylocH">
+<div>
+<div class="font-label-ui text-label-ui text-on-surface">Dr. Alex Rivera</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ex-Ethereum Foundation researcher, co-creator of distributed state verifiable trees.</p>
+</div>
+</div>
+</div>
+<!-- Prerequisites & Conduct -->
+<div class="space-y-2">
+<h4 class="font-label-ui text-label-ui text-on-surface uppercase tracking-wider">Prerequisites &amp; Rules</h4>
+<ul class="space-y-1.5 font-body-sm text-body-sm text-on-surface-variant list-disc pl-5">
+<li class="">Basic familiarity with distributed primitives or modern backend frameworks (Go, Rust, Node.js).</li>
+<li class="">All repositories must include an open-source permissive license (MIT or Apache 2.0).</li>
+<li class="">Strict adherence to <a class="text-primary underline" href="#">The Code Vibe Engineering Code of Conduct</a>. Zero harassment tolerance.</li>
+</ul>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="p-6 bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">Free Admission • Developer Ticket</span>
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<button class="w-full sm:w-auto px-4 py-2 font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface" onclick="closeDetailsModal()" type="button">
+            Cancel
+          </button>
+<button class="w-full sm:w-auto px-5 py-2 rounded-lg text-on-primary font-label-ui text-label-ui shadow-sm hover:opacity-95 transition-opacity bg-gradient-to-r from-primary to-tertiary" id="modalRegisterActionBtn" onclick="confirmModalRegistration()" type="button">
+            Register for Session
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Registration Success Notification Toast -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="toastNotification">
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-xl flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<div>
+<div class="font-label-ui text-label-ui text-on-surface" id="toastTitle">Registration Confirmed!</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant" id="toastSubtitle">Calendar invite and Discord invite dispatched.</div>
+</div>
+</div>
+</div>
+<script>
+    // Live Search Filter
+    const searchInput = document.getElementById('eventSearchInput');
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase();
+      const cards = document.querySelectorAll('.event-card');
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        if (text.includes(query)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+
+    // Timeframe dropdown logic
+    const dropdownBtn = document.getElementById('timeframeDropdownBtn');
+    const dropdownMenu = document.getElementById('timeframeDropdownMenu');
+    const dropdownArrow = document.getElementById('dropdownArrow');
+
+    dropdownBtn.addEventListener('click', () => {
+      dropdownMenu.classList.toggle('hidden');
+      dropdownArrow.classList.toggle('rotate-180');
+    });
+
+    function setTimeframe(val) {
+      document.getElementById('selectedTimeframe').innerText = val;
+      dropdownMenu.classList.add('hidden');
+      dropdownArrow.classList.remove('rotate-180');
+      showToast('View Updated', `Displaying view filtered by: ${val}`);
+    }
+
+    // Category Filter Pills
+    function filterCategory(category, btn) {
+      document.querySelectorAll('.category-btn').forEach(b => {
+        b.classList.remove('bg-primary-container', 'text-on-primary-container', 'shadow-sm');
+        b.classList.add('bg-surface-container', 'text-on-surface');
+      });
+      btn.classList.remove('bg-surface-container', 'text-on-surface');
+      btn.classList.add('bg-primary-container', 'text-on-primary-container', 'shadow-sm');
+
+      const cards = document.querySelectorAll('.event-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Modal Control
+    function openDetailsModal(title, category) {
+      const modal = document.getElementById('eventDetailModal');
+      document.getElementById('modalEventTitle').innerText = title;
+      const catBadge = document.getElementById('modalCategoryBadge');
+      catBadge.innerText = category.toUpperCase();
+      modal.classList.remove('hidden');
+    }
+
+    function closeDetailsModal() {
+      document.getElementById('eventDetailModal').classList.add('hidden');
+    }
+
+    function confirmModalRegistration() {
+      const title = document.getElementById('modalEventTitle').innerText;
+      closeDetailsModal();
+      showToast('Spot Reserved!', `You're signed up for "${title}".`);
+    }
+
+    function triggerRegister(title) {
+      showToast('Registration Confirmed', `Successfully reserved your seat for "${title}". Check email.`);
+    }
+
+    function triggerWaitlist(title) {
+      showToast('Added to Waitlist', `You are #14 in queue for "${title}". We will ping you if a slot frees up.`);
+    }
+
+    function toggleRegisterCard(btn) {
+      if (btn.innerText.includes('Registered')) {
+        btn.innerHTML = 'Register Now';
+        btn.classList.remove('bg-surface-container');
+        btn.classList.add('bg-primary', 'text-on-primary');
+        showToast('Cancelled Registration', 'Your reservation was cancelled.');
+      } else {
+        btn.innerHTML = '<span class="material-symbols-outlined text-xs text-primary">check_circle</span> Registered';
+        btn.classList.add('bg-surface-container', 'text-on-surface');
+        btn.classList.remove('bg-primary', 'text-on-primary');
+        showToast('Registered!', 'You are registered for this meetup.');
+      }
+    }
+
+    // Toggle Past Events
+    function togglePastEvents() {
+      const list = document.getElementById('pastEventsList');
+      const icon = document.getElementById('pastCollapseIcon');
+      list.classList.toggle('hidden');
+      icon.classList.toggle('rotate-180');
+    }
+
+    // Toast Notification Utility
+    function showToast(title, subtitle) {
+      const toast = document.getElementById('toastNotification');
+      document.getElementById('toastTitle').innerText = title;
+      document.getElementById('toastSubtitle').innerText = subtitle;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 4000);
+    }
+
+    // Quick Command+K keyboard focus on search
+    window.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        searchInput.focus();
+      }
+      if (e.key === 'Escape') {
+        closeDetailsModal();
+      }
+    });
+  </script>
+</div></main><footer class="w-full bg-[#faf8ff] border-t border-slate-200/80 pt-16 pb-12 mt-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-slate-200/70">
+      <div class="md:col-span-5 space-y-4">
+        <div class="flex items-center gap-3">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf_ijl3CcP3fD-3YzCWKT_kVy4PU5Xu8eyA4QrLAEIPJPxzPViJ1J9mR_VgwJWpNEI-frBwQ3gI1US92ndC1uYgZELwITrZP5IcZOwxFize4In3VAK1zWzDF2Ju7mBlGfHTw1Jz4M46MRmeyh6XP0Z30ET1AI1qM18y51Qt1PKYX3nBidT469YDHhOJVjoCIF6IqDFTlswZcxrMPCyelALZ7tRBQqRxwUJnilhfSo4VJYwisS0FJ33pDj9g5saKeh-tA" alt="The Code Vibe Logo" class="w-9 h-9 object-contain rounded-full shadow-sm">
+          <span class="text-xl font-bold tracking-tight bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">The Code Vibe</span>
+        </div>
+        <p class="text-sm text-slate-600 max-w-sm leading-relaxed">
+          Where developers explore technology, build meaningful projects, and pair up to ship real software.
+        </p>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-xs text-emerald-700 font-medium">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span class="">All Systems Operational • 12,400+ Active Builders</span>
+        </div>
+        <div class="flex items-center gap-3 pt-2 text-slate-500">
+          <a href="#" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-colors hover:text-slate-900" aria-label="GitHub">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path></svg>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-colors hover:text-slate-900" aria-label="Discord">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 urban-hidden 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.894.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"></path></svg>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-colors hover:text-slate-900" aria-label="X">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-colors hover:text-slate-900" aria-label="LinkedIn">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.8v8.37h-2.8V10.9M7.86 6.81a1.63 1.63 0 1 0 1.63 1.63 1.63 1.63 0 0 0-1.63-1.63z"></path></svg>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-colors hover:text-slate-900" aria-label="YouTube">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
+          </a>
+        </div>
+      </div>
+      <div class="md:col-span-2 space-y-3">
+        <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-900">Navigation</h4>
+        <ul class="space-y-2 text-sm text-slate-600">
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">Home</a></li>
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">About Us</a></li>
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">Events &amp; Workshops</a></li>
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">Collaborate</a></li>
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">Admin Portal</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-2 space-y-3">
+        <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-900">Community</h4>
+        <ul class="space-y-2 text-sm text-slate-600">
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">AI Agents Hackathon</a></li>
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">Pair Programming Circles</a></li>
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">Open Source Pods</a></li>
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">Mentorship Network</a></li>
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">Leaderboard</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-3 space-y-3">
+        <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-900">Resources</h4>
+        <ul class="space-y-2 text-sm text-slate-600">
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">Documentation</a></li>
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">Community Guidelines</a></li>
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">Code of Conduct</a></li>
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">Brand Assets</a></li>
+          <li class=""><a href="#" class="hover:text-blue-600 transition-colors">API &amp; Telemetry</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+      <p class="">© 2025 The Code Vibe Community. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a href="#" class="hover:text-slate-800 transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-slate-800 transition-colors">Terms of Service</a>
+        <a href="#" class="hover:text-slate-800 transition-colors">Security</a>
+        <a href="#" class="hover:text-slate-800 transition-colors">Cookie Settings</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+</body></html>
