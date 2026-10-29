@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useOutletContext } from 'react-router-dom';
 import StatCard from '../components/ui/StatCard';
 import Toast from '../components/ui/Toast';
+import FloatingNeonOrbs from '../components/ui/FloatingNeonOrbs';
 import {
   PLATFORM_STATS,
   WHAT_WE_DO_CARDS,
@@ -36,7 +37,10 @@ export default function HomePage() {
 
       {/* HERO SECTION */}
       <div className="relative w-full overflow-hidden">
-        <section className="max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-16 lg:pt-20 lg:pb-24 flex flex-col items-center text-center">
+        {/* Floating Neon Orbs */}
+        <FloatingNeonOrbs />
+
+        <section className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-16 lg:pt-20 lg:pb-24 flex flex-col items-center text-center">
           {/* Status Badge / Radar */}
           <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/70 backdrop-blur-md border border-white/80 shadow-[0_4px_16px_rgba(0,55,140,0.06)] mb-7">
             <span className="relative flex h-2 w-2">
