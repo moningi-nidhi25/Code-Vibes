@@ -163,3 +163,81 @@
   will-change: transform;
 }
 
+/* Technical & Welcoming Animations */
+@keyframes spin-orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-orbit-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes pulse-warm-glow {
+  0%, 100% {
+    opacity: 0.82;
+    transform: scale(1);
+    filter: drop-shadow(0 0 25px rgba(0, 229, 255, 0.45));
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.04);
+    filter: drop-shadow(0 0 45px rgba(0, 229, 255, 0.75)) drop-shadow(0 0 75px rgba(179, 36, 229, 0.4));
+  }
+}
+
+@keyframes constellation-dash {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+
+@keyframes beacon-wave {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+}
+
+.animate-spin-orbit {
+  animation: spin-orbit 28s linear infinite;
+  will-change: transform;
+}
+
+.animate-spin-orbit-reverse {
+  animation: spin-orbit-reverse 34s linear infinite;
+  will-change: transform;
+}
+
+.animate-pulse-warm-glow {
+  animation: pulse-warm-glow 6s ease-in-out infinite;
+  will-change: transform, filter;
+}
+
+.animate-beacon-wave {
+  animation: beacon-wave 3.5s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.animate-constellation-dash {
+  stroke-dasharray: 6 6;
+  animation: constellation-dash 3s linear infinite;
+}
+
+
