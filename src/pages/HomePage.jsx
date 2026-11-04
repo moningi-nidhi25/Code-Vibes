@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link, useOutletContext } from 'react-router-dom';
 import StatCard from '../components/ui/StatCard';
 import Toast from '../components/ui/Toast';
-import FloatingNeonOrbs from '../components/ui/FloatingNeonOrbs';
 import {
   PLATFORM_STATS,
   WHAT_WE_DO_CARDS,
@@ -36,29 +35,13 @@ export default function HomePage() {
       />
 
       {/* HERO SECTION */}
-      <div className="relative w-full overflow-hidden">
-        {/* Floating Neon Orbs */}
-        <FloatingNeonOrbs />
-
+      <div className="relative w-full overflow-hidden hero-mesh-canvas">
         <section className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-16 lg:pt-20 lg:pb-24 flex flex-col items-center text-center">
-          {/* Status Badge / Radar */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/70 backdrop-blur-md border border-white/80 shadow-[0_4px_16px_rgba(0,55,140,0.06)] mb-7">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-container opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary" />
-            </span>
-            <span className="font-mono-sm text-mono-sm text-on-surface-variant uppercase tracking-wider">
-              Cohort 08 • Registrations Open
-            </span>
-            <span className="font-mono-sm text-mono-sm text-primary font-semibold">
-              Live
-            </span>
-          </div>
 
           {/* Main Typography Hero */}
-          <h1 className="font-display-hero text-display-hero text-on-surface max-w-4xl tracking-tight leading-tight drop-shadow-xs">
+          <h1 className="font-display-hero text-display-hero text-on-surface max-w-4xl tracking-tight leading-tight">
             More Than Code. <br />
-            <span className="bg-gradient-to-r from-secondary via-primary-container to-tertiary bg-clip-text text-transparent">
+            <span className="gradient-text-radiant">
               A Community That Builds Together.
             </span>
           </h1>
@@ -72,7 +55,7 @@ export default function HomePage() {
             <button
               type="button"
               onClick={openJoinModal}
-              className="group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-secondary via-primary-container to-tertiary text-on-primary font-label-ui text-label-ui shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:brightness-105 active:scale-95 transition-all cursor-pointer"
+              className="btn-gradient-primary group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-label-ui text-label-ui shadow-sm active:scale-95 cursor-pointer"
             >
               <span>Join the Community</span>
               <span className="material-symbols-outlined text-base group-hover:translate-x-0.5 transition-transform">
@@ -81,17 +64,17 @@ export default function HomePage() {
             </button>
             <Link
               to="/events"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white/70 backdrop-blur-md border border-white/80 hover:bg-white/90 text-on-surface font-label-ui text-label-ui shadow-md shadow-slate-200/50 transition-all active:scale-95"
+              className="btn-frosted-glass inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-label-ui text-label-ui shadow-xs active:scale-95"
             >
-              <span className="material-symbols-outlined text-base text-primary">
+              <span className="material-symbols-outlined text-base text-[#0056c5]">
                 calendar_month
               </span>
               <span>Explore Events</span>
             </Link>
           </div>
 
-          {/* Glassmorphic Quick Metric Strip */}
-          <div className="w-full mt-16 p-1.5 rounded-3xl bg-gradient-to-r from-white/70 via-white/40 to-white/70 backdrop-blur-xl border border-white/80 shadow-[0_16px_40px_rgba(0,40,120,0.06)]">
+          {/* Glassmorphic Quick Metric Strip (Glass Tier 2) */}
+          <div className="w-full mt-16 p-1.5 rounded-3xl glass-base border-t border-l border-white/80 border-r border-b border-[#c2c6d7]/35 shadow-card-default">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-6 px-6 bg-white/60 backdrop-blur-md rounded-2xl">
               {PLATFORM_STATS.map((stat, idx) => (
                 <StatCard
@@ -110,15 +93,15 @@ export default function HomePage() {
       {/* WHAT WE DO (GOALS & OBJECTIVES) SECTION */}
       <section className="max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-20 relative" id="what-we-do">
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/70 backdrop-blur-md border border-white/80 mb-4 shadow-sm">
-            <span className="w-2 h-2 rounded-full bg-gradient-to-r from-secondary-container via-primary-container to-tertiary-container animate-pulse" />
-            <span className="font-mono-sm text-mono-sm uppercase tracking-wider text-primary font-semibold">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full telemetry-chip mb-4 shadow-xs">
+            <span className="w-2 h-2 rounded-full bg-[#00E5FF] animate-pulse" />
+            <span className="font-mono-sm text-mono-sm uppercase tracking-wider text-[#0056c5] font-semibold">
               Mission &amp; Objectives
             </span>
           </div>
-          <h2 className="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+          <h2 className="font-headline-xl text-headline-xl text-on-surface tracking-tight font-bold">
             What We Do{' '}
-            <span className="bg-gradient-to-r from-secondary via-primary to-tertiary bg-clip-text text-transparent">
+            <span className="gradient-text-radiant">
               — Built for Engineers
             </span>
           </h2>
@@ -127,25 +110,23 @@ export default function HomePage() {
           </p>
         </div>
 
-        {/* 4-Card Frosted Glass Bento Grid */}
+        {/* 4-Card Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {WHAT_WE_DO_CARDS.map((card) => (
             <div
               key={card.id}
-              className={`group relative rounded-3xl bg-white/60 backdrop-blur-xl p-7 border border-white/70 shadow-[0_10px_30px_rgba(0,50,130,0.05)] hover:shadow-[0_20px_40px_rgba(0,74,198,0.12)] hover:-translate-y-1.5 ${card.hoverBorder} transition-all duration-300 flex flex-col justify-between overflow-hidden`}
+              className="group relative rounded-xl bento-card p-7 flex flex-col justify-between overflow-hidden"
             >
-              <div className={`absolute -top-12 -right-12 w-28 h-28 ${card.accent} rounded-full blur-2xl group-hover:scale-125 transition-all pointer-events-none`} />
-
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-5">
-                  <div className="w-12 h-12 rounded-2xl bg-white/80 backdrop-blur-md border border-white text-primary flex items-center justify-center shadow-sm group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-white/90 border border-white/80 text-[#0056c5] flex items-center justify-center shadow-xs group-hover:bg-[#0056c5] group-hover:text-white transition-colors duration-300">
                     <span className="material-symbols-outlined text-2xl">{card.icon}</span>
                   </div>
-                  <span className="font-mono-sm text-mono-sm px-2.5 py-1 rounded-full bg-primary/10 border border-primary/20 font-semibold tracking-wider text-primary uppercase">
+                  <span className="font-mono-sm text-mono-sm px-2.5 py-1 rounded-full bg-[rgba(0,229,255,0.12)] border border-[rgba(0,229,255,0.30)] font-semibold tracking-wider text-[#006875] uppercase">
                     {card.category}
                   </span>
                 </div>
-                <h3 className="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors font-bold">
+                <h3 className="font-headline-sm text-headline-sm text-on-surface group-hover:text-[#0056c5] transition-colors font-bold">
                   {card.title}
                 </h3>
                 <p className="mt-3 font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
@@ -153,12 +134,12 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-slate-200/50 flex items-center justify-between text-on-surface relative z-10">
-                <span className="font-mono-sm text-mono-sm font-semibold flex items-center gap-1.5 text-primary">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+              <div className="mt-6 pt-4 border-t border-[#c2c6d7]/30 flex items-center justify-between text-on-surface relative z-10">
+                <span className="font-mono-sm text-mono-sm font-semibold flex items-center gap-1.5 text-[#0056c5]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#0056c5]" />
                   {card.stat}
                 </span>
-                <span className="material-symbols-outlined text-base text-outline group-hover:text-primary group-hover:translate-x-1 transition-all">
+                <span className="material-symbols-outlined text-base text-outline group-hover:text-[#0056c5] group-hover:translate-x-1 transition-all">
                   arrow_forward
                 </span>
               </div>
@@ -171,16 +152,16 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-6 lg:px-12 py-16" id="featured-events">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
           <div>
-            <span className="font-mono-sm text-mono-sm text-primary uppercase tracking-wider block mb-1">
+            <span className="font-mono-sm text-mono-sm text-[#0056c5] uppercase tracking-wider block mb-1 font-semibold">
               Calendar &amp; Assemblies
             </span>
-            <h2 className="font-headline-xl text-headline-xl text-on-surface font-bold">
+            <h2 className="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">
               Featured Events
             </h2>
           </div>
           <Link
             to="/events"
-            className="inline-flex items-center gap-1.5 font-label-ui text-label-ui text-primary hover:text-on-primary-fixed-variant group"
+            className="inline-flex items-center gap-1.5 font-label-ui text-label-ui text-[#0056c5] hover:underline group"
           >
             <span>View all scheduled events</span>
             <span className="material-symbols-outlined text-sm group-hover:translate-x-0.5 transition-transform">
@@ -193,43 +174,43 @@ export default function HomePage() {
           {FEATURED_EVENTS_HOME.map((event) => (
             <div
               key={event.id}
-              className="bg-white/60 backdrop-blur-xl border border-white/70 rounded-3xl overflow-hidden shadow-[0_10px_30px_rgba(0,50,130,0.05)] hover:shadow-[0_20px_40px_rgba(0,50,130,0.1)] hover:-translate-y-1 transition-all flex flex-col justify-between group"
+              className="bento-card rounded-xl overflow-hidden flex flex-col justify-between group"
             >
               <div className="p-7 pb-2">
                 <div className="flex items-center justify-between gap-2 mb-4">
-                  <span className={`px-3 py-1 rounded-full font-mono-sm text-mono-sm font-semibold ${event.typeBadgeClass}`}>
+                  <span className="px-3 py-1 rounded-full font-mono-sm text-mono-sm font-semibold bg-[rgba(179,36,229,0.12)] border border-[rgba(179,36,229,0.30)] text-[#9700c6]">
                     {event.type}
                   </span>
                   <span className="font-mono-sm text-mono-sm text-on-surface-variant flex items-center gap-1.5">
-                    <span className="material-symbols-outlined text-sm text-primary">schedule</span>
+                    <span className="material-symbols-outlined text-sm text-[#0056c5]">schedule</span>
                     {event.time}
                   </span>
                 </div>
-                <h3 className="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors font-bold">
+                <h3 className="font-headline-sm text-headline-sm text-on-surface group-hover:text-[#0056c5] transition-colors font-bold">
                   {event.title}
                 </h3>
-                <p className="mt-2 font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                <p className="mt-2 font-body-sm text-body-sm text-on-surface-variant line-clamp-2 leading-relaxed">
                   {event.description}
                 </p>
-                <div className="mt-4 space-y-2 py-3 px-3.5 rounded-2xl bg-white/50 backdrop-blur-sm border border-white/60">
+                <div className="mt-4 space-y-2 py-3 px-3.5 rounded-lg bg-white/70 border border-white/80 shadow-xs">
                   <div className="flex items-center gap-2 text-on-surface-variant font-mono-sm text-mono-sm">
-                    <span className="material-symbols-outlined text-base text-primary">calendar_month</span>
+                    <span className="material-symbols-outlined text-base text-[#0056c5]">calendar_month</span>
                     <span>{event.date}</span>
                   </div>
                   <div className="flex items-center gap-2 text-on-surface-variant font-mono-sm text-mono-sm">
-                    <span className="material-symbols-outlined text-base text-secondary">location_on</span>
+                    <span className="material-symbols-outlined text-base text-[#006875]">location_on</span>
                     <span>{event.location}</span>
                   </div>
                 </div>
               </div>
 
-              <div className="px-6 pb-6 pt-3 flex items-center justify-end">
+              <div className="px-6 pb-6 pt-3 flex items-center justify-end border-t border-[#c2c6d7]/30 mt-3">
                 <Link
                   to={event.link}
-                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white/70 hover:bg-white/95 border border-white/80 text-on-surface font-label-ui text-label-ui shadow-xs transition-all active:scale-95 group-hover:border-primary/40"
+                  className="btn-frosted-glass inline-flex items-center gap-1.5 px-4 py-2 rounded-lg font-label-ui text-label-ui shadow-xs cursor-pointer"
                 >
                   <span>More Details</span>
-                  <span className="material-symbols-outlined text-sm text-on-surface-variant group-hover:text-primary group-hover:translate-x-0.5 transition-all">
+                  <span className="material-symbols-outlined text-sm text-on-surface-variant group-hover:text-[#0056c5] group-hover:translate-x-0.5 transition-all">
                     arrow_forward
                   </span>
                 </Link>
@@ -241,23 +222,20 @@ export default function HomePage() {
 
       {/* OPEN COLLABORATION PROJECTS SPOTLIGHT */}
       <section className="max-w-7xl mx-auto px-6 lg:px-12 py-12">
-        <div className="p-8 lg:p-12 rounded-3xl bg-white/50 backdrop-blur-xl border border-white/80 shadow-[0_16px_40px_rgba(0,40,120,0.06)] relative overflow-hidden">
-          <div className="absolute -top-32 -left-32 w-80 h-80 bg-secondary/10 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-tertiary/10 rounded-full blur-3xl pointer-events-none" />
-
+        <div className="p-8 lg:p-12 rounded-2xl glass-base border-t border-l border-white/80 border-r border-b border-[#c2c6d7]/35 shadow-card-default relative overflow-hidden">
           <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4 relative z-10">
             <div>
-              <div className="flex items-center gap-2 mb-1.5 font-mono-sm text-mono-sm text-secondary uppercase font-semibold">
+              <div className="flex items-center gap-2 mb-1.5 font-mono-sm text-mono-sm text-[#006875] uppercase font-semibold">
                 <span className="material-symbols-outlined text-sm">code_blocks</span>
                 <span>Peer Engineering Pods</span>
               </div>
-              <h2 className="font-headline-xl text-headline-xl text-on-surface font-bold">
+              <h2 className="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">
                 Open Collaboration Projects
               </h2>
             </div>
             <Link
               to="/collaborate"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/80 hover:bg-white border border-white/90 text-on-surface font-label-ui text-label-ui shadow-sm hover:shadow transition-all"
+              className="btn-frosted-glass inline-flex items-center gap-2 px-4 py-2.5 rounded-lg font-label-ui text-label-ui shadow-xs"
             >
               <span>Explore All Projects</span>
               <span className="material-symbols-outlined text-sm">tune</span>
@@ -268,29 +246,29 @@ export default function HomePage() {
             {OPEN_COLLABORATION_SPOTLIGHT.map((proj) => (
               <div
                 key={proj.id}
-                className="p-7 rounded-3xl bg-white/70 backdrop-blur-xl border border-white/80 shadow-[0_8px_24px_rgba(0,30,90,0.04)] hover:shadow-[0_16px_36px_rgba(0,50,140,0.08)] hover:-translate-y-1 transition-all flex flex-col justify-between"
+                className="p-7 rounded-xl bento-card flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
-                    <span className="font-mono-sm text-mono-sm text-primary font-semibold">
+                    <span className="font-mono-sm text-mono-sm text-[#0056c5] font-semibold">
                       {proj.repo}
                     </span>
-                    <span className={`px-3 py-1 rounded-full font-mono-sm text-mono-sm flex items-center gap-1.5 font-semibold ${proj.seatColor}`}>
-                      <span className={`w-1.5 h-1.5 rounded-full ${proj.indicatorColor}`} />
+                    <span className="px-3 py-1 rounded-full font-mono-sm text-mono-sm flex items-center gap-1.5 font-semibold bg-[rgba(0,229,255,0.12)] border border-[rgba(0,229,255,0.30)] text-[#006875]">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#00E5FF] animate-pulse" />
                       {proj.seats}
                     </span>
                   </div>
                   <h3 className="font-headline-md text-headline-md text-on-surface font-bold">
                     {proj.title}
                   </h3>
-                  <p className="mt-2 font-body-sm text-body-sm text-on-surface-variant">
+                  <p className="mt-2 font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
                     {proj.description}
                   </p>
                   <div className="flex flex-wrap gap-2 mt-4">
                     {proj.tags.map((tag, idx) => (
                       <span
                         key={idx}
-                        className="px-2.5 py-1 rounded-lg bg-white/80 border border-white font-mono-sm text-mono-sm text-on-surface shadow-xs"
+                        className="px-2.5 py-1 rounded-md bg-white/85 border border-[#c2c6d7]/35 font-mono-sm text-mono-sm text-on-surface shadow-xs"
                       >
                         {tag}
                       </span>
@@ -298,21 +276,21 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="mt-8 pt-4 border-t border-slate-200/50 flex items-center justify-between">
+                <div className="mt-8 pt-4 border-t border-[#c2c6d7]/30 flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
                     <img
                       className="w-8 h-8 rounded-full object-cover ring-2 ring-white"
                       src={proj.leadAvatar}
                       alt={proj.lead}
                     />
-                    <span className="font-mono-sm text-mono-sm text-on-surface-variant">
+                    <span className="font-mono-sm text-mono-sm text-on-surface-variant font-medium">
                       Lead: {proj.lead}
                     </span>
                   </div>
                   <button
                     type="button"
                     onClick={() => handlePairRequest(proj.projectKey)}
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-primary text-on-primary font-label-ui text-label-ui shadow-md shadow-primary/20 hover:opacity-95 transition-all active:scale-95 cursor-pointer"
+                    className="btn-gradient-primary inline-flex items-center gap-1.5 px-4 py-2 rounded-lg font-label-ui text-label-ui shadow-sm active:scale-95 cursor-pointer"
                   >
                     <span>Request to Pair</span>
                     <span className="material-symbols-outlined text-sm">handshake</span>
@@ -327,10 +305,10 @@ export default function HomePage() {
       {/* COMMUNITY VOICES / TESTIMONIALS */}
       <section className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="font-mono-sm text-mono-sm text-primary uppercase tracking-widest block mb-2 font-semibold">
+          <span className="font-mono-sm text-mono-sm text-[#0056c5] uppercase tracking-widest block mb-2 font-semibold">
             Verified Builders
           </span>
-          <h2 className="font-headline-xl text-headline-xl text-on-surface font-bold">
+          <h2 className="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">
             Engineered by Creators
           </h2>
           <p className="mt-2 font-body-md text-body-md text-on-surface-variant">
@@ -342,14 +320,14 @@ export default function HomePage() {
           {TESTIMONIALS.map((t, idx) => (
             <div
               key={idx}
-              className="p-7 rounded-3xl bg-white/60 backdrop-blur-xl border border-white/70 shadow-[0_10px_30px_rgba(0,50,130,0.05)] hover:shadow-[0_20px_40px_rgba(0,50,130,0.1)] hover:-translate-y-1 transition-all flex flex-col justify-between"
+              className="p-7 rounded-xl bento-card flex flex-col justify-between"
             >
               <p className="font-body-md text-body-md text-on-surface italic leading-relaxed">
-                {t.quote}
+                "{t.quote}"
               </p>
-              <div className="mt-6 flex items-center gap-3 pt-4 border-t border-slate-200/50">
+              <div className="mt-6 flex items-center gap-3 pt-4 border-t border-[#c2c6d7]/30">
                 <img
-                  className="w-11 h-11 rounded-full object-cover ring-2 ring-white/80 shadow-xs"
+                  className="w-11 h-11 rounded-full object-cover ring-2 ring-white shadow-xs"
                   src={t.avatar}
                   alt={t.name}
                 />
@@ -369,33 +347,29 @@ export default function HomePage() {
 
       {/* FINAL CALL TO ACTION BANNER */}
       <section className="max-w-7xl mx-auto px-6 lg:px-12 pb-24">
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-primary via-primary-container to-tertiary p-8 lg:p-14 text-on-primary shadow-2xl shadow-primary/25 border border-white/20 backdrop-blur-xl">
-          <div className="absolute -right-20 -bottom-20 w-80 h-80 bg-secondary-container/30 rounded-full blur-2xl pointer-events-none" />
-          <div className="absolute -left-12 -top-12 w-64 h-64 bg-white/10 rounded-full blur-xl pointer-events-none" />
-          <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent pointer-events-none" />
-
+        <div className="relative overflow-hidden rounded-2xl gradient-core-action p-8 lg:p-14 text-on-primary shadow-glow-cobalt border border-white/40 backdrop-blur-xl">
           <div className="relative z-10 max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-md border border-white/20 mb-4 text-xs font-mono-sm shadow-xs">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/40 mb-4 text-xs font-mono-sm shadow-xs">
               <span className="material-symbols-outlined text-sm">bolt</span>
               <span>Zero Friction Onboarding</span>
             </div>
             <h2 className="font-headline-xl text-headline-xl text-on-primary tracking-tight font-bold">
               Ready to elevate your code vibe?
             </h2>
-            <p className="mt-4 font-body-lg text-body-lg text-on-primary-container/90 max-w-2xl">
+            <p className="mt-4 font-body-lg text-body-lg text-white/95 max-w-2xl leading-relaxed">
               Connect with top engineers, ship ambitious projects, and grow your career. Get instant access to private repos, hackathons, and pairing circles.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <button
                 type="button"
                 onClick={openJoinModal}
-                className="px-7 py-3.5 rounded-xl bg-white text-on-surface font-label-ui text-label-ui font-semibold shadow-lg shadow-black/10 hover:bg-white/90 active:scale-95 transition-all cursor-pointer"
+                className="px-7 py-3.5 rounded-lg bg-white text-[#151b2b] font-label-ui text-label-ui font-semibold shadow-card-default hover:bg-white/95 hover:shadow-glow-cobalt active:scale-95 transition-all cursor-pointer"
               >
                 Join Community
               </button>
               <Link
                 to="/about"
-                className="px-6 py-3.5 rounded-xl bg-white/15 hover:bg-white/25 text-on-primary font-label-ui text-label-ui backdrop-blur-md border border-white/25 transition-all active:scale-95"
+                className="btn-frosted-glass px-6 py-3.5 rounded-lg font-label-ui text-label-ui active:scale-95"
               >
                 Read Our Manifesto
               </Link>

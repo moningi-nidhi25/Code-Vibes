@@ -5,6 +5,10 @@ import SearchBar from '../components/ui/SearchBar';
 import Toast from '../components/ui/Toast';
 import { EVENTS_PAGE_ITEMS, PAST_SESSIONS } from '../data/mockData';
 
+/**
+ * EventsPage Component
+ * Implements Electric Glass & Precision Syntax for community events, workshops, and recorded sessions.
+ */
 export default function EventsPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -66,31 +70,23 @@ export default function EventsPage() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
             <div className="space-y-space-xs max-w-2xl">
               <div className="flex items-center gap-2">
-                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-surface-container-high font-mono-sm text-mono-sm text-primary">
-                  <span className="w-1.5 h-1.5 rounded-full bg-secondary-container mr-1.5 animate-ping" />
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full telemetry-chip font-mono-sm text-mono-sm text-[#0056c5] font-semibold">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#00E5FF] mr-1.5 animate-ping" />
                   LIVE EVENT PROTOCOL
                 </span>
-                <span className="font-mono-sm text-mono-sm text-on-surface-variant">SYS.REV.2025</span>
+                <span className="font-mono-sm text-mono-sm text-[#424655]">SYS.REV.2025</span>
               </div>
-              <h1 className="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+              <h1 className="font-headline-xl text-headline-xl text-on-surface tracking-tight font-bold">
                 Community Events &amp; Workshops
               </h1>
-              <p className="font-body-lg text-body-lg text-on-surface-variant">
+              <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
                 Learn, compete, and level up with fellow developers across hackathons, deep-dive workshops, and tech talks.
               </p>
             </div>
 
-            <div
-              className="flex items-center gap-space-sm p-2 rounded-xl shadow-sm self-start md:self-auto"
-              style={{
-                background: 'rgba(255, 255, 255, 0.72)',
-                backdropFilter: 'blur(16px)',
-                border: '1px solid rgba(255, 255, 255, 0.9)',
-                boxShadow: 'rgba(37, 99, 235, 0.05) 0px 8px 32px, rgba(255, 255, 255, 0.8) 0px 1px 1px inset',
-              }}
-            >
-              <div className="flex items-center gap-2 px-3 py-1.5 bg-surface-container rounded-lg">
-                <span className="material-symbols-outlined text-primary text-base">calendar_month</span>
+            <div className="flex items-center gap-space-sm p-2 rounded-xl bento-card self-start md:self-auto">
+              <div className="flex items-center gap-2 px-3 py-1.5 bg-white/90 rounded-lg border border-white/80 shadow-xs">
+                <span className="material-symbols-outlined text-[#0056c5] text-base">calendar_month</span>
                 <span className="font-mono-sm text-mono-sm text-on-surface font-semibold">Q4 2025 COHORT</span>
               </div>
               <span className="font-mono-sm text-mono-sm text-on-surface-variant px-2">
@@ -100,15 +96,7 @@ export default function EventsPage() {
           </div>
 
           {/* Search & Dynamic Filter Suite */}
-          <div
-            className="p-space-md rounded-xl space-y-space-md"
-            style={{
-              background: 'rgba(255, 255, 255, 0.7)',
-              backdropFilter: 'blur(20px)',
-              border: '1px solid rgba(255, 255, 255, 0.9)',
-              boxShadow: 'rgba(19, 27, 46, 0.04) 0px 12px 36px, rgba(255, 255, 255, 0.8) 0px 1px 1px inset',
-            }}
-          >
+          <div className="p-space-md rounded-2xl glass-base border-t border-l border-white/80 border-r border-b border-[#c2c6d7]/35 shadow-card-default space-y-space-md">
             <div className="flex flex-col lg:flex-row gap-space-md items-center justify-between">
               {/* Search Bar */}
               <SearchBar
@@ -122,16 +110,11 @@ export default function EventsPage() {
               <div className="relative w-full lg:w-72">
                 <div
                   onClick={() => setDropdownOpen(!dropdownOpen)}
-                  className="flex items-center justify-between px-4 py-3 bg-surface-container-low rounded-lg cursor-pointer select-none"
-                  style={{
-                    background: 'rgba(255, 255, 255, 0.6)',
-                    backdropFilter: 'blur(12px)',
-                    border: '1px solid rgba(226, 232, 255, 0.8)',
-                  }}
+                  className="flex items-center justify-between px-4 py-2.5 glass-input rounded-md cursor-pointer select-none"
                 >
                   <div className="flex items-center gap-2">
-                    <span className="material-symbols-outlined text-primary text-sm">schedule</span>
-                    <span className="font-label-ui text-label-ui text-on-surface">{timeframe}</span>
+                    <span className="material-symbols-outlined text-[#0056c5] text-sm">schedule</span>
+                    <span className="font-label-ui text-label-ui text-on-surface font-medium">{timeframe}</span>
                   </div>
                   <span
                     className={`material-symbols-outlined text-outline text-sm transition-transform ${
@@ -143,15 +126,7 @@ export default function EventsPage() {
                 </div>
 
                 {dropdownOpen && (
-                  <div
-                    className="absolute top-full left-0 right-0 mt-2 rounded-xl shadow-xl z-30 py-2 animate-in fade-in zoom-in-95"
-                    style={{
-                      background: 'rgba(255, 255, 255, 0.95)',
-                      backdropFilter: 'blur(24px)',
-                      border: '1px solid rgba(255, 255, 255, 0.95)',
-                      boxShadow: 'rgba(0, 74, 198, 0.08) 0px 16px 40px, rgba(255, 255, 255, 0.9) 0px 1px 1px inset',
-                    }}
-                  >
+                  <div className="absolute top-full left-0 right-0 mt-2 rounded-xl glass-elevated border border-white/90 shadow-2xl z-30 py-2 animate-in fade-in zoom-in-95">
                     {[
                       { label: 'Upcoming Events', badge: 'Active', count: null },
                       { label: 'This Month', badge: null, count: '8 items' },
@@ -165,11 +140,11 @@ export default function EventsPage() {
                           setDropdownOpen(false);
                           showToast(`Viewing: ${opt.label}`);
                         }}
-                        className="w-full text-left px-4 py-2 font-body-sm text-body-sm text-on-surface hover:bg-surface-container transition-colors flex items-center justify-between cursor-pointer"
+                        className="w-full text-left px-4 py-2 font-body-sm text-body-sm text-on-surface hover:bg-white/80 transition-colors flex items-center justify-between cursor-pointer"
                       >
                         <span>{opt.label}</span>
                         {opt.badge && (
-                          <span className="font-mono-sm text-mono-sm text-primary">{opt.badge}</span>
+                          <span className="font-mono-sm text-mono-sm text-[#0056c5] font-semibold">{opt.badge}</span>
                         )}
                         {opt.count && (
                           <span className="font-mono-sm text-mono-sm text-on-surface-variant">
@@ -194,18 +169,9 @@ export default function EventsPage() {
                     onClick={() => setSelectedCategory(cat.key)}
                     className={`category-btn px-4 py-1.5 rounded-full font-label-ui text-label-ui transition-all cursor-pointer ${
                       isActive
-                        ? 'bg-gradient-to-r from-primary to-tertiary text-on-primary shadow-sm'
-                        : 'bg-surface-container hover:bg-surface-container-high text-on-surface'
+                        ? 'btn-gradient-primary shadow-sm'
+                        : 'bg-white/70 hover:bg-white text-on-surface border border-white/80 shadow-xs'
                     }`}
-                    style={
-                      !isActive
-                        ? {
-                            background: 'rgba(234, 237, 255, 0.6)',
-                            backdropFilter: 'blur(8px)',
-                            border: '1px solid rgba(255, 255, 255, 0.8)',
-                          }
-                        : {}
-                    }
                   >
                     {cat.label}
                   </button>
@@ -219,7 +185,7 @@ export default function EventsPage() {
         <section className="space-y-space-md mb-space-xl">
           <div className="flex items-center justify-between">
             <div className="space-y-0.5">
-              <h2 className="font-headline-md text-headline-md text-on-surface">
+              <h2 className="font-headline-md text-headline-md text-on-surface font-bold">
                 Upcoming Scheduled Sessions
               </h2>
               <p className="font-body-sm text-body-sm text-on-surface-variant">
@@ -246,9 +212,9 @@ export default function EventsPage() {
               ))}
             </div>
           ) : (
-            <div className="p-12 text-center rounded-xl bg-surface-container-lowest flex flex-col items-center justify-center gap-3 border border-outline-variant/30">
+            <div className="p-12 text-center rounded-xl bento-card flex flex-col items-center justify-center gap-3">
               <span className="material-symbols-outlined text-5xl text-outline">event_busy</span>
-              <h3 className="font-headline-sm text-headline-sm text-on-surface">
+              <h3 className="font-headline-sm text-headline-sm text-on-surface font-bold">
                 No sessions match your filter
               </h3>
               <p className="font-body-md text-body-md text-on-surface-variant">
@@ -260,7 +226,7 @@ export default function EventsPage() {
                   setSearchQuery('');
                   setSelectedCategory('all');
                 }}
-                className="mt-2 px-4 py-2 rounded-lg bg-primary text-on-primary font-label-ui text-label-ui cursor-pointer"
+                className="btn-gradient-primary mt-2 px-5 py-2 rounded-lg font-label-ui text-label-ui cursor-pointer"
               >
                 Reset Filters
               </button>
@@ -272,20 +238,14 @@ export default function EventsPage() {
         <section className="space-y-space-md">
           <div
             onClick={() => setPastArchiveExpanded(!pastArchiveExpanded)}
-            className="flex items-center justify-between p-4 rounded-xl cursor-pointer select-none"
-            style={{
-              background: 'rgba(255, 255, 255, 0.72)',
-              backdropFilter: 'blur(20px)',
-              border: '1px solid rgba(255, 255, 255, 0.9)',
-              boxShadow: 'rgba(19, 27, 46, 0.04) 0px 8px 30px, rgba(255, 255, 255, 0.85) 0px 1px 1px inset',
-            }}
+            className="flex items-center justify-between p-4 rounded-xl bento-card cursor-pointer select-none"
           >
             <div className="flex items-center gap-3">
-              <span className="p-2 rounded-lg bg-surface-container text-primary material-symbols-outlined">
+              <span className="p-2 rounded-lg bg-white/90 text-[#0056c5] border border-white/80 material-symbols-outlined shadow-xs">
                 history_edu
               </span>
               <div>
-                <h3 className="font-headline-sm text-headline-sm text-on-surface font-semibold">
+                <h3 className="font-headline-sm text-headline-sm text-on-surface font-bold">
                   Past Events &amp; Recorded Sessions
                 </h3>
                 <p className="font-body-sm text-body-sm text-on-surface-variant">
@@ -294,7 +254,7 @@ export default function EventsPage() {
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <span className="font-mono-sm text-mono-sm text-on-surface-variant hidden sm:inline">
+              <span className="font-mono-sm text-mono-sm text-on-surface-variant hidden sm:inline font-semibold">
                 {PAST_SESSIONS.length} Archives Available
               </span>
               <span
@@ -310,15 +270,7 @@ export default function EventsPage() {
           {pastArchiveExpanded && (
             <div className="space-y-4 pt-2 animate-in fade-in duration-200">
               {/* Archive filter pills */}
-              <div
-                className="flex flex-wrap items-center justify-between gap-3 p-4 rounded-xl border border-slate-200/70 shadow-sm"
-                style={{
-                  background: 'rgba(255, 255, 255, 0.65)',
-                  backdropFilter: 'blur(16px)',
-                  border: '1px solid rgba(255, 255, 255, 0.85)',
-                  boxShadow: 'rgba(37, 99, 235, 0.03) 0px 8px 24px, rgba(255, 255, 255, 0.8) 0px 1px 1px inset',
-                }}
-              >
+              <div className="flex flex-wrap items-center justify-between gap-3 p-4 rounded-xl bento-card">
                 <div className="flex flex-wrap items-center gap-2">
                   {pastCategoryOptions.map((opt) => {
                     const isActive = pastCategoryFilter === opt.key;
@@ -329,8 +281,8 @@ export default function EventsPage() {
                         onClick={() => setPastCategoryFilter(opt.key)}
                         className={`px-3.5 py-1.5 rounded-full font-label-ui text-label-ui transition-colors cursor-pointer ${
                           isActive
-                            ? 'bg-gradient-to-r from-primary to-tertiary text-on-primary shadow-sm'
-                            : 'bg-surface-container hover:bg-surface-container-high text-on-surface'
+                            ? 'btn-gradient-primary shadow-sm'
+                            : 'bg-white/70 hover:bg-white text-on-surface border border-white/80 shadow-xs'
                         }`}
                       >
                         {opt.label}
@@ -339,7 +291,7 @@ export default function EventsPage() {
                   })}
                 </div>
                 <div className="flex items-center gap-2 text-on-surface-variant font-mono-sm text-mono-sm">
-                  <span className="material-symbols-outlined text-sm text-primary">tune</span>
+                  <span className="material-symbols-outlined text-sm text-[#0056c5]">tune</span>
                   <span>Filtered by: Latest 2025 Sessions</span>
                 </div>
               </div>

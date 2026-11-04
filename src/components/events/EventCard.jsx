@@ -1,44 +1,41 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+/**
+ * EventCard Component
+ * Implements Electric Glass Bento Card specification with specular highlights and frosted badges.
+ */
 export default function EventCard({
   event,
   onOpenDetails
 }) {
   const categoryBadgeStyles = {
-    workshop: 'bg-tertiary-fixed text-on-tertiary-fixed-variant',
-    hackathon: 'bg-primary-fixed text-on-primary-fixed-variant',
-    talk: 'bg-secondary-fixed text-on-secondary-fixed-variant',
-    meetup: 'bg-surface-container-high text-on-surface',
+    workshop: 'bg-[rgba(179,36,229,0.12)] border border-[rgba(179,36,229,0.30)] text-[#9700c6]',
+    hackathon: 'bg-primary-fixed text-on-primary-fixed border border-primary/20',
+    talk: 'bg-[rgba(0,229,255,0.12)] border border-[rgba(0,229,255,0.30)] text-[#006875]',
+    meetup: 'bg-white/80 border border-[#c2c6d7]/40 text-on-surface',
   };
 
   return (
-    <div
-      className="event-card group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col overflow-hidden border border-slate-200/70"
-      style={{
-        background: 'rgba(255, 255, 255, 0.72)',
-        backdropFilter: 'blur(20px)',
-        border: '1px solid rgba(255, 255, 255, 0.85)',
-        boxShadow: 'rgba(37, 99, 235, 0.05) 0px 10px 30px, rgba(255, 255, 255, 0.9) 0px 1px 1px inset',
-      }}
-    >
+    <div className="event-card group bento-card rounded-xl flex flex-col overflow-hidden">
       <div className="relative h-48 w-full overflow-hidden bg-surface-container">
         <img
           src={event.image}
           alt={event.title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
       </div>
 
       <div className="p-6 flex flex-col flex-1 justify-between space-y-4">
         <div className="space-y-3">
           <div className="flex items-center justify-between">
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm bg-secondary-fixed text-on-secondary-fixed">
-              <span className="w-1.5 h-1.5 rounded-full bg-secondary" />
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm bg-[rgba(0,229,255,0.12)] border border-[rgba(0,229,255,0.30)] text-[#006875] font-semibold">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#00E5FF] animate-pulse" />
               {event.status}
             </span>
             <span
-              className={`px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm ${
+              className={`px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm font-semibold ${
                 categoryBadgeStyles[event.category] || categoryBadgeStyles.workshop
               }`}
             >
@@ -47,10 +44,10 @@ export default function EventCard({
           </div>
 
           <div>
-            <h3 className="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+            <h3 className="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
               {event.title}
             </h3>
-            <p className="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-2">
+            <p className="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-2 leading-relaxed">
               {event.description}
             </p>
           </div>
@@ -67,13 +64,13 @@ export default function EventCard({
           </div>
         </div>
 
-        <div className="pt-2 flex justify-end border-t border-slate-100">
+        <div className="pt-3 flex justify-end border-t border-[#c2c6d7]/30">
           <Link
             to={event.link || '/events/wasm-memory-safety'}
-            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-ui text-label-ui transition-colors group/btn"
+            className="btn-frosted-glass inline-flex items-center gap-1.5 px-4 py-2 rounded-lg font-label-ui text-label-ui shadow-xs group/btn cursor-pointer"
           >
             <span>More Details</span>
-            <span className="material-symbols-outlined text-sm group-hover/btn:translate-x-0.5 transition-transform">
+            <span className="material-symbols-outlined text-sm group-hover/btn:translate-x-0.5 transition-transform text-primary">
               arrow_forward
             </span>
           </Link>

@@ -7,6 +7,11 @@ import SearchBar from '../components/ui/SearchBar';
 import Toast from '../components/ui/Toast';
 import { TELEMETRY_METRICS, COLLABORATE_PROJECTS } from '../data/mockData';
 
+/**
+ * CollaboratePage Component
+ * Implements Electric Glass & Precision Syntax for collaborative pods,
+ * telemetry metrics, and project application pipelines.
+ */
 export default function CollaboratePage() {
   const [projects, setProjects] = useState(COLLABORATE_PROJECTS);
   const [searchQuery, setSearchQuery] = useState('');
@@ -130,20 +135,17 @@ export default function CollaboratePage() {
       />
 
       {/* Top Visual Accent & Signal Tracker */}
-      <div className="relative w-full overflow-hidden bg-surface-container-low py-10 px-6 lg:px-12">
-        <div className="absolute -right-20 -top-24 w-96 h-96 rounded-full bg-gradient-to-br from-secondary-container via-primary to-tertiary opacity-20 blur-3xl pointer-events-none" />
-        <div className="absolute left-1/3 bottom-0 w-80 h-32 bg-primary-fixed/30 blur-2xl pointer-events-none" />
-
+      <div className="relative w-full overflow-hidden hero-mesh-canvas py-10 px-6 lg:px-12 border-b border-[#c2c6d7]/30">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-6 relative z-10">
           <div className="space-y-3 max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-mono-sm text-mono-sm">
-              <span className="w-2 h-2 rounded-full bg-secondary-container animate-ping" />
-              <span>DISPATCH // {projects.length + 19} ACTIVE OPEN-SOURCE CELL CLUSTERS</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full telemetry-chip text-on-surface-variant font-mono-sm text-mono-sm shadow-card-default">
+              <span className="w-2 h-2 rounded-full bg-[#00E5FF] animate-ping" />
+              <span className="font-semibold text-on-surface">DISPATCH // {projects.length + 19} ACTIVE OPEN-SOURCE CELL CLUSTERS</span>
             </div>
-            <h1 className="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+            <h1 className="font-headline-xl text-headline-xl text-on-surface tracking-tight font-bold">
               Open Collaboration Projects
             </h1>
-            <p className="font-body-lg text-body-lg text-on-surface-variant">
+            <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
               Find your next team, contribute to production-grade open source, or launch your own project with passionate builders.
             </p>
           </div>
@@ -153,7 +155,7 @@ export default function CollaboratePage() {
             <button
               type="button"
               onClick={() => setSubmitModalOpen(true)}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-secondary-container via-primary to-tertiary text-on-primary font-label-ui text-label-ui shadow-md hover:shadow-lg active:scale-95 transition-all cursor-pointer"
+              className="btn-gradient-primary inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-label-ui text-label-ui shadow-sm active:scale-95 cursor-pointer"
             >
               <span className="material-symbols-outlined text-lg">add_circle</span>
               <span>+ Submit a Project</span>
@@ -164,13 +166,8 @@ export default function CollaboratePage() {
 
       {/* Main Exploration Hub */}
       <div className="max-w-7xl mx-auto w-full px-6 lg:px-12 py-8 flex flex-col gap-8 relative">
-        <div className="absolute inset-0 pointer-events-none overflow-hidden -z-10">
-          <div className="absolute top-1/4 left-10 w-96 h-96 rounded-full bg-gradient-to-br from-secondary-container via-primary to-tertiary opacity-20 blur-3xl" />
-          <div className="absolute top-2/3 right-10 w-96 h-96 rounded-full bg-gradient-to-br from-tertiary via-primary to-secondary opacity-20 blur-3xl" />
-        </div>
-
         {/* Controls: Filter & Search Console */}
-        <div className="w-full backdrop-blur-xl bg-surface-container-lowest/80 border border-outline-variant/30 p-6 rounded-xl shadow-lg flex flex-col gap-6">
+        <div className="w-full glass-base border-t border-l border-white/80 border-r border-b border-[#c2c6d7]/35 p-6 rounded-2xl shadow-card-default flex flex-col gap-6">
           <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
             {/* Search Input */}
             <SearchBar
@@ -182,13 +179,13 @@ export default function CollaboratePage() {
 
             {/* Sort & Count */}
             <div className="flex items-center gap-3 self-end lg:self-center">
-              <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low/80 backdrop-blur-sm text-on-surface font-mono-sm text-mono-sm border border-outline-variant/20">
-                <span className="material-symbols-outlined text-sm text-secondary">tune</span>
+              <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/80 backdrop-blur-sm text-on-surface font-mono-sm text-mono-sm border border-[#c2c6d7]/35 shadow-xs">
+                <span className="material-symbols-outlined text-sm text-[#006875]">tune</span>
                 <span>
                   Sort: <strong className="font-semibold">{sortBy}</strong>
                 </span>
               </div>
-              <span className="font-mono-sm text-mono-sm text-on-surface-variant bg-surface-container px-3 py-1.5 rounded-lg">
+              <span className="font-mono-sm text-mono-sm text-on-surface-variant bg-white/70 border border-white/80 px-3 py-1.5 rounded-lg shadow-xs">
                 Showing {filteredProjects.length} of {projects.length + 19}
               </span>
             </div>
@@ -197,13 +194,13 @@ export default function CollaboratePage() {
           {/* Tech Stack Filter Pills */}
           <div className="flex flex-col gap-2">
             <div className="flex items-center justify-between">
-              <span className="font-label-ui text-label-ui uppercase tracking-wider text-outline">
+              <span className="font-label-ui text-label-ui uppercase tracking-wider text-outline font-semibold">
                 Tech Stack Filter
               </span>
               <button
                 type="button"
                 onClick={resetAllFilters}
-                className="text-primary font-mono-sm text-mono-sm hover:underline cursor-pointer"
+                className="text-[#0056c5] font-mono-sm text-mono-sm hover:underline cursor-pointer font-medium"
               >
                 Reset Filters
               </button>
@@ -218,8 +215,8 @@ export default function CollaboratePage() {
                     onClick={() => setActiveTech(pill.value)}
                     className={`px-3 py-1.5 rounded-lg font-mono-sm text-mono-sm transition-all cursor-pointer ${
                       isActive
-                        ? 'bg-primary text-on-primary shadow-sm active'
-                        : 'bg-surface-container/80 text-on-surface hover:bg-surface-container-high'
+                        ? 'btn-gradient-primary shadow-sm'
+                        : 'bg-white/80 text-on-surface border border-[#c2c6d7]/40 hover:bg-white shadow-xs'
                     }`}
                   >
                     {pill.label}
@@ -230,8 +227,8 @@ export default function CollaboratePage() {
           </div>
 
           {/* Open Positions Role Filter */}
-          <div className="flex flex-col gap-2 pt-2 border-t border-slate-100">
-            <span className="font-label-ui text-label-ui uppercase tracking-wider text-outline">
+          <div className="flex flex-col gap-2 pt-2 border-t border-[#c2c6d7]/30">
+            <span className="font-label-ui text-label-ui uppercase tracking-wider text-outline font-semibold">
               Open Positions
             </span>
             <div className="flex flex-wrap items-center gap-2">
@@ -244,8 +241,8 @@ export default function CollaboratePage() {
                     onClick={() => setActiveRole(rf.value)}
                     className={`px-3 py-1 rounded-full font-label-ui text-label-ui transition-all cursor-pointer ${
                       isActive
-                        ? 'bg-secondary-fixed text-on-secondary-fixed font-semibold active'
-                        : 'bg-surface-container/80 text-on-surface-variant hover:bg-surface-container-high'
+                        ? 'bg-[rgba(0,229,255,0.15)] border border-[rgba(0,229,255,0.40)] text-[#006875] font-semibold'
+                        : 'bg-white/70 text-on-surface-variant border border-white/80 hover:bg-white'
                     }`}
                   >
                     {rf.label}
@@ -261,15 +258,15 @@ export default function CollaboratePage() {
           {TELEMETRY_METRICS.map((metric, idx) => (
             <div
               key={idx}
-              className="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between border border-outline-variant/30"
+              className="p-4 rounded-xl bento-card flex items-center justify-between"
             >
               <div>
-                <div className="font-mono-sm text-mono-sm text-outline">{metric.label}</div>
-                <div className="font-headline-md text-headline-md text-on-surface mt-0.5">
+                <div className="font-mono-sm text-mono-sm text-outline font-medium">{metric.label}</div>
+                <div className="font-headline-md text-headline-md text-on-surface font-bold mt-0.5">
                   {metric.value}
                 </div>
               </div>
-              <div className={`w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center ${metric.iconColor}`}>
+              <div className={`w-10 h-10 rounded-lg bg-white/90 border border-white/80 shadow-xs flex items-center justify-center ${metric.iconColor}`}>
                 <span className="material-symbols-outlined">{metric.icon}</span>
               </div>
             </div>
@@ -289,18 +286,18 @@ export default function CollaboratePage() {
             ))}
           </div>
         ) : (
-          <div className="p-12 text-center rounded-xl bg-surface-container-lowest flex flex-col items-center justify-center gap-3 shadow-sm border border-outline-variant/30">
+          <div className="p-12 text-center rounded-xl bento-card flex flex-col items-center justify-center gap-3">
             <span className="material-symbols-outlined text-5xl text-outline">manage_search</span>
-            <h3 className="font-headline-sm text-headline-sm text-on-surface">
+            <h3 className="font-headline-sm text-headline-sm text-on-surface font-bold">
               No matching projects found
             </h3>
-            <p className="font-body-md text-body-md text-on-surface-variant max-w-md">
+            <p className="font-body-md text-body-md text-on-surface-variant max-w-md leading-relaxed">
               Try clearing some filters or searching for alternative tech keywords like "Rust", "WebGPU", or "Go".
             </p>
             <button
               type="button"
               onClick={resetAllFilters}
-              className="mt-2 px-4 py-2 rounded-lg bg-primary text-on-primary font-label-ui text-label-ui cursor-pointer"
+              className="btn-gradient-primary mt-2 px-5 py-2 rounded-lg font-label-ui text-label-ui cursor-pointer"
             >
               Reset All Filters
             </button>

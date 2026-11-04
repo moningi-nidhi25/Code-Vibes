@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 
+/**
+ * ProjectSpecsModal Component
+ * Implements Glass Tier 4 modal for rapid architecture blueprint inspection.
+ */
 export default function ProjectSpecsModal({ isOpen, onClose, project }) {
   const [copied, setCopied] = useState(false);
 
@@ -14,80 +18,83 @@ export default function ProjectSpecsModal({ isOpen, onClose, project }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-on-surface/40 backdrop-blur-sm transition-all duration-200">
-      <div className="relative w-full max-w-2xl bg-surface-container-lowest rounded-xl shadow-xl border border-outline-variant/30 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
-        <div className="h-1.5 w-full bg-secondary" />
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#0B1120]/40 backdrop-blur-md transition-all duration-200">
+      <div className="relative w-full max-w-2xl glass-modal rounded-2xl shadow-2xl border border-white/80 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+        <div className="h-1.5 w-full gradient-core-action" />
 
         <div className="p-6 md:p-8 space-y-6">
           <div className="flex items-start justify-between">
             <div>
-              <span className="font-mono-sm text-mono-sm text-secondary uppercase tracking-wider">
+              <span className="font-mono-sm text-mono-sm text-[#006875] font-semibold uppercase tracking-wider">
                 Architecture Brief &amp; Requirements
               </span>
-              <h2 className="font-headline-md text-headline-md text-on-surface mt-1">
+              <h2 className="font-headline-md text-headline-md text-on-surface mt-1 font-bold">
                 {project.title?.split(':')[0] || 'Project'} Blueprint Specifications
               </h2>
             </div>
             <button
               type="button"
               onClick={onClose}
-              className="text-outline hover:text-on-surface p-1 rounded-lg hover:bg-surface-container cursor-pointer transition-colors"
+              className="text-outline hover:text-on-surface p-1 rounded-lg hover:bg-black/5 cursor-pointer transition-colors"
             >
               <span className="material-symbols-outlined">close</span>
             </button>
           </div>
 
           <div className="space-y-4 font-body-md text-body-md text-on-surface-variant max-h-[60vh] overflow-y-auto pr-2">
-            <div className="p-4 rounded-lg bg-surface-container-low space-y-2">
-              <h4 className="font-headline-sm text-headline-sm text-on-surface">
+            <div className="p-4 rounded-xl bg-white/80 border border-white/90 shadow-card-default space-y-2">
+              <h4 className="font-headline-sm text-headline-sm text-on-surface font-semibold">
                 Target Architecture
               </h4>
-              <p>
+              <p className="leading-relaxed">
                 Components follow strict zero-copy ingestion patterns with decoupled telemetry rings. Low latency syscall inspection utilizes kernel BPF maps before piping into regional Kafka buffers.
               </p>
             </div>
 
             <div className="space-y-2">
-              <h4 className="font-headline-sm text-headline-sm text-on-surface">
+              <h4 className="font-headline-sm text-headline-sm text-on-surface font-semibold">
                 Development Milestones
               </h4>
-              <ul className="space-y-1.5 list-disc list-inside font-body-sm text-body-sm">
+              <ul className="space-y-1.5 list-disc list-inside font-body-sm text-body-sm leading-relaxed">
                 <li>
-                  <strong className="text-on-surface">Milestone 1:</strong> Trace Collector Kernel Probe implementation (Weeks 1-3)
+                  <strong className="text-on-surface font-semibold">Milestone 1:</strong> Trace Collector Kernel Probe implementation (Weeks 1-3)
                 </li>
                 <li>
-                  <strong className="text-on-surface">Milestone 2:</strong> gRPC Streaming Channel &amp; Session multiplexing (Weeks 4-6)
+                  <strong className="text-on-surface font-semibold">Milestone 2:</strong> gRPC Streaming Channel &amp; Session multiplexing (Weeks 4-6)
                 </li>
                 <li>
-                  <strong className="text-on-surface">Milestone 3:</strong> High-DPI UI Canvas real-time event visualizer (Weeks 7-9)
+                  <strong className="text-on-surface font-semibold">Milestone 3:</strong> Canvas WebGL Node Visualizer Engine (Weeks 7-9)
                 </li>
               </ul>
             </div>
 
             <div className="space-y-2">
-              <h4 className="font-headline-sm text-headline-sm text-on-surface">
-                Codebase Standards
+              <h4 className="font-headline-sm text-headline-sm text-on-surface font-semibold">
+                Local Sandbox Quickstart
               </h4>
-              <div className="p-3 bg-surface-container rounded font-mono-sm text-mono-sm text-on-surface flex items-center justify-between">
-                <code className="text-primary truncate mr-2">{cloneCmd}</code>
+              <div className="p-3 rounded-lg bg-white/90 border border-[#c2c6d7]/40 font-mono-sm text-mono-sm text-[#0056c5] flex items-center justify-between gap-3 shadow-xs">
+                <code className="truncate">{cloneCmd}</code>
                 <button
                   type="button"
                   onClick={handleCopy}
-                  className="text-primary hover:underline cursor-pointer font-semibold shrink-0"
+                  className="px-2.5 py-1 rounded-md bg-white border border-[#c2c6d7]/50 text-on-surface hover:text-[#0056c5] flex items-center gap-1 text-xs shrink-0 cursor-pointer shadow-xs"
                 >
-                  {copied ? 'Copied!' : 'Copy'}
+                  <span className="material-symbols-outlined text-[14px]">
+                    {copied ? 'check' : 'content_copy'}
+                  </span>
+                  <span>{copied ? 'Copied' : 'Copy'}</span>
                 </button>
               </div>
             </div>
           </div>
 
-          <div className="pt-2 flex items-center justify-end">
+          <div className="pt-2 border-t border-[#c2c6d7]/30 flex items-center justify-end gap-3">
             <button
               type="button"
               onClick={onClose}
-              className="px-5 py-2.5 rounded-lg bg-primary text-on-primary font-label-ui text-label-ui cursor-pointer hover:bg-primary-container transition-colors"
+              className="btn-frosted-glass px-5 py-2.5 rounded-lg font-label-ui text-label-ui cursor-pointer"
             >
-              Close Specs
+              Close Specifications
             </button>
           </div>
         </div>

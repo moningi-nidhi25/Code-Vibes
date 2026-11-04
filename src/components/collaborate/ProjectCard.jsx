@@ -1,6 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
+/**
+ * ProjectCard Component
+ * Implements the Electric Glass Standard Bento Card specification:
+ * - rgba(255, 255, 255, 0.80) fill with 16px backdrop-blur, specular top border.
+ * - Directional Cobalt glow on hover.
+ * - Precision JetBrains Mono telemetry chips and role badges.
+ */
 export default function ProjectCard({
   project,
   onApply,
@@ -17,21 +24,21 @@ export default function ProjectCard({
   };
 
   const badgeColors = {
-    primary: 'bg-primary-fixed text-on-primary-fixed',
-    secondary: 'bg-secondary-fixed text-on-secondary-fixed',
-    tertiary: 'bg-tertiary-fixed text-on-tertiary-fixed',
-    surface: 'bg-surface-container-highest text-on-surface',
+    primary: 'bg-primary-fixed text-on-primary-fixed border border-primary/20',
+    secondary: 'bg-[rgba(0,229,255,0.12)] border border-[rgba(0,229,255,0.30)] text-[#006875]',
+    tertiary: 'bg-[rgba(179,36,229,0.12)] border border-[rgba(179,36,229,0.30)] text-[#9700c6]',
+    surface: 'bg-white/90 text-on-surface border border-outline-variant/40',
   };
 
   return (
-    <article className="project-card rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all p-6 lg:p-8 flex flex-col gap-6 relative overflow-hidden backdrop-blur-xl border border-outline-variant/30">
-      {/* Visual Accent Left Edge */}
-      <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-primary via-secondary-container to-tertiary" />
+    <article className="project-card rounded-xl bento-card p-6 lg:p-8 flex flex-col gap-6 relative overflow-hidden">
+      {/* Visual Accent Left Edge: Core Action Spectrum */}
+      <div className="absolute left-0 top-0 bottom-0 w-1.5 gradient-core-action" />
 
       {/* Header section with icon, title, meta & maintainers */}
       <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-4">
         <div className="flex items-start gap-4">
-          <div className="w-14 h-14 rounded-xl bg-surface-container flex items-center justify-center shrink-0 shadow-sm">
+          <div className="w-14 h-14 rounded-xl bg-white/90 border border-white/80 flex items-center justify-center shrink-0 shadow-sm">
             <span className={`material-symbols-outlined text-3xl ${project.iconColor || 'text-primary'}`}>
               {project.icon}
             </span>
@@ -39,11 +46,11 @@ export default function ProjectCard({
 
           <div className="space-y-1">
             <div className="flex flex-wrap items-center gap-2">
-              <span className={`px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm uppercase tracking-wider ${badgeColors[project.badgeType] || badgeColors.primary}`}>
+              <span className={`px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm uppercase tracking-wider font-semibold ${badgeColors[project.badgeType] || badgeColors.primary}`}>
                 {project.badge}
               </span>
-              <span className="px-2 py-0.5 rounded-full font-mono-sm text-mono-sm bg-surface-container-high text-on-surface-variant flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse" />
+              <span className="px-2.5 py-0.5 rounded-full font-mono-sm text-mono-sm bg-white/70 border border-white/60 text-on-surface-variant flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#00E5FF] animate-pulse" />
                 {project.statusText}
               </span>
               <span className="font-mono-sm text-mono-sm text-outline">
@@ -51,7 +58,7 @@ export default function ProjectCard({
               </span>
             </div>
 
-            <h2 className="font-headline-md text-headline-md text-on-surface">
+            <h2 className="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">
               {project.title}
             </h2>
             <p className="font-body-md text-body-md text-on-surface-variant max-w-3xl leading-relaxed">
@@ -61,18 +68,18 @@ export default function ProjectCard({
         </div>
 
         {/* Maintainers cluster */}
-        <div className="flex items-center gap-2 self-start lg:self-center shrink-0">
+        <div className="flex items-center gap-2 self-start lg:self-center shrink-0 bg-white/60 px-3 py-1.5 rounded-full border border-white/80 shadow-xs">
           <div className="flex -space-x-2 overflow-hidden">
             {project.maintainerAvatars?.map((avatar, idx) => (
               <img
                 key={idx}
-                className="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container-lowest object-cover"
+                className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover"
                 src={avatar}
                 alt="Maintainer"
               />
             ))}
           </div>
-          <span className="font-mono-sm text-mono-sm text-on-surface-variant font-medium">
+          <span className="font-mono-sm text-mono-sm text-on-surface-variant font-semibold">
             {project.maintainers}
           </span>
         </div>
@@ -86,71 +93,47 @@ export default function ProjectCard({
         {project.techs?.map((tech, idx) => (
           <span
             key={idx}
-            className="px-2.5 py-1 rounded bg-surface-container font-mono-sm text-mono-sm text-on-surface"
+            className="px-2.5 py-1 rounded-md bg-white/85 border border-[#c2c6d7]/40 font-mono-sm text-mono-sm text-on-surface font-medium shadow-xs"
           >
             {tech}
           </span>
         ))}
       </div>
 
-      {/* Open Roles Split Bento Panel */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {project.roleSpots?.map((spot, idx) => (
-          <div
-            key={idx}
-            className={`p-4 rounded-xl bg-surface-container-low flex flex-col justify-between gap-3 ${spot.colSpan || ''}`}
-          >
-            <div className="flex items-start justify-between">
-              <div>
-                <div className={`font-label-ui text-label-ui uppercase tracking-wide ${spot.tagColor}`}>
-                  {spot.tag}
-                </div>
-                <h3 className="font-headline-sm text-headline-sm text-on-surface mt-0.5">
-                  {spot.title}
-                </h3>
-              </div>
-              <span className="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-mono-sm text-mono-sm font-semibold shrink-0">
-                {spot.openings}
-              </span>
-            </div>
-            <p className="font-body-sm text-body-sm text-on-surface-variant">
-              {spot.requirements}
-            </p>
-          </div>
-        ))}
-      </div>
-
-      {/* Card Footprint & CTA Actions */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-slate-100">
-        <div className="flex flex-wrap items-center gap-4 text-on-surface-variant font-mono-sm text-mono-sm w-full sm:w-auto">
-          <span className="flex items-center gap-1.5">
-            <span className="material-symbols-outlined text-base text-outline">fork_right</span>
-            {project.forks}
+      {/* Open Roles & Action Footer */}
+      <div className="pt-4 border-t border-[#c2c6d7]/30 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="font-mono-sm text-mono-sm font-semibold text-outline uppercase tracking-wider mr-1">
+            Open Spots:
           </span>
-          <span className="flex items-center gap-1.5">
-            <span className="material-symbols-outlined text-base text-outline">star</span>
-            {project.stars}
-          </span>
-          <span className="flex items-center gap-1.5">
-            <span className="material-symbols-outlined text-base text-outline">schedule</span>
-            {project.commitment}
-          </span>
+          {project.roles?.map((role, idx) => (
+            <span
+              key={idx}
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full font-mono-sm text-mono-sm bg-white/70 border border-white/80 text-on-surface shadow-xs"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-[#2979FF]" />
+              <span className="font-semibold">{role.title}</span>
+              <span className="text-outline">({role.count})</span>
+            </span>
+          ))}
         </div>
 
-        <div className="flex items-center gap-3 w-full sm:w-auto justify-end">
+        <div className="flex items-center gap-3 w-full md:w-auto justify-end">
           <button
-            type="button"
             onClick={handleSpecsClick}
-            className="px-4 py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-ui text-label-ui transition-colors cursor-pointer border border-outline-variant/30"
+            type="button"
+            className="btn-frosted-glass px-4 py-2 rounded-lg font-label-ui text-label-ui flex items-center gap-1.5 shadow-xs cursor-pointer"
           >
-            View Project Specs
+            <span className="material-symbols-outlined text-base">architecture</span>
+            <span>View Specs</span>
           </button>
           <button
-            type="button"
             onClick={() => onApply?.(project)}
-            className="px-5 py-2 rounded-lg bg-gradient-to-r from-secondary-container via-primary to-tertiary text-on-primary font-label-ui text-label-ui shadow-sm hover:opacity-95 active:scale-95 transition-all cursor-pointer"
+            type="button"
+            className="btn-gradient-primary px-5 py-2 rounded-lg font-label-ui text-label-ui flex items-center gap-1.5 shadow-sm active:scale-95 cursor-pointer"
           >
-            Apply to Collaborate
+            <span>Apply to Pod</span>
+            <span className="material-symbols-outlined text-base">arrow_forward</span>
           </button>
         </div>
       </div>

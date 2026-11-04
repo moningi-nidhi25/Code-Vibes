@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 
+/**
+ * FaqAccordion Component
+ * Uses the Electric Glass Bento Card container with specular top borders and smooth expand.
+ */
 export default function FaqAccordion({ items = [] }) {
   const [openIndex, setOpenIndex] = useState(0);
 
@@ -8,24 +12,24 @@ export default function FaqAccordion({ items = [] }) {
   };
 
   return (
-    <div className="space-y-3.5">
+    <div className="space-y-4">
       {items.map((item, index) => {
         const isOpen = openIndex === index;
         return (
           <div
             key={index}
-            className="rounded-xl bg-surface-container-lowest/70 backdrop-blur-xl border border-surface-container-lowest/80 shadow-xs overflow-hidden transition-all duration-200"
+            className="rounded-xl bento-card overflow-hidden transition-all duration-200"
           >
             <button
               onClick={() => toggleItem(index)}
               className="w-full p-5 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
               type="button"
             >
-              <span className="font-headline-sm text-headline-sm text-on-surface">
+              <span className="font-headline-sm text-headline-sm text-on-surface font-semibold">
                 {item.question}
               </span>
               <span
-                className={`material-symbols-outlined text-on-surface-variant transition-transform duration-300 transform shrink-0 ${
+                className={`material-symbols-outlined text-primary transition-transform duration-300 transform shrink-0 ${
                   isOpen ? 'rotate-180' : 'rotate-0'
                 }`}
               >
@@ -33,7 +37,7 @@ export default function FaqAccordion({ items = [] }) {
               </span>
             </button>
             <div
-              className={`transition-all duration-300 ease-in-out overflow-hidden px-5 bg-surface-container-low/40 backdrop-blur-md ${
+              className={`transition-all duration-300 ease-in-out overflow-hidden px-5 bg-white/50 backdrop-blur-sm border-t border-[#c2c6d7]/30 ${
                 isOpen ? 'max-h-96 opacity-100 py-4' : 'max-h-0 opacity-0 py-0'
               }`}
             >

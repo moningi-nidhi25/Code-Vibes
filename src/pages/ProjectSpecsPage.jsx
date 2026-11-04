@@ -131,7 +131,7 @@ export default function ProjectSpecsPage() {
             </div>
 
             <a
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-ui text-label-ui shadow-sm transition-all border border-outline-variant/30"
+              className="btn-frosted-glass inline-flex items-center gap-2 px-4 py-2 rounded-lg font-label-ui text-label-ui shadow-xs transition-all"
               href="https://github.com"
               rel="noreferrer"
               target="_blank"
@@ -143,7 +143,7 @@ export default function ProjectSpecsPage() {
             </a>
 
             <a
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-secondary via-primary to-tertiary text-on-primary font-label-ui text-label-ui shadow-md hover:opacity-95 active:scale-95 transition-all"
+              className="btn-gradient-primary inline-flex items-center gap-2 px-4 py-2 rounded-lg font-label-ui text-label-ui shadow-sm active:scale-95 transition-all"
               href="#open-positions"
             >
               <span className="material-symbols-outlined text-[16px]">how_to_reg</span>
@@ -769,21 +769,21 @@ export default function ProjectSpecsPage() {
 
       {/* Interactive Apply Modal */}
       {applyModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-on-surface/40 backdrop-blur-md">
-          <div className="w-full max-w-xl rounded-2xl bg-surface-container-lowest shadow-2xl p-8 space-y-6 border border-outline-variant/30 animate-in fade-in zoom-in-95">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#0B1120]/40 backdrop-blur-md">
+          <div className="w-full max-w-xl rounded-2xl glass-modal shadow-2xl p-8 space-y-6 border border-white/80 animate-in fade-in zoom-in-95">
             <div className="flex items-center justify-between">
               <div className="space-y-1">
-                <div className="font-mono-sm text-mono-sm text-primary uppercase">
+                <div className="font-mono-sm text-mono-sm text-[#0056c5] uppercase font-semibold">
                   Pod Application
                 </div>
-                <h2 className="font-headline-lg text-headline-lg text-on-surface">
+                <h2 className="font-headline-lg text-headline-lg text-on-surface font-bold">
                   Apply: {applyRoleTitle}
                 </h2>
               </div>
               <button
                 type="button"
                 onClick={() => setApplyModalOpen(false)}
-                className="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface transition-colors cursor-pointer"
+                className="w-8 h-8 rounded-full bg-white/80 hover:bg-white flex items-center justify-center text-on-surface transition-colors cursor-pointer border border-[#c2c6d7]/40"
               >
                 <span className="material-symbols-outlined text-[18px]">close</span>
               </button>
@@ -791,46 +791,46 @@ export default function ProjectSpecsPage() {
 
             <form className="space-y-4" onSubmit={handleModalSubmit}>
               <div className="space-y-1">
-                <label className="font-label-ui text-label-ui text-on-surface">
+                <label className="font-label-ui text-label-ui text-on-surface font-semibold">
                   Full Name or Handle
                 </label>
                 <input
                   type="text"
                   required
                   placeholder="e.g. Alex Rivera (@arivera)"
-                  className="w-full px-4 py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary border border-outline-variant/30"
+                  className="w-full px-4 py-2.5 rounded-md glass-input text-on-surface font-body-md text-body-md"
                 />
               </div>
 
               <div className="space-y-1">
-                <label className="font-label-ui text-label-ui text-on-surface">
+                <label className="font-label-ui text-label-ui text-on-surface font-semibold">
                   GitHub Profile / Portfolio Link
                 </label>
                 <input
                   type="url"
                   required
                   placeholder="https://github.com/yourhandle"
-                  className="w-full px-4 py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary border border-outline-variant/30"
+                  className="w-full px-4 py-2.5 rounded-md glass-input text-on-surface font-body-md text-body-md"
                 />
               </div>
 
               <div className="space-y-1">
-                <label className="font-label-ui text-label-ui text-on-surface">
+                <label className="font-label-ui text-label-ui text-on-surface font-semibold">
                   Relevant Experience &amp; Motivation
                 </label>
                 <textarea
                   rows={3}
                   required
                   placeholder="Briefly describe what you've built with systems code, Rust, eBPF, or high-perf UI..."
-                  className="w-full px-4 py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary border border-outline-variant/30 resize-none"
+                  className="w-full px-4 py-2.5 rounded-md glass-input text-on-surface font-body-md text-body-md resize-none"
                 />
               </div>
 
               <div className="space-y-1">
-                <label className="font-label-ui text-label-ui text-on-surface">
+                <label className="font-label-ui text-label-ui text-on-surface font-semibold">
                   Weekly Availability
                 </label>
-                <select className="w-full px-4 py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary border border-outline-variant/30">
+                <select className="w-full px-4 py-2.5 rounded-md glass-input text-on-surface font-body-md text-body-md cursor-pointer">
                   <option>5–8 hrs / week (Standard pod commitment)</option>
                   <option>8–12 hrs / week (Sprint contributor)</option>
                   <option>2–4 hrs / week (Reviewer / Advisory)</option>
@@ -841,13 +841,13 @@ export default function ProjectSpecsPage() {
                 <button
                   type="button"
                   onClick={() => setApplyModalOpen(false)}
-                  className="px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-ui text-label-ui transition-colors cursor-pointer"
+                  className="btn-frosted-glass px-4 py-2 rounded-lg font-label-ui text-label-ui cursor-pointer"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-2 rounded-lg bg-gradient-to-r from-secondary via-primary to-tertiary text-on-primary font-label-ui text-label-ui shadow-md hover:opacity-95 transition-all cursor-pointer"
+                  className="btn-gradient-primary px-5 py-2.5 rounded-lg font-label-ui text-label-ui shadow-sm active:scale-95 cursor-pointer"
                 >
                   Submit Application
                 </button>

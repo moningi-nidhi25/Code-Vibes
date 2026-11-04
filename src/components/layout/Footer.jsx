@@ -13,8 +13,8 @@ export default function Footer() {
                 <div className="w-10 h-10 rounded-full p-0.5 bg-gradient-to-tr from-secondary-container via-primary-container to-tertiary-container shadow-xs shrink-0 flex items-center justify-center transition-transform group-hover:scale-105">
                   <img
                     alt="The Code Vibe Logo"
-                    className="w-full h-full rounded-full object-contain bg-white/90 backdrop-blur-sm"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuABcyLxDKvWB5SEr_arLw2sMGjqjX3kFjITy-e3zQDkzTmebJ5HNnw3VBsiemhfX77PNp5AN04jBw8Om42EceFRbIEv5f5KtPq3ulzGSru7qs-7SIk82Um9BCKiP9PgnZt1PZwygTMBVfOoGAJFklK1MUFfKz6fzZGARIpL7S7ym4Z2RJmOC2IODSNIDJ3ewu6US8DaCbyQtPX__XUJYl0cXm92S_FWz-kDrduWFHz7hKFOjT59t1Xy"
+                    className="w-full h-full rounded-full object-contain bg-black/95 backdrop-blur-sm"
+                    src="/logo.png"
                   />
                 </div>
                 <span className="font-headline-md text-headline-md tracking-tight font-bold bg-gradient-to-r from-secondary via-primary-container to-tertiary bg-clip-text text-transparent">

@@ -9,12 +9,15 @@ export default function MainLayout() {
   const [joinModalOpen, setJoinModalOpen] = useState(false);
   const location = useLocation();
 
-  const isGlassVariant = location.pathname === '/' || location.pathname === '/events';
+  const isHomePage = location.pathname === '/';
+  const isGlassVariant = location.pathname === '/events';
 
   return (
     <div className="flex flex-col min-h-screen relative overflow-x-hidden">
-      {/* Dynamic Ambient Mesh Glow Background */}
-      <AtmosphereOrbs variant={isGlassVariant ? 'glass' : 'default'} />
+      {/* Dynamic Ambient Mesh Glow Background (omitted on home page) */}
+      {!isHomePage && (
+        <AtmosphereOrbs variant={isGlassVariant ? 'glass' : 'default'} />
+      )}
 
       {/* Floating Header */}
       <Navbar onOpenJoinModal={() => setJoinModalOpen(true)} />
