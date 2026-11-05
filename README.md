@@ -4,15 +4,37 @@ A pixel-faithful, responsive React.js frontend built from **Google Stitch** desi
 
 ---
 
+## 📁 Project Structure
+
+```
+Code Vibes/
+├── frontend/               # React + Vite frontend application
+│   ├── src/                # Components, pages, hooks, mock data, and styles
+│   ├── public/             # Static public assets (logo, icons, etc.)
+│   ├── package.json        # Frontend dependencies & scripts
+│   └── vite.config.js      # Vite build configuration
+├── backend/                # Backend API services & database configurations
+└── package.json            # Root workspace scripts (delegates to frontend)
+```
+
+---
+
 ## 🚀 Quick Start
 
 ### 1. Installation
 ```bash
+cd frontend
 npm install
 ```
 
 ### 2. Development Server
+From root:
 ```bash
+npm run dev
+```
+Or directly in `frontend/`:
+```bash
+cd frontend
 npm run dev
 ```
 Open [http://localhost:5173](http://localhost:5173) in your browser.
