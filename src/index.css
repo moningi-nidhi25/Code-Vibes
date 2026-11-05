@@ -323,3 +323,303 @@
   animation: float-orb-4 13s ease-in-out infinite;
   will-change: transform;
 }
+
+/* Infinite Continuous Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* ═══════════════════════════════════════════
+   SCROLL-REVEAL ANIMATION SYSTEM
+   ═══════════════════════════════════════════ */
+
+/* Fade In Up — primary reveal animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In Down — for navbar/top elements */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In — pure opacity */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Scale In — for cards, badges */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.90);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Slide In Left — for text blocks */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide In Right */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Shimmer sweep — for buttons and card highlights */
+@keyframes shimmer {
+  0%   { transform: translateX(-100%) skewX(-12deg); }
+  100% { transform: translateX(200%) skewX(-12deg);  }
+}
+
+/* Gradient shift — for hero gradient text */
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Breathe — subtle scale pulse for glowing elements */
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50%       { transform: scale(1.08); opacity: 1;  }
+}
+
+/* Scroll-progress bar */
+@keyframes growWidth {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+
+/* ═══════════════════════════════════════════
+   ANIMATION UTILITY CLASSES
+   ═══════════════════════════════════════════ */
+
+/* Base "before reveal" state — invisible + shifted down */
+.reveal-ready {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Applied by IntersectionObserver when element enters viewport */
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scale variant */
+.reveal-scale-ready {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-scale-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* One-shot animation classes */
+.animate-fade-in-up {
+  animation: fadeInUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.animate-fade-in-down {
+  animation: fadeInDown 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.animate-fade-in {
+  animation: fadeIn 0.5s ease both;
+}
+.animate-scale-in {
+  animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.animate-slide-in-left {
+  animation: slideInLeft 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.animate-slide-in-right {
+  animation: slideInRight 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.animate-breathe {
+  animation: breathe 3s ease-in-out infinite;
+}
+
+/* Shimmer effect — add to ::after pseudo-element overlay */
+.shimmer-effect {
+  position: relative;
+  overflow: hidden;
+}
+.shimmer-effect::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.55) 50%,
+    transparent 60%
+  );
+  transform: translateX(-100%) skewX(-12deg);
+  pointer-events: none;
+}
+.shimmer-effect:hover::after {
+  animation: shimmer 0.65s ease forwards;
+}
+
+/* Animated gradient text */
+.gradient-text-animated {
+  background: linear-gradient(135deg, #00E5FF, #2979FF, #B324E5, #00E5FF);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 5s ease infinite;
+}
+
+/* Enhanced bento card — deeper lift + shimmer */
+.bento-card-premium {
+  background-color: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(20px) saturate(170%);
+  -webkit-backdrop-filter: blur(20px) saturate(170%);
+  border-top: 1px solid rgba(255, 255, 255, 0.70);
+  border-left: 1px solid rgba(255, 255, 255, 0.60);
+  border-right: 1px solid rgba(194, 198, 215, 0.30);
+  border-bottom: 1px solid rgba(194, 198, 215, 0.30);
+  box-shadow: 0 10px 30px -10px rgba(11, 17, 32, 0.07), 0 1px 3px 0 rgba(11, 17, 32, 0.02);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+.bento-card-premium::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.50) 50%,
+    transparent 60%
+  );
+  transform: translateX(-100%) skewX(-12deg);
+  pointer-events: none;
+  z-index: 1;
+}
+.bento-card-premium:hover {
+  transform: translateY(-6px);
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 20px 44px -8px rgba(41, 121, 255, 0.28), 0 4px 12px -2px rgba(41, 121, 255, 0.16);
+}
+.bento-card-premium:hover::before {
+  animation: shimmer 0.65s ease forwards;
+}
+
+/* Scroll progress bar */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00E5FF 0%, #2979FF 50%, #B324E5 100%);
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
+
+/* Navbar scroll glow enhancement */
+.navbar-scrolled {
+  box-shadow: 0 8px 32px -8px rgba(41, 121, 255, 0.18), 0 2px 8px -2px rgba(0, 0, 0, 0.06) !important;
+  background-color: rgba(255, 255, 255, 0.96) !important;
+}
+
+/* Focus glow for form inputs */
+.glass-input-focused {
+  animation: none;
+}
+.glass-input:focus {
+  background: rgba(255, 255, 255, 0.98);
+  border-color: #2979FF;
+  box-shadow: 0 0 0 3px rgba(41, 121, 255, 0.18), 0 0 16px rgba(41, 121, 255, 0.12);
+  outline: none;
+}
+
+/* Stagger delay helpers */
+.delay-0   { animation-delay: 0ms; }
+.delay-75  { animation-delay: 75ms; }
+.delay-100 { animation-delay: 100ms; }
+.delay-150 { animation-delay: 150ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-250 { animation-delay: 250ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-ready,
+  .reveal-scale-ready,
+  .animate-fade-in-up,
+  .animate-fade-in-down,
+  .animate-fade-in,
+  .animate-scale-in,
+  .animate-slide-in-left,
+  .animate-slide-in-right {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .bento-card-premium:hover {
+    transform: none;
+  }
+  .animate-marquee {
+    animation-duration: 60s;
+  }
+}

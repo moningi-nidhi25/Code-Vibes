@@ -21,84 +21,186 @@ export const TELEMETRY_METRICS = [
 
 export const WHAT_WE_DO_CARDS = [
   {
-    id: "co-building",
-    title: "Ship Real Production Software",
-    category: "Co-Building",
-    description: "Join active engineering pods building distributed systems, AI agent frameworks, and developer tooling. Ship to production with peer code reviews and architectural oversight.",
-    stat: "180+ Open Source Repos",
-    icon: "terminal",
-    color: "primary",
-    accent: "bg-primary/20",
-    hoverBorder: "hover:border-primary/50"
-  },
-  {
-    id: "mentorship",
-    title: "Peer Pair Programming",
-    category: "Mentorship",
-    description: "Level up faster through structured weekly pairing sessions, algorithmic breakdowns, and guidance from senior and staff engineers from top tech companies.",
-    stat: "Weekly Rhythm • Zero Ego",
-    icon: "group",
-    color: "secondary",
-    accent: "bg-secondary/20",
-    hoverBorder: "hover:border-secondary/50"
-  },
-  {
     id: "hackathons",
-    title: "Flagship Hackathons & Sprints",
-    category: "Hackathons",
-    description: "Compete in high-stakes build challenges with automated sandbox environments, verifiable deliverables, sponsor bounties, and cash prize pools.",
-    stat: "$50,000+ Distributed Bounties",
+    index: "01",
+    title: "Hackathons",
+    category: "Competition",
+    description: "Turn creative ideas into working solutions.",
     icon: "trophy",
-    color: "tertiary",
-    accent: "bg-tertiary/20",
-    hoverBorder: "hover:border-tertiary/50"
+    color: "primary",
+    link: "/events",
+    gradient: "from-[#00E5FF] via-[#2979FF] to-[#B324E5]",
+    iconGlow: "shadow-[0_8px_24px_-4px_rgba(0,229,255,0.35)]",
+    cardGlow: "rgba(0, 229, 255, 0.18)",
+    badgeDot: "bg-[#00E5FF]",
+    badgeBg: "bg-[rgba(0,229,255,0.12)] text-[#006875] border-[rgba(0,229,255,0.30)]",
+    tags: ["48h Sprints", "Prize Pools", "Ship MVPs"]
   },
   {
-    id: "knowledge",
-    title: "Deep-Dive Workshops & Tech Talks",
+    id: "tech-talks",
+    index: "02",
+    title: "Tech Talks",
     category: "Knowledge",
-    description: "Deconstruct complex topics like eBPF internals, distributed consensus, memory-safe languages, and zero-knowledge systems in hands-on workshops.",
-    stat: "45+ Deep Dives Hosted",
-    icon: "menu_book",
+    description: "Explore new technologies and industry insights.",
+    icon: "podcasts",
+    color: "secondary",
+    link: "/events",
+    gradient: "from-[#B324E5] via-[#7928CA] to-[#2979FF]",
+    iconGlow: "shadow-[0_8px_24px_-4px_rgba(179,36,229,0.35)]",
+    cardGlow: "rgba(179, 36, 229, 0.18)",
+    badgeDot: "bg-[#B324E5]",
+    badgeBg: "bg-[rgba(179,36,229,0.12)] text-[#76009b] border-[rgba(179,36,229,0.30)]",
+    tags: ["Tech Leads", "System Dives", "Live Q&A"]
+  },
+  {
+    id: "workshops",
+    index: "03",
+    title: "Workshops",
+    category: "Hands-on",
+    description: "Learn through practical experiences.",
+    icon: "terminal",
+    color: "tertiary",
+    link: "/events",
+    gradient: "from-[#00E5FF] via-[#00B0FF] to-[#10B981]",
+    iconGlow: "shadow-[0_8px_24px_-4px_rgba(16,185,129,0.35)]",
+    cardGlow: "rgba(16, 185, 129, 0.18)",
+    badgeDot: "bg-[#10B981]",
+    badgeBg: "bg-[rgba(16,185,129,0.12)] text-[#065f46] border-[rgba(16,185,129,0.30)]",
+    tags: ["Live Labs", "Modern Stacks", "Practical Code"]
+  },
+  {
+    id: "collaboration",
+    index: "04",
+    title: "Collaboration",
+    category: "Community",
+    description: "Connect, share ideas and build together.",
+    icon: "groups",
     color: "primary-container",
-    accent: "bg-primary-container/20",
-    hoverBorder: "hover:border-primary-container/50"
+    link: "/collaborate",
+    gradient: "from-[#2979FF] via-[#00E5FF] to-[#B324E5]",
+    iconGlow: "shadow-[0_8px_24px_-4px_rgba(41,121,255,0.35)]",
+    cardGlow: "rgba(41, 121, 255, 0.18)",
+    badgeDot: "bg-[#2979FF]",
+    badgeBg: "bg-[rgba(41,121,255,0.12)] text-[#00429b] border-[rgba(41,121,255,0.30)]",
+    tags: ["Builder Pods", "Open Source", "Pair Coding"]
   }
 ];
 
 export const FEATURED_EVENTS_HOME = [
   {
-    id: "ai-agent-hackathon-2025",
-    type: "Hackathon",
-    typeBadgeClass: "bg-secondary-fixed/50 border border-secondary/20 text-on-secondary-fixed-variant",
-    time: "09:00 AM - 06:00 PM PST",
-    title: "AI Agent Hackathon 2025",
-    description: "48-hour sprint to craft self-healing, stateful autonomous agents with memory persistence.",
-    date: "May 16 - 18, 2025",
+    id: "ai-agent-hackathon-2026",
+    title: "Autonomous AI Agents Sprint 2026",
+    category: "Hackathons",
+    categoryKey: "hackathons",
+    date: "May 16 - 18, 2026",
+    time: "48-Hour Continuous Sprint",
     location: "Online & Worldwide • Discord Stage",
-    link: "/events/wasm-memory-safety"
+    description: "48-hour sprint to craft self-healing, stateful autonomous agents with memory persistence.",
+    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
+    badgeBg: "bg-[rgba(0,229,255,0.12)] border-[rgba(0,229,255,0.30)] text-[#006875]",
+    badgeDot: "bg-[#00E5FF]",
+    link: "/events"
   },
   {
-    id: "rust-typescript-devs",
-    type: "Workshop",
-    typeBadgeClass: "bg-tertiary-fixed/50 border border-tertiary/20 text-on-tertiary-fixed-variant",
-    time: "11:00 AM - 02:00 PM PST",
-    title: "Rust for TypeScript Devs",
-    description: "Demystifying memory safety, lifetimes, and WebAssembly compilation paths for JavaScript veterans.",
-    date: "June 02, 2025",
-    location: "Interactive Lab • Virtual Sandbox",
-    link: "/events/wasm-memory-safety"
-  },
-  {
-    id: "system-architecture-scale",
-    type: "Tech Talk",
-    typeBadgeClass: "bg-primary-fixed/50 border border-primary/20 text-on-primary-fixed-variant",
-    time: "05:00 PM - 07:30 PM PST",
-    title: "System Architecture at Scale",
+    id: "system-architecture-scale-2026",
+    title: "System Architecture & Consensus at Scale",
+    category: "Technical talks",
+    categoryKey: "technical-talks",
+    date: "May 28, 2026",
+    time: "06:00 PM – 08:30 PM PST",
+    location: "SF Tech Hall & Global Live Stream",
     description: "Deep architectural breakdown of zero-downtime database sharding and distributed consensus under 100k QPS.",
-    date: "June 18, 2025",
-    location: "SF Tech Hall & Global Stream",
-    link: "/events/wasm-memory-safety"
+    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
+    badgeBg: "bg-[rgba(179,36,229,0.12)] border-[rgba(179,36,229,0.30)] text-[#76009b]",
+    badgeDot: "bg-[#B324E5]",
+    link: "/events"
+  },
+  {
+    id: "full-stack-vector-search-2026",
+    title: "Full-Stack Vector Search with Postgres & pgvector",
+    category: "Workshops",
+    categoryKey: "workshops",
+    date: "June 05, 2026",
+    time: "10:00 AM – 01:00 PM PST",
+    location: "Interactive Lab • Virtual Sandbox",
+    description: "Architecting scalable semantic retrieval pipelines directly in PostgreSQL with HNSW indexing.",
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+    badgeBg: "bg-[rgba(16,185,129,0.12)] border-[rgba(16,185,129,0.30)] text-[#065f46]",
+    badgeDot: "bg-[#10B981]",
+    link: "/events"
+  },
+  {
+    id: "algorithmic-code-duel-2026",
+    title: "Algorithmic Code Duel & WebGPU Shader Arena",
+    category: "Competitions",
+    categoryKey: "competitions",
+    date: "June 14, 2026",
+    time: "12:00 PM – 04:00 PM PST",
+    location: "Online Competitive Arena • Realtime Leaderboard",
+    description: "Live code golf and compute shader optimization duel. Race against the clock to optimize memory & latency.",
+    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80",
+    badgeBg: "bg-[rgba(41,121,255,0.12)] border-[rgba(41,121,255,0.30)] text-[#00429b]",
+    badgeDot: "bg-[#2979FF]",
+    link: "/events"
+  }
+];
+
+export const WHY_JOIN_REASONS = [
+  {
+    id: "learn",
+    index: "01",
+    benefit: "Learn",
+    description: "Explore technologies and develop skills.",
+    icon: "school",
+    gradient: "from-[#00E5FF] via-[#2979FF] to-[#B324E5]",
+    cardGlow: "rgba(0, 229, 255, 0.18)",
+    iconGlow: "shadow-[0_8px_24px_-4px_rgba(0,229,255,0.35)]",
+    badgeDot: "bg-[#00E5FF]",
+    badgeBg: "bg-[rgba(0,229,255,0.12)] text-[#006875] border-[rgba(0,229,255,0.30)]",
+    tagline: "Skill Acceleration",
+    highlights: ["Modern Stacks", "Interactive Labs", "Peer Code Reviews"]
+  },
+  {
+    id: "connect",
+    index: "02",
+    benefit: "Connect",
+    description: "Meet like-minded students.",
+    icon: "diversity_3",
+    gradient: "from-[#B324E5] via-[#7928CA] to-[#2979FF]",
+    cardGlow: "rgba(179, 36, 229, 0.18)",
+    iconGlow: "shadow-[0_8px_24px_-4px_rgba(179,36,229,0.35)]",
+    badgeDot: "bg-[#B324E5]",
+    badgeBg: "bg-[rgba(179,36,229,0.12)] text-[#76009b] border-[rgba(179,36,229,0.30)]",
+    tagline: "Peer Network",
+    highlights: ["Active Discord", "Student Devs", "Hackathon Pods"]
+  },
+  {
+    id: "build",
+    index: "03",
+    benefit: "Build",
+    description: "Work on interesting projects.",
+    icon: "rocket_launch",
+    gradient: "from-[#00E5FF] via-[#00B0FF] to-[#10B981]",
+    cardGlow: "rgba(16, 185, 129, 0.18)",
+    iconGlow: "shadow-[0_8px_24px_-4px_rgba(16,185,129,0.35)]",
+    badgeDot: "bg-[#10B981]",
+    badgeBg: "bg-[rgba(16,185,129,0.12)] text-[#065f46] border-[rgba(16,185,129,0.30)]",
+    tagline: "Hands-on Shipping",
+    highlights: ["Real Software", "Open Source Repos", "Production MVPs"]
+  },
+  {
+    id: "grow",
+    index: "04",
+    benefit: "Grow",
+    description: "Gain experience through events and activities.",
+    icon: "trending_up",
+    gradient: "from-[#2979FF] via-[#00E5FF] to-[#B324E5]",
+    cardGlow: "rgba(41, 121, 255, 0.18)",
+    iconGlow: "shadow-[0_8px_24px_-4px_rgba(41,121,255,0.35)]",
+    badgeDot: "bg-[#2979FF]",
+    badgeBg: "bg-[rgba(41,121,255,0.12)] text-[#00429b] border-[rgba(41,121,255,0.30)]",
+    tagline: "Career Velocity",
+    highlights: ["Flagship Events", "Speaker Insights", "Portfolio Boost"]
   }
 ];
 
@@ -152,6 +254,93 @@ export const TESTIMONIALS = [
     handle: "@dmoretti",
     role: "Staff Eng at Datasync",
     avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCJRR1f9IkzhbpzVcSRtK1_yk9Sxvwja60KOsUK84bH734qqLCoGOtE7ZHXBXeYBeGC2BKD0CzRduEOlsjvMnb8AvhXmM0ZF9D2iRP_DxNgjE4gyN1lKrAm0zCB0pgJncTpHQpl-gg1um8qXo8uPhJbV9ZO1R_0R8Tvk_TVUnsZafx2afhnPawxl0QqRElYE7DG53ckPkDsnxtLAH6fZQ6PiBPwFaTuWEQcnQ4mM4jPh2LxA6mjaE-V"
+  }
+];
+
+export const ABOUT_BELIEFS = [
+  {
+    id: "explore",
+    title: "Explore",
+    description: "Stay curious and discover new possibilities.",
+    icon: "explore",
+    gradient: "from-[#00E5FF] via-[#2979FF] to-[#B324E5]",
+    cardGlow: "rgba(0, 229, 255, 0.18)",
+    iconGlow: "shadow-[0_8px_24px_-4px_rgba(0,229,255,0.35)]",
+    badgeBg: "bg-[rgba(0,229,255,0.12)] border-[rgba(0,229,255,0.30)] text-[#006875]",
+    badgeDot: "bg-[#00E5FF]"
+  },
+  {
+    id: "create",
+    title: "Create",
+    description: "Turn ideas into meaningful projects.",
+    icon: "lightbulb",
+    gradient: "from-[#B324E5] via-[#7928CA] to-[#2979FF]",
+    cardGlow: "rgba(179, 36, 229, 0.18)",
+    iconGlow: "shadow-[0_8px_24px_-4px_rgba(179,36,229,0.35)]",
+    badgeBg: "bg-[rgba(179,36,229,0.12)] border-[rgba(179,36,229,0.30)] text-[#76009b]",
+    badgeDot: "bg-[#B324E5]"
+  },
+  {
+    id: "connect",
+    title: "Connect",
+    description: "Learn and grow together.",
+    icon: "diversity_3",
+    gradient: "from-[#00E5FF] via-[#00B0FF] to-[#10B981]",
+    cardGlow: "rgba(16, 185, 129, 0.18)",
+    iconGlow: "shadow-[0_8px_24px_-4px_rgba(16,185,129,0.35)]",
+    badgeBg: "bg-[rgba(16,185,129,0.12)] border-[rgba(16,185,129,0.30)] text-[#065f46]",
+    badgeDot: "bg-[#10B981]"
+  }
+];
+
+export const TEAM_MEMBERS = [
+  {
+    id: "aarav-sharma",
+    name: "Aarav Sharma",
+    position: "Founder & Community Lead",
+    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80",
+    linkedin: "https://linkedin.com",
+    badge: "Founding Member"
+  },
+  {
+    id: "ananya-verma",
+    name: "Ananya Verma",
+    position: "Co-Founder & Technical Coordinator",
+    avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80",
+    linkedin: "https://linkedin.com",
+    badge: "Founding Member"
+  },
+  {
+    id: "rohan-patel",
+    name: "Rohan Patel",
+    position: "Hackathons & Events Lead",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
+    linkedin: "https://linkedin.com",
+    badge: "Coordinator"
+  },
+  {
+    id: "sneha-kulkarni",
+    name: "Sneha Kulkarni",
+    position: "Open Source & Workshops Coordinator",
+    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80",
+    linkedin: "https://linkedin.com",
+    badge: "Coordinator"
+  },
+  {
+    id: "aditya-roy",
+    name: "Aditya Roy",
+    position: "Design & Creative Tech Lead",
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
+    linkedin: "https://linkedin.com",
+    badge: "Coordinator"
+  },
+  {
+    id: "priya-nair",
+    name: "Priya Nair",
+    position: "Student Outreach & Partnerships",
+    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80",
+    linkedin: "https://linkedin.com",
+    badge: "Coordinator"
   }
 ];
 
@@ -253,6 +442,33 @@ export const FAQ_ITEMS = [
   {
     question: "How can organizations or sponsors partner with The Code Vibe?",
     answer: "Companies can sponsor bounty issues, host deep-dive technical masterclasses, or sponsor specialized hackathon tracks by reaching out via our partner desk at partners@thecodevibe.dev."
+  }
+];
+
+export const HOME_FAQ_ITEMS = [
+  {
+    question: "1. Who can join The Code Vibe?",
+    answer: "Anyone passionate about programming, building technology, or exploring software can join! Whether you are a beginner, a university student, a self-taught coder, or an experienced engineer, The Code Vibe welcomes all passionate builders."
+  },
+  {
+    question: "2. Do I need coding experience to join?",
+    answer: "No prior experience is required! We offer beginner-friendly tracks, guided workshops, and collaborative project pods where you can learn from peers and grow from hello-world fundamentals to building production software."
+  },
+  {
+    question: "3. Can students from different branches participate?",
+    answer: "Yes, absolutely! Students from all branches and academic fields—including Computer Science, Electrical, Mechanical, Civil, Design, Business, and humanities—actively participate. Cross-disciplinary thinking drives the most creative projects."
+  },
+  {
+    question: "4. How can I participate in hackathons?",
+    answer: "You can register directly from our Events page or via our community announcements. You can enter individually or as a team. If you don't have a team yet, we host dedicated matchmaking channels and pairing huddles to connect you with teammates."
+  },
+  {
+    question: "5. How can I stay updated about events?",
+    answer: "Keep an eye on the Upcoming Events section on our website, join our official Discord community, and follow our GitHub organization. All event dates, registration links, and stage reminders are published there in real time."
+  },
+  {
+    question: "6. How can I collaborate with the community?",
+    answer: "Head over to our Collaborate page to submit your details and connect as a collaborator, join active open-source project pods, propose new project ideas, or join our weekly pair programming circles."
   }
 ];
 
