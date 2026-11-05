@@ -32,7 +32,7 @@ export default function NotFoundPage() {
           to="/collaborate"
           className="btn-frosted-glass px-5 py-3 rounded-lg font-label-ui text-label-ui shadow-xs"
         >
-          Explore Projects
+          Collaborate
         </Link>
       </div>
     </div>

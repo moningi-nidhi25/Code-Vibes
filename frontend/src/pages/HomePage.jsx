@@ -4,6 +4,8 @@ import StatCard from '../components/ui/StatCard';
 import FaqAccordion from '../components/ui/FaqAccordion';
 import Toast from '../components/ui/Toast';
 import { useReveal, useRevealGroup } from '../hooks/useReveal';
+import { useAuth } from '../context/AuthContext';
+import { apiRsvpEvent } from '../services/api';
 import {
   PLATFORM_STATS,
   WHAT_WE_DO_CARDS,
@@ -14,6 +16,7 @@ import {
 
 export default function HomePage() {
   const { openJoinModal } = useOutletContext();
+  const { requireAuth, user } = useAuth();
   const [toastMessage, setToastMessage] = useState('');
   const [toastVisible, setToastVisible] = useState(false);
   const [registeredEventIds, setRegisteredEventIds] = useState([]);
@@ -40,10 +43,18 @@ export default function HomePage() {
     if (registeredEventIds.includes(eventId)) {
       setRegisteredEventIds((prev) => prev.filter((id) => id !== eventId));
       showNotification(`Unregistered from ${eventTitle}.`);
-    } else {
-      setRegisteredEventIds((prev) => [...prev, eventId]);
-      showNotification(`🎉 Successfully registered for ${eventTitle}! Confirmation email dispatched.`);
+      return;
     }
+
+    requireAuth(
+      (verifiedUser) => {
+        setRegisteredEventIds((prev) => [...prev, eventId]);
+        apiRsvpEvent(eventId, verifiedUser.name, verifiedUser.email);
+        showNotification(`🎉 Verified: ${verifiedUser.name} registered for ${eventTitle}! Confirmation sent to ${verifiedUser.email}.`);
+      },
+      `Please log in to confirm your verified spot for "${eventTitle}".`,
+      eventTitle
+    );
   };
 
   return (
@@ -64,7 +75,7 @@ export default function HomePage() {
         <div className="absolute -top-16 right-0 w-72 h-72 rounded-full bg-[rgba(179,36,229,0.08)] blur-3xl pointer-events-none animate-breathe" style={{ animationDelay: '1.5s' }} />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-[rgba(41,121,255,0.07)] blur-3xl pointer-events-none animate-breathe" style={{ animationDelay: '3s' }} />
 
-        <section className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-16 lg:pt-20 lg:pb-24 flex flex-col items-center text-center">
+        <section className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-10 pb-12 sm:pt-14 sm:pb-16 lg:pt-20 lg:pb-24 flex flex-col items-center text-center">
 
           {/* Badge */}
           <div className="animate-fade-in-down delay-100 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full telemetry-chip mb-6 shadow-xs">
@@ -76,7 +87,7 @@ export default function HomePage() {
 
           {/* Main Typography Hero */}
           <div ref={heroTextRef} className="reveal-ready">
-            <h1 className="font-display-hero text-display-hero text-on-surface max-w-4xl tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-on-surface max-w-4xl tracking-tight leading-tight font-bold font-display">
               More Than Code. <br />
               <span className="gradient-text-animated">
                 A Community That Builds Together.
@@ -89,16 +100,17 @@ export default function HomePage() {
 
             {/* Action Buttons */}
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-              <button
-                type="button"
-                onClick={openJoinModal}
+              <a
+                href="https://chat.whatsapp.com/Jp2xLed8Z7q5wpljKA2SKe"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-gradient-primary shimmer-effect group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-label-ui text-label-ui shadow-sm active:scale-95 cursor-pointer"
               >
                 <span>Join the Community</span>
                 <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform duration-200">
                   arrow_forward
                 </span>
-              </button>
+              </a>
               <Link
                 to="/events"
                 className="btn-frosted-glass shimmer-effect inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-label-ui text-label-ui shadow-xs active:scale-95"
@@ -114,9 +126,9 @@ export default function HomePage() {
           {/* Stats Strip */}
           <div
             ref={heroStatsRef}
-            className="reveal-ready w-full mt-16 p-1.5 rounded-3xl glass-base border-t border-l border-white/80 border-r border-b border-[#c2c6d7]/35 shadow-card-default"
+            className="reveal-ready w-full mt-10 sm:mt-16 p-1.5 rounded-2xl sm:rounded-3xl glass-base border-t border-l border-white/80 border-r border-b border-[#c2c6d7]/35 shadow-card-default"
           >
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-6 px-6 bg-white/60 backdrop-blur-md rounded-2xl">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 py-4 sm:py-6 px-3 sm:px-6 bg-white/60 backdrop-blur-md rounded-xl sm:rounded-2xl">
               {PLATFORM_STATS.map((stat, idx) => (
                 <StatCard
                   key={idx}
@@ -134,7 +146,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════
           WHAT WE DO SECTION
       ═══════════════════════════════════════ */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-24 relative" id="what-we-do">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-24 relative" id="what-we-do">
         <div ref={whatWeDoRef} className="reveal-ready text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full telemetry-chip mb-4 shadow-xs">
             <span className="w-2 h-2 rounded-full bg-[#00E5FF] animate-pulse" />
@@ -217,7 +229,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════
           UPCOMING EVENTS SECTION
       ═══════════════════════════════════════ */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-24" id="upcoming-events">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-24" id="upcoming-events">
         <div ref={eventsRef} className="reveal-ready text-center max-w-3xl mx-auto mb-8">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full telemetry-chip mb-4 shadow-xs">
             <span className="w-2 h-2 rounded-full bg-[#00E5FF] animate-pulse" />
@@ -265,7 +277,7 @@ export default function HomePage() {
               return (
                 <div
                   key={event.id}
-                  className="reveal-ready group rounded-3xl bg-white/85 backdrop-blur-2xl border-t border-l border-white/95 border-r border-b border-[#c2c6d7]/40 overflow-hidden shadow-card-default hover:shadow-glow-cyan transition-all duration-350 hover:-translate-y-3 flex flex-col justify-between"
+                  className="reveal-ready group rounded-3xl bg-white/85 backdrop-blur-2xl border-t border-l border-white/95 border-r border-b border-[#c2c6d7]/40 overflow-hidden shadow-card-default hover:shadow-glow-cyan transition-shadow duration-300 flex flex-col justify-between"
                 >
                   <div>
                     {/* Image Banner */}
@@ -273,7 +285,7 @@ export default function HomePage() {
                       <img
                         src={event.image}
                         alt={event.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        className="w-full h-full object-cover"
                       />
                       {/* Gradient overlay on hover */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -317,7 +329,7 @@ export default function HomePage() {
                       <span className="material-symbols-outlined text-base">
                         {isRegistered ? 'check_circle' : 'how_to_reg'}
                       </span>
-                      <span>{isRegistered ? 'Registered ✓' : 'Register Now'}</span>
+                      <span>{isRegistered ? 'Verified Registration ✓' : 'Register Now'}</span>
                     </button>
                   </div>
                 </div>
@@ -330,7 +342,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════
           WHY JOIN SECTION
       ═══════════════════════════════════════ */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-24" id="why-join">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-24" id="why-join">
         <div ref={whyJoinRef} className="reveal-ready text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full telemetry-chip mb-4 shadow-xs">
             <span className="w-2 h-2 rounded-full bg-[#00E5FF] animate-pulse" />
@@ -409,7 +421,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════
           FAQ SECTION
       ═══════════════════════════════════════ */}
-      <section className="max-w-4xl mx-auto px-6 lg:px-8 py-16 lg:py-24" id="faq">
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-24" id="faq">
         <div ref={faqRef} className="reveal-ready text-center max-w-2xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full telemetry-chip mb-4 shadow-xs">
             <span className="w-2 h-2 rounded-full bg-[#00E5FF] animate-pulse" />
@@ -431,7 +443,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════
           BOTTOM BANNER — JOIN ACTION
       ═══════════════════════════════════════ */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-12 pb-20">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pb-16 sm:pb-20">
         <div
           ref={bannerRef}
           className="reveal-ready p-8 sm:p-10 rounded-3xl relative overflow-hidden glass-base border-t border-l border-white/90 border-r border-b border-[#c2c6d7]/35 shadow-card-default flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left"
@@ -448,14 +460,15 @@ export default function HomePage() {
               Connect with 12,400+ student developers and builders shipping real projects.
             </p>
           </div>
-          <button
-            type="button"
-            onClick={openJoinModal}
+          <a
+            href="https://chat.whatsapp.com/Jp2xLed8Z7q5wpljKA2SKe"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-gradient-primary shimmer-effect inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-label-ui text-label-ui font-semibold shadow-glow-cyan active:scale-95 cursor-pointer shrink-0 relative z-10 group"
           >
             <span>Join the Community</span>
             <span className="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform duration-200">arrow_forward</span>
-          </button>
+          </a>
         </div>
       </section>
     </div>

@@ -4,6 +4,10 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import AtmosphereOrbs from './AtmosphereOrbs';
 import JoinCommunityModal from '../ui/JoinCommunityModal';
+import AuthModal from '../ui/AuthModal';
+import ProfileModal from '../ui/ProfileModal';
+
+const WHATSAPP_COMMUNITY_URL = 'https://chat.whatsapp.com/Jp2xLed8Z7q5wpljKA2SKe';
 
 export default function MainLayout() {
   const [joinModalOpen, setJoinModalOpen] = useState(false);
@@ -11,6 +15,10 @@ export default function MainLayout() {
 
   const isHomePage = location.pathname === '/';
   const isGlassVariant = location.pathname === '/events';
+
+  const redirectToWhatsApp = () => {
+    window.open(WHATSAPP_COMMUNITY_URL, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <div className="flex flex-col min-h-screen relative overflow-x-hidden">
@@ -20,11 +28,11 @@ export default function MainLayout() {
       )}
 
       {/* Floating Header */}
-      <Navbar onOpenJoinModal={() => setJoinModalOpen(true)} />
+      <Navbar onOpenJoinModal={redirectToWhatsApp} />
 
       {/* Main Page Outlet */}
       <main className="flex-1 w-full pt-16">
-        <Outlet context={{ openJoinModal: () => setJoinModalOpen(true) }} />
+        <Outlet context={{ openJoinModal: redirectToWhatsApp }} />
       </main>
 
       {/* Footer */}
@@ -35,6 +43,12 @@ export default function MainLayout() {
         isOpen={joinModalOpen}
         onClose={() => setJoinModalOpen(false)}
       />
+
+      {/* Global Auth / Verified Login Modal */}
+      <AuthModal />
+
+      {/* Global Builder Profile Edit Modal */}
+      <ProfileModal />
     </div>
   );
 }

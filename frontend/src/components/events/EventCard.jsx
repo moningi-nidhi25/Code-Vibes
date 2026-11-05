@@ -17,12 +17,12 @@ export default function EventCard({
   };
 
   return (
-    <div className="event-card group bento-card rounded-xl flex flex-col overflow-hidden">
+    <div className="event-card group bento-card rounded-xl flex flex-col overflow-hidden hover:transform-none">
       <div className="relative h-48 w-full overflow-hidden bg-surface-container">
         <img
           src={event.image}
           alt={event.title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
       </div>

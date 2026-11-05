@@ -20,7 +20,7 @@ export default function AboutPage() {
       <div className="fixed top-0 right-0 w-96 h-96 rounded-full bg-[rgba(179,36,229,0.05)] blur-3xl pointer-events-none -z-10" />
       <div className="fixed bottom-0 left-0 w-80 h-80 rounded-full bg-[rgba(0,229,255,0.06)] blur-3xl pointer-events-none -z-10" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full py-12 lg:py-16 space-y-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 w-full py-10 lg:py-16 space-y-16 sm:space-y-24">
 
         {/* ═════════════════════════════
             1. WHO WE ARE
@@ -221,14 +221,15 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <button
-              type="button"
-              onClick={openJoinModal}
+            <a
+              href="https://chat.whatsapp.com/Jp2xLed8Z7q5wpljKA2SKe"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-gradient-primary shimmer-effect inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-label-ui text-label-ui font-semibold shadow-glow-cyan active:scale-95 cursor-pointer shrink-0 group"
             >
               <span>Join The Code Vibe</span>
               <span className="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform duration-200">arrow_forward</span>
-            </button>
+            </a>
           </div>
         </section>
 

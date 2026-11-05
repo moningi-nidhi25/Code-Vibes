@@ -299,7 +299,7 @@ export const TEAM_MEMBERS = [
     name: "Aarav Sharma",
     position: "Founder & Community Lead",
     avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80",
-    linkedin: "https://linkedin.com",
+    linkedin: "https://www.linkedin.com/company/the-code-vibe/",
     badge: "Founding Member"
   },
   {
@@ -307,7 +307,7 @@ export const TEAM_MEMBERS = [
     name: "Ananya Verma",
     position: "Co-Founder & Technical Coordinator",
     avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80",
-    linkedin: "https://linkedin.com",
+    linkedin: "https://www.linkedin.com/company/the-code-vibe/",
     badge: "Founding Member"
   },
   {
@@ -315,7 +315,7 @@ export const TEAM_MEMBERS = [
     name: "Rohan Patel",
     position: "Hackathons & Events Lead",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
-    linkedin: "https://linkedin.com",
+    linkedin: "https://www.linkedin.com/company/the-code-vibe/",
     badge: "Coordinator"
   },
   {
@@ -323,7 +323,7 @@ export const TEAM_MEMBERS = [
     name: "Sneha Kulkarni",
     position: "Open Source & Workshops Coordinator",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80",
-    linkedin: "https://linkedin.com",
+    linkedin: "https://www.linkedin.com/company/the-code-vibe/",
     badge: "Coordinator"
   },
   {
@@ -331,7 +331,7 @@ export const TEAM_MEMBERS = [
     name: "Aditya Roy",
     position: "Design & Creative Tech Lead",
     avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
-    linkedin: "https://linkedin.com",
+    linkedin: "https://www.linkedin.com/company/the-code-vibe/",
     badge: "Coordinator"
   },
   {
@@ -339,7 +339,7 @@ export const TEAM_MEMBERS = [
     name: "Priya Nair",
     position: "Student Outreach & Partnerships",
     avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80",
-    linkedin: "https://linkedin.com",
+    linkedin: "https://www.linkedin.com/company/the-code-vibe/",
     badge: "Coordinator"
   }
 ];
@@ -464,7 +464,7 @@ export const HOME_FAQ_ITEMS = [
   },
   {
     question: "5. How can I stay updated about events?",
-    answer: "Keep an eye on the Upcoming Events section on our website, join our official Discord community, and follow our GitHub organization. All event dates, registration links, and stage reminders are published there in real time."
+    answer: "Keep an eye on the Upcoming Events section on our website, join our WhatsApp community, and follow our LinkedIn and Instagram pages. All event dates, registration links, and reminders are published there in real time."
   },
   {
     question: "6. How can I collaborate with the community?",
@@ -472,204 +472,30 @@ export const HOME_FAQ_ITEMS = [
   }
 ];
 
-export const COLLABORATE_PROJECTS = [
-  {
-    id: "devpulse",
-    title: "DevPulse: Real-time Developer Analytics & Telemetry",
-    badge: "Flagship OS",
-    badgeType: "primary",
-    statusText: "Open until Nov 30",
-    applicationsText: "6 applications received",
-    description: "Open-source telemetry collector for multi-cloud developer environments with eBPF hooks. Captures sub-millisecond execution traces and translates runtime syscalls directly into actionable distributed tracing graphs.",
-    icon: "insights",
-    iconColor: "text-primary",
-    techs: ["Rust", "eBPF", "Apache Kafka", "React", "Tailwind CSS"],
-    roles: ["Backend / Systems", "Frontend Dev"],
-    maintainers: "Alex Chen (@achen) & 4 maintainers",
-    maintainerAvatars: [
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDUUUCBkysTYFy6Ydnwf7HO1sJd4r9WuYESgmFci7lxODronijvSwpH8b10Xwy-Pj5JNlP2vb60QOKs3gSEP5qA3Lf52ahQIsAcSCdjI1N4JXokHnLwdGxbGeArVO1EFVL5KthRyzcXfyQ0sDW_1Bs5xCvJE8ajGqiaRvagrG_vjwk4rO-aUHCyTRjWTXImWqGuqWayhF07SiqmRJbXVDkYW-MlneQ3jnuT4nJdHgnRMrXI5Mmmagt6",
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCCemehlgxETL3QaHaosVsHQGdYI186gVy1dACNFXKa_Ooh61GY05kJSw8IA0-kzNq0M356XSKHPz0JyeQfliIyiBVOKVpD9KJIqIoUpW0za2xej9G1FRRZhsdBzF9-Yc8QNG24TdEJUlYrN13a_q1zib1BcR-iNNkecbCa0OE4bw79zkmhAnOVIxtkwLCY8N_ATc5kfnRZqOc_Q85lSJ3Rq1BW9oJhM2g6rIOdAp4lE6PlrXgjyLZQ",
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDiuwsvhBvuDuvoEtKEtJFS5Wu8kWI7SNZTofcUic0Ik_fa37KOXquplJ2OdJPRYAfrfIWz4SsWe5OQoEAYMnkFN3r9HDPbAIrWniF9RdlI3gDe6w4Ev_XSgKWXW6aAqCxSEYieUHtyDT5ZfbJVLyBx2ncA0S4ZPFfOWlvE9rmb2NIxPbLUNRigf2qwRQ7y9L3JDMWNr0luU8pWIrkFLf_mcnltAdxpafG6kAYhU7e_Q5dDbPkLjx0g"
-    ],
-    roleSpots: [
-      {
-        tag: "Role Spot 01",
-        tagColor: "text-primary",
-        title: "eBPF Systems Engineer",
-        openings: "1 Opening",
-        requirements: "Required: Low-level C/Rust kernel tracing, system probes, memory safe concurrent ring-buffers."
-      },
-      {
-        tag: "Role Spot 02",
-        tagColor: "text-tertiary",
-        title: "Full-Stack UI Engineer",
-        openings: "2 Openings",
-        requirements: "Required: React, Canvas / WebGL metrics canvas, high-frequency telemetry charting with WebSockets."
-      }
-    ],
-    forks: "142 Forks",
-    stars: "1.8k Stars",
-    commitment: "~8 hrs/week expected",
-    specsRoute: "/projects/devpulse"
-  },
-  {
-    id: "neuroflow",
-    title: "NeuroFlow: Local LLM Orchestration Studio",
-    badge: "AI Studio",
-    badgeType: "tertiary",
-    statusText: "Active Sprint",
-    applicationsText: "11 applications received",
-    description: "Lightweight desktop UI for running and routing multi-agent workflows locally using WebGPU acceleration. Zero data egress, local quant models, and node-based prompt chain visualizer.",
-    icon: "psychology",
-    iconColor: "text-secondary",
-    techs: ["Python", "PyTorch", "WebGPU", "TypeScript", "Electron", "AI"],
-    roles: ["Frontend Dev", "AI Engineer"],
-    maintainers: "Sophia Rodriguez & AI Working Group",
-    maintainerAvatars: [
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDofp_RPW3en-PN6jrXu0-7Za_BMQHruz2DDJkH_zCn-lj28KVB-iE8EokvLINbHEhCh4QUpRJ0PIcMi1miCf2Sw8XVqce7xdyOEjP5fSQIq6_9E0K7BcmbeoDCadPSV-j7P_GbUosDuz5jv11I2B26kll9mD8x4nq29SBoWRWVibUwchX_C5AO_xKzR9arX6r2C472HO6H6BDBUUlxHj6KB-7a5UIH4JvgCcY0WRXiBS0-S7V1ZI90",
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDtOG99e934JauV15Rjcz31YOjSHAObnf6byehiyUW7cYFJb9yYRURyzLhrNyJzbaGQGnyzVC5Qju2NO8Y-OFkGjh1aKMb4TL06njZMKsrhtJnx9LZ3sqOF2Ami9Q7AF-o5dgoShDPYBR8ea8dH7GNXTbry7tylg28ekqsiF6_ItQ_w03-kMPJpH17sd-UqRfV-I43PAHxqtiEOg-LJjsdVeCfoF-zVhB9ljzht8k9FJigT_wncjUM7"
-    ],
-    roleSpots: [
-      {
-        tag: "Role Spot 01",
-        tagColor: "text-secondary",
-        title: "Frontend Performance Specialist",
-        openings: "1 Opening",
-        requirements: "Required: WebGPU shader compute passes, Canvas rendering speedups, and responsive reactive node trees."
-      },
-      {
-        tag: "Role Spot 02",
-        tagColor: "text-secondary",
-        title: "Python API Dev",
-        openings: "1 Opening",
-        requirements: "Required: FastAPI, model weight streaming, local ONNX conversion pipelines, asynchronous IPC messaging."
-      }
-    ],
-    forks: "89 Forks",
-    stars: "940 Stars",
-    commitment: "~10 hrs/week",
-    specsRoute: null
-  },
-  {
-    id: "cloudmesh",
-    title: "CloudMesh: Serverless Workflow Engine",
-    badge: "Cloud Infrastructure",
-    badgeType: "surface",
-    statusText: "Rolling Admissions",
-    applicationsText: "4 applications received",
-    description: "Distributed, event-driven task coordinator built in Golang. Orchestrates hybrid multi-cloud workloads with zero cold start latency via smart container hibernation and warm pre-allocations.",
-    icon: "hub",
-    iconColor: "text-primary-container",
-    techs: ["Go", "Kubernetes", "gRPC", "Protobuf", "Prometheus"],
-    roles: ["Backend / Systems", "DevOps"],
-    maintainers: "Elena Rostova & Systems SIG",
-    maintainerAvatars: [
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBmI5ofj9gELotzRk1WR5f2gSmKe-b8bK6NNgyCEyQ2NFid1g_sYP4BL2tud7EmH_9LB70kYPYHbOcfxvDMvuP4q339pa3JvM8MV7l8yOA51pe5EKpc0fMOhlpx0ck0pGVR0fPhg15zLibyeqm8xNAdb5ykbb8JjUrjnzFS1dbgt6O2AXgHgk2r5k18dXTe0i2NEPjql4Wk0StsRKz1JKlqBfWFl0z7fhGlJmSuz3GRypzFNadL7T60"
-    ],
-    roleSpots: [
-      {
-        tag: "Core Opening",
-        tagColor: "text-primary",
-        title: "Backend Go Engineer",
-        openings: "2 Openings",
-        requirements: "Required: Advanced Go goroutines channel choreography, Kubernetes Custom Resource Definitions (CRDs), and high-throughput gRPC stream optimizations.",
-        colSpan: "md:col-span-2"
-      }
-    ],
-    forks: "62 Forks",
-    stars: "520 Stars",
-    commitment: "~6 hrs/week",
-    specsRoute: null
-  },
-  {
-    id: "omnianchor",
-    title: "OmniAnchor: Cross-Chain State Oracle",
-    badge: "Protocol",
-    badgeType: "tertiary",
-    statusText: "Active Audit",
-    applicationsText: "8 applications received",
-    description: "Zero-knowledge proof-based data synchronizer securing high-frequency state updates between EVM networks and Solana without relying on centralized validator rings.",
-    icon: "token",
-    iconColor: "text-tertiary",
-    techs: ["Solidity", "Rust", "Foundry", "TypeScript"],
-    roles: ["Backend / Systems", "Product Designer"],
-    maintainers: "Kaelen Voss (@kvoss)",
-    maintainerAvatars: [
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuC-9l4kyybi8Id7ydcc4Uh6_jbWCKaiZBRRzXXkTMStxTdaxzVYO5UkSGOwBcH-CjRw8lANZY9arf7PX1p8lWLIeufF1QJ_yrrh0VAnR5BcdaRlau_NMt4I6V_3CSi67zriL3kEzUkxakpmQHdg17V0vhGzRGNa8l5cqa9SIVw3sYeL0z9mNMv_bqZjt5nIWqV3J4LPYbztgmrb8s-5-gnXIwDWmcgFxOPeO-A-Q3x9yLd9hLA4HQq1",
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAjSko6TvfKFYe4vSsLo8SZDOWYGRmY-hy-V-c7hbsYtmL_WZTePBRA2pVeLe11XcWA7-b9Z_62EL28iAzqGABTVwk40JWIEHiIKpAXf2bYGaDYU3e_HMzs44ANUcdo1oxfsh3ER46RTOXMxcX-WDmukH3ux7LgnBFwpQ8l_hN9V3446mcBFioFSq08YhEZis7BF_cioMGtf4uOFowigRRglby32X3JDy7LO4rSDVrK9MqiUaun4-JA"
-    ],
-    roleSpots: [
-      {
-        tag: "Role Spot 01",
-        tagColor: "text-tertiary",
-        title: "Smart Contract Auditor / Dev",
-        openings: "1 Opening",
-        requirements: "Required: Solidity gas optimization, Foundry fuzzing, and reentrancy proof verification."
-      },
-      {
-        tag: "Role Spot 02",
-        tagColor: "text-secondary",
-        title: "Product Designer",
-        openings: "1 Opening",
-        requirements: "Required: Figma design system design for technical explorer panels, token bridges, and status telemetry monitors."
-      }
-    ],
-    forks: "41 Forks",
-    stars: "388 Stars",
-    commitment: "~8 hrs/week",
-    specsRoute: null
-  },
-  {
-    id: "vibecanvas",
-    title: "VibeCanvas: Reactive Shader Playground",
-    badge: "Creative Tech",
-    badgeType: "surface",
-    statusText: "Sprint Launch",
-    applicationsText: "3 applications received",
-    description: "Interactive web-based fragment shader editor with generative AI audio reactives and instantaneous live WebAssembly exports.",
-    icon: "brush",
-    iconColor: "text-secondary-container",
-    techs: ["TypeScript", "React", "WebGPU", "WASM"],
-    roles: ["Frontend Dev", "Product Designer"],
-    maintainers: "Marc Dupont (@mdupont)",
-    maintainerAvatars: [
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDytZKinXoaeJ-Az1Zi9d8dUMciHggxNtYsH55E_bVEuld8RDuAYrYBEqzvfagsSqXCJbdS6zXlqTenIIBJZXUouX7fNVhKKkDBtnhaF3bRzlZlPf3DqVyAe7fQqpwi66pHGteoy3WcJOo6d7_h7GevvxUwPTYMUYLkx5O-bGKPQ8X1ShyPml0hfeRjxH0yEoVxjeK4Udh-dOsnXXyA8jLC8YtCWmT6egScfI17_0ibC9o1JocLLQSd"
-    ],
-    roleSpots: [
-      {
-        tag: "Role Spot 01",
-        tagColor: "text-primary",
-        title: "Frontend Dev",
-        openings: "1 Opening",
-        requirements: "Required: React performance tuning, monaco-editor customization, and WebAudio API integrations."
-      },
-      {
-        tag: "Role Spot 02",
-        tagColor: "text-secondary",
-        title: "Product Designer",
-        openings: "1 Opening",
-        requirements: "Required: Prototyping dark and light mode UI controls, knobs, and timeline scrubbers."
-      }
-    ],
-    forks: "29 Forks",
-    stars: "310 Stars",
-    commitment: "~5 hrs/week",
-    specsRoute: null
-  }
-];
-
 export const EVENTS_PAGE_ITEMS = [
+  {
+    id: "wasm-memory-safety",
+    title: "Deep Dive: WebAssembly, Memory Safety & Sandboxing",
+    description: "Architecting untrusted edge execution environments with Wasmtime and Rust. Dive into isolated memory linear address spaces.",
+    date: "Nov 28, 2025",
+    time: "6:00 PM – 8:30 PM PST",
+    category: "workshop",
+    categoryLabel: "Workshop",
+    status: "Online",
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+    link: "/events/wasm-memory-safety"
+  },
   {
     id: "full-stack-vector-search",
     title: "Full-Stack Vector Search with Postgres & pgvector",
-    description: "Architecting scalable semantic retrieval pipelines directly in PostgreSQL with HNSW indexing.",
+    description: "Architecting scalable semantic retrieval pipelines directly in PostgreSQL with HNSW indexing and Supabase.",
     date: "Dec 2, 2025",
     time: "10:00 AM – 1:00 PM PST",
     category: "workshop",
     categoryLabel: "Workshop",
     status: "Online",
-    image: "https://lh3.googleusercontent.com/aida/AEtjO1V8xRv2-lE656xEurDdYlPC7wFHUgAc9YGOi1X0bACSu-_ODWIzEf_PNtUCH0hZgKlobWOQfCI0nZgh44ZMW2yY0RzBByKP0tT6bDy4omBrWT6X-KsR024UWBQkFmABbZv7KATfXuMO_rNiEbfc4as31TWurKPUKy4tJjcnvGu8fmh5QBuZY1wQTzOZpl71qSRbodf8EHczQuS5EXJxutSE9KJZZghxS-COO0f_15-6XjabgPMZY_eINg",
-    link: "/events/wasm-memory-safety"
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+    link: "/events/full-stack-vector-search"
   },
   {
     id: "building-high-throughput-microservices-go",
@@ -680,8 +506,8 @@ export const EVENTS_PAGE_ITEMS = [
     category: "talk",
     categoryLabel: "Tech Talk",
     status: "Online",
-    image: "https://lh3.googleusercontent.com/aida/AEtjO1V1tOU0WqQTsUSsU_f9D1VRXboW0NF1Py15sHlyuQoY0_5-oSr65ZCUWYEtUo0sbUoUAzDoN4lKtep-a31dt5BHtkFNWDERSXm32tl2iSwW1q8_W1L7mVInACjFfyAIYBVgbfB-Ny5c5WqCS96poHHinojsQMLpDc0qEP3_InS2wx0908FrZOW2kgoiK5QtfSYZ4a5kyDYSBPKwtB2rr4qhdJka6n7UUi7asurCThhOq7H3ui-1aYl6WIc",
-    link: "/events/wasm-memory-safety"
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+    link: "/events/building-high-throughput-microservices-go"
   },
   {
     id: "open-source-ai-sprint",
@@ -692,8 +518,8 @@ export const EVENTS_PAGE_ITEMS = [
     category: "hackathon",
     categoryLabel: "Hackathon",
     status: "Online",
-    image: "https://lh3.googleusercontent.com/aida/AEtjO1V9aX6OuzBN_kVEPYmsGA_5dFKZwtMchMLm04UJIutXj_1UH7vah8NGzeL3g-SXN4paLbtWNILCCjsGhw_GGYU3usouzclo4h1XdSLWY3xzzS5izgdIghoIfwVkNoxL9zwUH7_1gq7HFyn_53KDDkoqGHV_Bcf2Jyvxpaz9jKseNd-3XAOCvRIqQVUyMLu2TtZd6Uqb-caGbFViW-YiBqe3LHAb2cIblD69NmYM-laReJOuuMSfc9qbGA",
-    link: "/events/wasm-memory-safety"
+    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80",
+    link: "/events/open-source-ai-sprint"
   },
   {
     id: "webassembly-real-world",
@@ -704,8 +530,8 @@ export const EVENTS_PAGE_ITEMS = [
     category: "meetup",
     categoryLabel: "Meetup",
     status: "Hybrid",
-    image: "https://lh3.googleusercontent.com/aida/AEtjO1V8xRv2-lE656xEurDdYlPC7wFHUgAc9YGOi1X0bACSu-_ODWIzEf_PNtUCH0hZgKlobWOQfCI0nZgh44ZMW2yY0RzBByKP0tT6bDy4omBrWT6X-KsR024UWBQkFmABbZv7KATfXuMO_rNiEbfc4as31TWurKPUKy4tJjcnvGu8fmh5QBuZY1wQTzOZpl71qSRbodf8EHczQuS5EXJxutSE9KJZZghxS-COO0f_15-6XjabgPMZY_eINg",
-    link: "/events/wasm-memory-safety"
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
+    link: "/events/webassembly-real-world"
   }
 ];
 
